@@ -321,18 +321,19 @@
         .hamburger-search-btns {
           display: flex;
           align-items: center;
+          margin-right: 30px;
 
           .hamburger-btn {
             width: 24px;
             height: 24px;
-            background: url($menu) 0 0 no-repeat;
+            background: url($menuBlack) 0 0 no-repeat;
             background-size: contain;
             margin-right: 24px;
           }
           .search-btn {
             width: 24px;
             height: 24px;
-            background: url($search) 0 0 no-repeat;
+            background: url($searchBlack) 0 0 no-repeat;
             background-size: contain;
           }
         }
@@ -354,6 +355,10 @@
               font-size: 16px;
               font-weight: 500;
               color: $black;
+
+              &:hover {
+                text-decoration: underline;
+              }
             }
           }
         }
