@@ -286,7 +286,6 @@
           line-height: 23px;
           border-radius: 100px;
           margin-right: 16px;
-          transition: all 0.3s;
 
           &:hover {
             color: $white;
@@ -404,6 +403,12 @@
             border-radius: 15px;
             padding: 0 16px;
             border: 1px solid #ebebeb;
+
+            &:hover {
+              border: 1px solid $blue500;
+              color: $white;
+              background-color: $blue500;
+            }
           }
         }
       }

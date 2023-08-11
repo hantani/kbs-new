@@ -319,8 +319,6 @@
   line-height: 23px;
   border-radius: 100px;
   margin-right: 16px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 #header .header-title-menu-wrapper .header-title-menu .report-live-menu .report-link:hover {
   color: #fff;
@@ -455,6 +453,11 @@
   border-radius: 15px;
   padding: 0 16px;
   border: 1px solid #ebebeb;
+}
+#header .header-nav-wrapper .header-nav .hashtag-links .hashtag-list .hashtag-link:hover {
+  border: 1px solid #2282b9;
+  color: #fff;
+  background-color: #2282b9;
 }
 #header .header-nav-wrapper .full-menu-wrapper {
   background-color: #fff;

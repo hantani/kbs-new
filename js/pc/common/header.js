@@ -25,7 +25,7 @@
     });
   };
 
-  // KBS WORLD select
+  // KBS WORLD 클릭 event
   const worldSelect = () => {
     const $menu = document.querySelector("#header .foreign-site-links");
     const $btn = document.querySelector("#header .kbs-world-select-btn");
