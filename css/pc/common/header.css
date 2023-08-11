@@ -31,9 +31,9 @@
           align-items: center;
 }
 #header .breaking-news-wrapper .breaking-news .news-title .badge {
-  width: 46px;
+  width: 54px;
   height: 29px;
-  background-color: #ff1313;
+  background: url("data:image/svg+xml,%3Csvg width='55' height='29' viewBox='0 0 55 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 25V4C1 1.79086 2.79087 0 5 0H44.3741C45.8079 0 47.132 0.76741 47.8448 2.01148L53.8607 12.5115C54.5664 13.7432 54.5664 15.2568 53.8607 16.4885L47.8448 26.9885C47.132 28.2326 45.8079 29 44.3741 29H5C2.79086 29 1 27.2091 1 25Z' fill='%23FF1313'/%3E%3Cpath d='M1 4H14M1 8H8.64706' stroke='%23030303' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") center center no-repeat;
   border-radius: 2px;
   color: #fff;
   font-size: 14px;
@@ -130,7 +130,7 @@
   font-weight: 500;
   color: #fff;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,20 +139,20 @@
           align-items: center;
   position: relative;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .today {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .today {
   color: #fff;
   font-size: 13px;
   line-height: 18px;
   margin-right: 20px;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .weather {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather {
   margin-right: 20px;
   height: 30px;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .weather .swiper-wrapper {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper {
   display: inline-block;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .weather .swiper-wrapper .weather-info-list {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper .weather-info-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,27 +160,27 @@
       -ms-flex-align: center;
           align-items: center;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .weather .swiper-wrapper .weather-info-list .weather-info-img {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper .weather-info-list .weather-info-img {
   width: 16px;
   height: 16px;
   margin-right: 8px;
   vertical-align: middle;
   display: inline-block;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .weather .swiper-wrapper .weather-info-list .weather-info-txt {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper .weather-info-list .weather-info-txt {
   font-size: 13px;
   line-height: 18px;
   color: #fff;
   display: inline-block;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .login,
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .my-page {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .login,
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .my-page {
   color: #dde1e4;
   font-size: 13px;
   line-height: 18px;
   margin-right: 20px;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .language-select .language-select-btn {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .kbs-world-select-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,13 +188,13 @@
       -ms-flex-align: center;
           align-items: center;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .language-select .language-select-btn .btn-txt {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .kbs-world-select-btn .btn-txt {
   font-size: 13px;
   line-height: 18px;
   color: #dde1e4;
   margin-right: 4px;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .language-select .language-select-btn .arrow {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .kbs-world-select-btn .arrow {
   display: block;
   width: 16px;
   height: 16px;
@@ -204,21 +204,30 @@
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .language-select .foreign-site-menu {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .kbs-world-select-btn.on .arrow {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .foreign-site-links {
   display: none;
   position: absolute;
   top: 30px;
   right: 0;
   padding: 8px 16px;
   border: 1px solid #ebeef0;
+  background-color: #fff;
+  z-index: 50;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .language-select .foreign-site-menu .foreign-site-list {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .foreign-site-links.on {
+  display: block;
+}
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .foreign-site-links .foreign-site-list {
   margin-top: 8px;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .language-select .foreign-site-menu .foreign-site-list:first-child {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .foreign-site-links .foreign-site-list:first-child {
   margin-top: 0;
 }
-#header .header-top-menu-wrapper .header-top-menu .login-mypage-menu .language-select .foreign-site-menu .foreign-site-list .foreign-site-link {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .kbs-world-select .foreign-site-links .foreign-site-list .foreign-site-link {
   font-size: 12px;
   font-weight: 700;
   color: #222;
@@ -310,6 +319,13 @@
   line-height: 23px;
   border-radius: 100px;
   margin-right: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#header .header-title-menu-wrapper .header-title-menu .report-live-menu .report-link:hover {
+  color: #fff;
+  background-color: #456bcd;
+  border: 1px solid #456bcd;
 }
 #header .header-title-menu-wrapper .header-title-menu .report-live-menu .live-link {
   display: -webkit-box;
@@ -409,6 +425,36 @@
 }
 #header .header-nav-wrapper .header-nav .nav-menu .nav-links .nav-list .nav-link:hover {
   text-decoration: underline;
+}
+#header .header-nav-wrapper .header-nav .hashtag-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#header .header-nav-wrapper .header-nav .hashtag-links .hashtag-list {
+  margin-right: 8px;
+}
+#header .header-nav-wrapper .header-nav .hashtag-links .hashtag-list:last-child {
+  margin-right: 0;
+}
+#header .header-nav-wrapper .header-nav .hashtag-links .hashtag-list .hashtag-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #2282b9;
+  height: 30px;
+  border-radius: 15px;
+  padding: 0 16px;
+  border: 1px solid #ebebeb;
 }
 #header .header-nav-wrapper .full-menu-wrapper {
   background-color: #fff;

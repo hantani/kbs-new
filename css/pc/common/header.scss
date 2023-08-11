@@ -20,9 +20,9 @@
         align-items: center;
 
         .badge {
-          width: 46px;
+          width: 54px;
           height: 29px;
-          background-color: $red;
+          background: url($breakingNews) center center no-repeat;
           border-radius: 2px;
           color: $white;
           font-size: 14px;
@@ -110,7 +110,7 @@
         }
       }
 
-      .login-mypage-menu {
+      .weather-login-menu {
         display: flex;
         align-items: center;
         position: relative;
@@ -152,8 +152,8 @@
           line-height: 18px;
           margin-right: 20px;
         }
-        .language-select {
-          .language-select-btn {
+        .kbs-world-select {
+          .kbs-world-select-btn {
             display: flex;
             align-items: center;
 
@@ -173,14 +173,26 @@
               background-size: contain;
               transform: rotate(90deg);
             }
+
+            &.on {
+              .arrow {
+                transform: rotate(270deg);
+              }
+            }
           }
-          .foreign-site-menu {
+          .foreign-site-links {
             display: none;
             position: absolute;
             top: 30px;
             right: 0;
             padding: 8px 16px;
             border: 1px solid $neutral300;
+            background-color: $white;
+            z-index: 50;
+
+            &.on {
+              display: block;
+            }
 
             .foreign-site-list {
               margin-top: 8px;
@@ -274,6 +286,13 @@
           line-height: 23px;
           border-radius: 100px;
           margin-right: 16px;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $white;
+            background-color: $blue1300;
+            border: 1px solid $blue1300;
+          }
         }
 
         .live-link {
@@ -360,6 +379,31 @@
                 text-decoration: underline;
               }
             }
+          }
+        }
+      }
+      .hashtag-links {
+        display: flex;
+
+        .hashtag-list {
+          margin-right: 8px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          .hashtag-link {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $blue500;
+            height: 30px;
+            border-radius: 15px;
+            padding: 0 16px;
+            border: 1px solid #ebebeb;
           }
         }
       }
