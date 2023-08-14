@@ -36,9 +36,146 @@
     });
   };
 
+  // 햄버거 버튼 클릭 event
+  const hamburgerClick = () => {
+    const $btn = document.querySelector(".hamburger-btn");
+    const $navMenu = document.querySelector(".header-nav");
+    const $fullMenu = document.querySelector(".full-menu-wrapper");
+    const $navLinks = document.querySelectorAll(".nav-link");
+    const $commonMenues = document.querySelectorAll(".common-menu");
+    const $dim = document.querySelector(".dim");
+
+    $btn.addEventListener("click", () => {
+      if ($btn.classList.contains("on")) {
+        $btn.classList.remove("on");
+        $navMenu.classList.remove("on");
+        $fullMenu.classList.remove("on");
+        $dim.classList.remove("on");
+        $navLinks.forEach(($navLink) => {
+          $navLink.classList.remove("on");
+        });
+        $commonMenues.forEach(($commonMenu) => {
+          $commonMenu.classList.remove("on");
+        });
+      } else if (!$btn.classList.contains("on")) {
+        $btn.classList.add("on");
+        $navMenu.classList.add("on");
+        $fullMenu.classList.add("on");
+        $dim.classList.add("on");
+      }
+    });
+  };
+
+  // 네비게이션 메뉴 클릭 event
+  const navMenuClick = () => {
+    const menuNames = ["분야별", "TV 뉴스", "프리미엄K", "시사", "지역"];
+    const $navLinks = document.querySelectorAll(".nav-link");
+    const $fullMenu = document.querySelector(".full-menu-wrapper");
+    const $dim = document.querySelector(".dim");
+    const $fullMenuNames = document.querySelectorAll(".full-menu-heading");
+    let $onNavLink;
+
+    $navLinks.forEach(($navLink) => {
+      $navLink.addEventListener("click", () => {
+        const menuName = $navLink.innerText;
+        if (menuNames.includes(menuName)) {
+          if ($onNavLink) {
+            $onNavLink.classList.remove("on");
+          }
+
+          $navLink.classList.add("on");
+          $onNavLink = $navLink;
+
+          $fullMenuNames.forEach(($fullMenuName) => {
+            const fullMenuName = $fullMenuName.innerText;
+            const $commonMenu = $fullMenuName.parentElement.parentElement;
+            $commonMenu.classList.remove("on");
+
+            if (fullMenuName === menuName) {
+              $commonMenu.classList.add("on");
+            }
+          });
+        }
+
+        if (!$fullMenu.classList.contains("on")) {
+          $fullMenu.classList.add("on");
+          $dim.classList.add("on");
+        }
+      });
+    });
+  };
+
+  // 서치 버튼 클릭 event
+  const searchClick = () => {
+    const $btn = document.querySelector(".hamburger-search-btns .search-btn");
+    const $closeBtn = document.querySelector(".search .close-btn");
+    const $hamburgerBtn = document.querySelector(".hamburger-btn");
+    const $fullMenu = document.querySelector(".full-menu-wrapper");
+    const $navLinks = document.querySelectorAll(".nav-link");
+    const $commonMenues = document.querySelectorAll(".full-menu .common-menu");
+    const $searchMenu = document.querySelector(".search-most-view");
+    const $dim = document.querySelector(".dim");
+
+    $btn.addEventListener("click", () => {
+      if ($fullMenu.classList.contains("on")) {
+        $fullMenu.classList.remove("on");
+      }
+
+      if ($hamburgerBtn.classList.contains("on")) {
+        $hamburgerBtn.classList.remove("on");
+      }
+
+      $navLinks.forEach(($navLink) => {
+        $navLink.classList.remove("on");
+      });
+      $commonMenues.forEach(($commonMenu) => {
+        $commonMenu.classList.remove("on");
+      });
+
+      $searchMenu.classList.add("on");
+      $dim.classList.add("on");
+    });
+
+    $closeBtn.addEventListener("click", () => {
+      $searchMenu.classList.remove("on");
+      $dim.classList.remove("on");
+    });
+  };
+
+  // 스크롤시 네비게이션 메뉴 고정 event
+  const navFixed = () => {
+    const $navMenu = document.querySelector(".header-nav-wrapper");
+    const navTop = $navMenu.getBoundingClientRect().top;
+
+    window.addEventListener("scroll", () => {
+      const winY = window.scrollY;
+
+      if (navTop <= winY) {
+        $navMenu.classList.add("fixed");
+      } else if (navTop > winY) {
+        $navMenu.classList.remove("fixed");
+      }
+    });
+  };
+
+  // 라이브 섹션 클릭 event
+  const liveClick = () => {
+    const $btn = document.querySelector(".header-live .arrow-btn");
+
+    $btn.addEventListener("click", () => {
+      const $headerLive = $btn.parentElement;
+      $headerLive.classList.toggle("on");
+    });
+  };
+
   window.addEventListener("load", () => {
     weatherRolling();
     disasterRolling();
     worldSelect();
+    hamburgerClick();
+    navMenuClick();
+    navFixed();
+    searchClick();
+    liveClick();
   });
 })();
