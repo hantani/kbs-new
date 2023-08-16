@@ -144,16 +144,13 @@
 
   // 스크롤시 네비게이션 메뉴 고정 event
   const navFixed = () => {
-    const $navMenu = document.querySelector(".header-nav-wrapper");
-    const navTop = $navMenu.getBoundingClientRect().top;
-
-    window.addEventListener("scroll", () => {
-      const winY = window.scrollY;
-
-      if (navTop <= winY) {
-        $navMenu.classList.add("fixed");
-      } else if (navTop > winY) {
-        $navMenu.classList.remove("fixed");
+    var menuBar = $(".header-nav-wrapper");
+    var point = menuBar.offset().top;
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > point) {
+        menuBar.addClass("fixed");
+      } else {
+        menuBar.removeClass("fixed");
       }
     });
   };
