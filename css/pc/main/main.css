@@ -378,6 +378,10 @@
       -ms-flex-align: center;
           align-items: center;
 }
+#contents .news-category .news-category-links .news-category-list .news-category-link .img {
+  width: 32px;
+  height: 32px;
+}
 #contents .news-category .news-category-links .news-category-list .news-category-link .txt {
   color: #b6b8b9;
   font-size: 14px;
