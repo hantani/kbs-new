@@ -5,7 +5,7 @@
 #header {
   // 속보 뉴스
   .breaking-news-wrapper {
-    background-color: $black100;
+    background-color: $blue1800;
 
     .breaking-news {
       width: 1280px;
@@ -67,7 +67,7 @@
   }
   // 헤더 탑 메뉴
   .header-top-menu-wrapper {
-    background-color: $black;
+    background-color: $blue1900;
 
     .header-top-menu {
       width: 1280px;
@@ -220,7 +220,7 @@
   }
   // 헤더 타이틀 메뉴
   .header-title-menu-wrapper {
-    background-color: $white;
+    background-color: $neutral200;
 
     .header-title-menu {
       width: 1280px;
@@ -293,6 +293,7 @@
           line-height: 23px;
           border-radius: 100px;
           margin-right: 16px;
+          background-color: $white;
 
           &:hover {
             color: $white;
@@ -308,6 +309,7 @@
           height: 34px;
           border: 1px solid $lightRed;
           border-radius: 100px;
+          background-color: $white;
           .txt {
             color: $gray;
             font-weight: 700;
@@ -477,8 +479,8 @@
 
           .full-menu-links-wrapper {
             .full-menu-heading {
-              font-size: 19px;
-              line-height: 24px;
+              font-size: 18px;
+              line-height: 26px;
               font-weight: 700;
               color: $neutral800;
               margin-bottom: 16px;
@@ -518,7 +520,7 @@
 
                 .sub-heading {
                   color: $neutral800;
-                  font-size: 15px;
+                  font-size: 14px;
                   line-height: 20px;
                   font-weight: 500;
                   display: inline-block;
@@ -802,6 +804,7 @@
   // 헤더 재난안내 롤링 메시지
   .disaster-rolling-wrapper {
     background-color: $lightPcBG;
+    overflow: hidden;
 
     .disaster-rolling {
       width: 1280px;
@@ -811,6 +814,49 @@
       padding: 0 16px 0 20px;
       display: flex;
       align-items: center;
+      overflow: hidden;
+
+      &.open {
+        height: auto;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        .disaster-rolling-swiper {
+          height: auto;
+          max-height: 414px;
+
+          &.overflow-y {
+            overflow-y: scroll;
+          }
+
+          &::-webkit-scrollbar {
+            width: 3px;
+            border-radius: 5px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: $neutral1000;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: $white;
+          }
+
+          .swiper-wrapper {
+            .disaster-rolling-list {
+              padding-right: 20px;
+            }
+          }
+        }
+
+        .swiper-slide {
+          margin-top: 12px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
 
       .disaster-rolling-swiper {
         margin-left: 0;
@@ -819,6 +865,7 @@
           display: inline-block;
 
           .disaster-rolling-list {
+            width: 1152px;
             .rolling-message {
               line-height: 22px;
               color: $black;
@@ -826,7 +873,6 @@
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              max-width: 1152px;
             }
           }
         }
@@ -837,6 +883,10 @@
         height: 32px;
         background: url($circleArrow) center center no-repeat;
         margin-left: 60px;
+
+        &.on {
+          transform: rotateX(180deg);
+        }
       }
     }
   }

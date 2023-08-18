@@ -4,7 +4,7 @@
 
 #footer {
   .full-menu-wrapper {
-    background-color: $blue1100;
+    background-color: $white;
 
     .full-menu {
       width: 1280px;
@@ -17,14 +17,13 @@
         padding-top: 16px;
         padding-bottom: 16px;
         min-height: 480px;
-        border-right: 1px solid $neutral900;
+        border-right: 1px solid rgba(219, 219, 219, 0.4);
 
         .full-menu-links-wrapper {
           .full-menu-heading {
-            font-size: 19px;
-            line-height: 24px;
+            font-size: 18px;
+            line-height: 26px;
             font-weight: 700;
-            color: $white;
             margin-bottom: 16px;
           }
           .full-menu-links {
@@ -60,8 +59,8 @@
               }
 
               .sub-heading {
-                color: $white;
-                font-size: 15px;
+                color: $black200;
+                font-size: 14px;
                 line-height: 20px;
                 font-weight: 500;
                 display: inline-block;
@@ -70,7 +69,7 @@
               .full-menu-link {
                 font-size: 13px;
                 line-height: 18px;
-                color: $white;
+                color: $black200;
                 display: block;
 
                 &:hover {
@@ -179,6 +178,12 @@
           border-left: 1px solid $neutral300;
           border-right: 1px solid $neutral300;
 
+          &.on {
+            .arrow {
+              transform: rotateX(180deg);
+            }
+          }
+
           .btn-txt {
             font-size: 12px;
             line-height: 18px;
@@ -204,6 +209,10 @@
           border-bottom: none;
           padding: 8px 16px 0;
           display: none;
+
+          &.on {
+            display: block;
+          }
 
           .common-select-list {
             margin-bottom: 8px;

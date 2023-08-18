@@ -41,6 +41,105 @@
     }
   };
 
+  // 유튜브 라이브 뉴스 슬라이드
+  const youtubeLiveNewsSlide = () => {
+    if ($(".youtube-live-news-slide .swiper-slide").length > 2) {
+      var newsNine = new Swiper(".youtube-live-news-slide", {
+        slidesPerView: 2,
+        spaceBetween: 24,
+        slidesPerGroup: 2,
+        loopFillGroupWithBlank: true,
+        loop: true,
+        pagination: {
+          el: ".youtube-live-news-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".youtube-live-news-next",
+          prevEl: ".youtube-live-news-previous",
+        },
+      });
+    }
+  };
+
+  // K-SHorts 슬라이드
+  const kshortsSlide = () => {
+    if ($(".k-shorts-slide .swiper-slide").length > 2) {
+      var newsNine = new Swiper(".k-shorts-slide", {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        slidesPerGroup: 4,
+        loopFillGroupWithBlank: true,
+        loop: true,
+        pagination: {
+          el: ".k-shorts-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".k-shorts-next",
+          prevEl: ".k-shorts-previous",
+        },
+      });
+    }
+  };
+
+  // PremiumK 슬라이드
+  const premiumkSlide = () => {
+    if ($(".crab-slide .swiper-slide").length > 4) {
+      var newsNine = new Swiper(".crab-slide", {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        slidesPerGroup: 4,
+        loopFillGroupWithBlank: true,
+        loop: true,
+        pagination: {
+          el: ".crab-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".crab-next",
+          prevEl: ".crab-previous",
+        },
+      });
+    }
+
+    if ($(".site-video-slide .swiper-slide").length > 4) {
+      var newsNine = new Swiper(".site-video-slide", {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        slidesPerGroup: 4,
+        loopFillGroupWithBlank: true,
+        loop: true,
+        pagination: {
+          el: ".site-video-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".site-video-next",
+          prevEl: ".site-video-previous",
+        },
+      });
+    }
+
+    if ($(".breaking-news-video-slide .swiper-slide").length > 4) {
+      var newsNine = new Swiper(".breaking-news-video-slide", {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        slidesPerGroup: 4,
+        loopFillGroupWithBlank: true,
+        loop: true,
+        pagination: {
+          el: ".breaking-news-video-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".breaking-news-video-next",
+          prevEl: ".breaking-news-video-previous",
+        },
+      });
+    }
+  };
+
   // 키워드롤
   const keywordRoll = () => {
     var keywordSwiper = new Swiper(".rolling-keyword", {
@@ -101,5 +200,8 @@
     keywordRoll();
     tabClick();
     tooltipClick();
+    kshortsSlide();
+    youtubeLiveNewsSlide();
+    premiumkSlide();
   });
 })();

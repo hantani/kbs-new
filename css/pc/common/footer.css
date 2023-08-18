@@ -6,7 +6,7 @@
 /* tooltip direction */
 /* decoration */
 #footer .full-menu-wrapper {
-  background-color: #303237;
+  background-color: #fff;
 }
 #footer .full-menu-wrapper .full-menu {
   width: 1280px;
@@ -25,13 +25,12 @@
   padding-top: 16px;
   padding-bottom: 16px;
   min-height: 480px;
-  border-right: 1px solid #47494f;
+  border-right: 1px solid rgba(219, 219, 219, 0.4);
 }
 #footer .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-heading {
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 26px;
   font-weight: 700;
-  color: #fff;
   margin-bottom: 16px;
 }
 #footer .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links:nth-child(n+3) {
@@ -62,8 +61,8 @@
   margin-right: 28px;
 }
 #footer .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list .sub-heading {
-  color: #fff;
-  font-size: 15px;
+  color: #333333;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 500;
   display: inline-block;
@@ -71,7 +70,7 @@
 #footer .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list .full-menu-link {
   font-size: 13px;
   line-height: 18px;
-  color: #fff;
+  color: #333333;
   display: block;
 }
 #footer .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list .full-menu-link:hover {
@@ -197,6 +196,10 @@
   border-left: 1px solid #ebeef0;
   border-right: 1px solid #ebeef0;
 }
+#footer .footer-util-menu-wrapper .footer-util-menu .footer-common-select .footer-select-btn.on .arrow {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
 #footer .footer-util-menu-wrapper .footer-util-menu .footer-common-select .footer-select-btn .btn-txt {
   font-size: 12px;
   line-height: 18px;
@@ -219,6 +222,9 @@
   border-bottom: none;
   padding: 8px 16px 0;
   display: none;
+}
+#footer .footer-util-menu-wrapper .footer-util-menu .footer-common-select .common-select-links.on {
+  display: block;
 }
 #footer .footer-util-menu-wrapper .footer-util-menu .footer-common-select .common-select-links .common-select-list {
   margin-bottom: 8px;
