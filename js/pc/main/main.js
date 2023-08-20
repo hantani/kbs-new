@@ -219,10 +219,11 @@
   const asideFixed = () => {
     var $aside = $(".aside");
     var point = $aside.offset().top - 120;
+    var point02 = $aside.offset().top;
     $(window).on("scroll", function () {
       if ($(window).scrollTop() > point) {
         $aside.addClass("fixed");
-      } else {
+      } else if ($(window).scrollTop() < point02) {
         $aside.removeClass("fixed");
       }
     });
