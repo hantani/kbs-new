@@ -1,4 +1,15 @@
 (() => {
+  // 속보 롤링 클릭 event
+  const breakingNewsClick = () => {
+    const $btn = document.querySelector(".breaking-news.rolling .arrow-btn");
+    const $history = document.querySelector(".breaking-news-history-wrapper");
+
+    $btn.addEventListener("click", () => {
+      $btn.classList.toggle("on");
+      $history.classList.toggle("on");
+    });
+  };
+
   // 날씨 롤링 event
   const weatherRolling = () => {
     var weatherSwiper = new Swiper(".weather", {
@@ -176,16 +187,6 @@
     });
   };
 
-  // 라이브 섹션 클릭 event
-  const liveClick = () => {
-    const $btn = document.querySelector(".header-live .arrow-btn");
-
-    $btn.addEventListener("click", () => {
-      const $headerLive = $btn.parentElement;
-      $headerLive.classList.toggle("on");
-    });
-  };
-
   // 딤 화면 클릭 event
   const dimClick = () => {
     const $dim = document.querySelector(".dim");
@@ -212,6 +213,7 @@
   };
 
   window.addEventListener("load", () => {
+    breakingNewsClick();
     weatherRolling();
     disasterRolling();
     worldSelect();

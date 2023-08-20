@@ -7,6 +7,193 @@
   background-color: $lightPcBG;
   padding-top: 24px;
   padding-bottom: 24px;
+  position: relative;
+
+  &.has-live-wrapper {
+    padding-top: 0;
+
+    .aside {
+      top: 176px;
+
+      &.position-change {
+        top: 94px;
+      }
+    }
+  }
+
+  // 사이드 메뉴
+  .aside {
+    position: absolute;
+    top: 24px;
+    left: 0;
+
+    &.fixed {
+      position: fixed;
+      top: 74px;
+    }
+
+    .aside-btns {
+      width: 48px;
+      border-radius: 30px;
+      background: $white;
+      border: 1px solid $neutral300;
+      z-index: 100;
+
+      .aside-btns-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid $neutral300;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .share-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .share-icon {
+            width: 24px;
+            height: 24px;
+            background: url($share) center center no-repeat;
+          }
+          .txt {
+            font-size: 12px;
+            line-height: 14px;
+            color: $neutral800;
+            margin-top: 2px;
+          }
+        }
+
+        .txt-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .txt-icon {
+            font-size: 18px;
+            line-height: 24px;
+            color: #484848;
+            font-weight: 700;
+          }
+          .txt {
+            font-size: 12px;
+            line-height: 14px;
+            color: $neutral800;
+            margin-top: 2px;
+          }
+        }
+
+        .dark-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .dark-icon {
+            width: 24px;
+            height: 24px;
+            background: url($darkMode) center center no-repeat;
+          }
+          .txt {
+            font-size: 12px;
+            line-height: 14px;
+            color: $neutral800;
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  // 라이브 섹션
+  .header-live-wrapper {
+    background-color: $black200;
+    margin-bottom: 24px;
+
+    .header-live {
+      width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 16px 20px 20px;
+
+      .live-video {
+        .video {
+          display: none;
+        }
+        .txt-wrapper {
+          display: flex;
+          align-items: center;
+
+          .live-txt {
+            display: flex;
+            margin-right: 16px;
+
+            .red-txt {
+              font-size: 24px;
+              line-height: 32px;
+              font-weight: 700;
+              color: $secondaryRed;
+              margin-right: 3px;
+            }
+
+            .red-dot {
+              display: block;
+              width: 8px;
+              height: 8px;
+              background-color: $secondaryRed;
+              border-radius: 50%;
+              animation: liveActionTop 2s ease infinite;
+            }
+          }
+          .title {
+            color: $white;
+            font-size: 27px;
+            line-height: 32px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 930px;
+          }
+        }
+      }
+
+      .arrow-btn {
+        width: 32px;
+        height: 32px;
+        background: url($circleArrowWhite) center center no-repeat;
+        transform: rotateX(180deg);
+        margin-left: 60px;
+      }
+
+      &.on {
+        .live-video {
+          display: flex;
+          align-items: center;
+          .video {
+            margin-right: 16px;
+            border-radius: 5px;
+            width: 200px;
+            height: 112px;
+            display: block;
+          }
+          .txt-wrapper {
+            display: block;
+            position: relative;
+
+            .title {
+              margin-top: 8px;
+            }
+          }
+        }
+        .arrow-btn {
+          transform: rotateX(360deg);
+        }
+      }
+    }
+  }
 
   .box {
     width: 1280px;

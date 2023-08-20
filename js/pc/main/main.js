@@ -194,6 +194,40 @@
     });
   };
 
+  // 라이브 섹션 클릭 event
+  const liveClick = () => {
+    const $btn = document.querySelector(".header-live .arrow-btn");
+    const $aside = document.querySelector(".aside");
+
+    $btn.addEventListener("click", () => {
+      const $headerLive = $btn.parentElement;
+      $headerLive.classList.toggle("on");
+      $aside.classList.toggle("position-change");
+      asideFixed();
+    });
+  };
+
+  // 사이드 메뉴 포지션
+  const setAsidePosition = () => {
+    const $aside = document.querySelector(".aside");
+    const $headLine = document.querySelector(".head-line");
+    const left = $headLine.getBoundingClientRect().left;
+
+    $aside.style.left = `${left - 98}px`;
+  };
+
+  const asideFixed = () => {
+    var $aside = $(".aside");
+    var point = $aside.offset().top - 120;
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > point) {
+        $aside.addClass("fixed");
+      } else {
+        $aside.removeClass("fixed");
+      }
+    });
+  };
+
   window.addEventListener("load", () => {
     nineSlide();
     mainVideoSlide();
@@ -203,5 +237,8 @@
     kshortsSlide();
     youtubeLiveNewsSlide();
     premiumkSlide();
+    setAsidePosition();
+    asideFixed();
+    liveClick();
   });
 })();
