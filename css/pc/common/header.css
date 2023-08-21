@@ -56,7 +56,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 1030px;
+  max-width: 1020px;
 }
 #header .breaking-news-wrapper .breaking-news .all-link {
   display: -webkit-box;
@@ -84,6 +84,7 @@
 }
 #header .breaking-news-wrapper .breaking-news.rolling .breaking-news-swiper {
   width: calc(100% - 70px);
+  height: 20px;
 }
 #header .breaking-news-wrapper .breaking-news.rolling .breaking-news-swiper .swiper-wrapper .breaking-news-list .breaking-news-link {
   color: #fff;
@@ -303,11 +304,16 @@
   vertical-align: middle;
   display: inline-block;
 }
-#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper .weather-info-list .weather-info-txt {
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper .weather-info-list .weather-info-txt .city-name,
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper .weather-info-list .weather-info-txt .temperature,
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper .weather-info-list .weather-info-txt .weather-info {
   font-size: 13px;
   line-height: 18px;
   color: #fff;
   display: inline-block;
+}
+#header .header-top-menu-wrapper .header-top-menu .weather-login-menu .weather .swiper-wrapper .weather-info-list .weather-info-txt .temperature {
+  margin: 0 4px;
 }
 #header .header-top-menu-wrapper .header-top-menu .weather-login-menu .login,
 #header .header-top-menu-wrapper .header-top-menu .weather-login-menu .my-page {
@@ -500,6 +506,9 @@
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #bfbfbf;
 }
+#header .header-nav-wrapper.index-change {
+  z-index: 100;
+}
 #header .header-nav-wrapper.fixed {
   position: fixed;
   top: 0;
@@ -663,20 +672,14 @@
 #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links:nth-child(n+3) {
   margin-top: 16px;
 }
+#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links.has-sub-heading {
+  margin-top: 8px;
+}
 #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list {
   margin-bottom: 8px;
 }
 #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list:last-child {
   margin-bottom: 0;
-}
-#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list.has-double-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list.has-double-heading .sub-heading:first-child {
-  min-width: 130px;
-  margin-right: 28px;
 }
 #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list.has-double-link {
   display: -webkit-box;
@@ -686,13 +689,6 @@
 #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list.has-double-link .full-menu-link:first-child {
   min-width: 130px;
   margin-right: 28px;
-}
-#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list .sub-heading {
-  color: #484848;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
-  display: inline-block;
 }
 #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list .full-menu-link {
   font-size: 13px;
@@ -706,6 +702,35 @@
 #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-links .full-menu-list .full-menu-link.large-font {
   font-size: 15px;
   font-weight: 500;
+}
+#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .sub-heading-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .sub-heading-wrapper.has-margin {
+  margin-top: 16px;
+}
+#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .sub-heading-wrapper .sub-heading {
+  color: #484848;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+}
+#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .sub-heading-wrapper .sub-heading .sub-heading-link {
+  color: #484848;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+}
+#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .sub-heading-wrapper .sub-heading .sub-heading-link:hover {
+  text-decoration: underline;
+}
+#header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .sub-heading-wrapper .sub-heading:first-child {
+  min-width: 130px;
+  margin-right: 28px;
 }
 #header .header-nav-wrapper .full-menu-wrapper .full-menu .field-menu {
   width: 135px;
@@ -920,22 +945,36 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .rank-list {
+#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list {
   width: 200px;
 }
-#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .rank-list .thumbnail {
+#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link:hover .thumbnail .thumbnail-img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link:hover .title {
+  color: #2282b9;
+}
+#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link .thumbnail {
   width: 200px;
   height: 112px;
   border-radius: 5px;
   margin-bottom: 8px;
   position: relative;
+  overflow: hidden;
 }
-#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .rank-list .thumbnail .thumbnail-img {
+#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link .thumbnail .thumbnail-img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .rank-list .thumbnail .rank-badge {
+#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link .thumbnail .rank-badge {
   position: absolute;
   top: 0;
   left: 0;
@@ -955,7 +994,7 @@
           justify-content: center;
   border-radius: 5px 0 0 0;
 }
-#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .rank-list .title {
+#header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link .title {
   line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -963,6 +1002,8 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   padding: 0 4px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 #header .disaster-rolling-wrapper {
   background-color: #f4f6f8;
@@ -1030,6 +1071,15 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+#header .disaster-rolling-wrapper .disaster-rolling .disaster-rolling-swiper .swiper-wrapper .disaster-rolling-list .rolling-message .caution {
+  display: inline-block;
+  color: #f8364b;
+  line-height: 22px;
+  font-weight: 500;
+}
+#header .disaster-rolling-wrapper .disaster-rolling .disaster-rolling-swiper .swiper-wrapper .disaster-rolling-list .rolling-message .caution.off {
+  display: none;
 }
 #header .disaster-rolling-wrapper .disaster-rolling .arrow-btn {
   width: 32px;

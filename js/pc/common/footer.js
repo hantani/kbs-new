@@ -1,17 +1,17 @@
-(() => {
-  const selectClick = () => {
-    const $btns = document.querySelectorAll(".footer-select-btn");
+"use strict";
 
-    $btns.forEach(($btn) => {
-      $btn.addEventListener("click", () => {
-        const $commonSelectLinks = $btn.nextElementSibling;
+(function () {
+  var selectClick = function selectClick() {
+    var $btns = document.querySelectorAll(".footer-select-btn");
+    $btns.forEach(function ($btn) {
+      $btn.addEventListener("click", function () {
+        var $commonSelectLinks = $btn.nextElementSibling;
         $btn.classList.toggle("on");
         $commonSelectLinks.classList.toggle("on");
       });
     });
   };
-
-  window.addEventListener("load", () => {
+  window.addEventListener("load", function () {
     selectClick();
   });
 })();

@@ -1,92 +1,89 @@
-(() => {
-  // 속보 롤링 클릭 event
-  const breakingNewsClick = () => {
-    const $btn = document.querySelector(".breaking-news.rolling .arrow-btn");
-    const $history = document.querySelector(".breaking-news-history-wrapper");
+"use strict";
 
-    $btn.addEventListener("click", () => {
+(function () {
+  // 속보 롤링 클릭 event
+  var breakingNewsClick = function breakingNewsClick() {
+    var $btn = document.querySelector(".breaking-news.rolling .arrow-btn");
+    var $history = document.querySelector(".breaking-news-history-wrapper");
+    $btn.addEventListener("click", function () {
       $btn.classList.toggle("on");
       $history.classList.toggle("on");
     });
   };
 
   // 날씨 롤링 event
-  const weatherRolling = () => {
+  var weatherRolling = function weatherRolling() {
     var weatherSwiper = new Swiper(".weather", {
       direction: "vertical",
       loop: true,
       loopAdditionalSlides: 1,
       autoplay: {
         delay: 2500,
-        disableOnInteraction: false,
-      },
+        disableOnInteraction: false
+      }
     });
   };
 
   // 재난 알림 롤링 event
   var disasterSwiper;
-  const disasterRolling = () => {
+  var disasterRolling = function disasterRolling() {
     disasterSwiper = new Swiper(".disaster-rolling-swiper", {
       direction: "vertical",
       loop: true,
       loopAdditionalSlides: 1,
       autoplay: {
         delay: 2500,
-        disableOnInteraction: false,
-      },
+        disableOnInteraction: false
+      }
     });
   };
   // 재난 알림 펼침 클릭 event
-  const disasterClick = () => {
-    $(".disaster-rolling .arrow-btn")
-      .off("click")
-      .on("click", function () {
-        if ($(this).hasClass("on")) {
-          disasterRolling();
-          $(".disaster-rolling").removeClass("open");
-          $(this).removeClass("on");
-        } else {
-          disasterSwiper.destroy();
-          $(".disaster-rolling-list").removeAttr("style");
-          $(".disaster-rolling").addClass("open");
-          $(this).addClass("on");
-          if ($(".disaster-rolling .swiper-wrapper").height() > 414) {
-            $(".disaster-rolling-swiper").addClass("overflow-y");
-          }
+  var disasterClick = function disasterClick() {
+    $(".disaster-rolling .arrow-btn").off("click").on("click", function () {
+      if ($(this).hasClass("on")) {
+        disasterRolling();
+        $(".disaster-rolling").removeClass("open");
+        $(this).removeClass("on");
+      } else {
+        disasterSwiper.destroy();
+        $(".disaster-rolling-list").removeAttr("style");
+        $(".disaster-rolling").addClass("open");
+        $(this).addClass("on");
+        if ($(".disaster-rolling .swiper-wrapper").height() > 414) {
+          $(".disaster-rolling-swiper").addClass("overflow-y");
         }
-      });
+      }
+    });
   };
 
   // KBS WORLD 클릭 event
-  const worldSelect = () => {
-    const $menu = document.querySelector("#header .foreign-site-links");
-    const $btn = document.querySelector("#header .kbs-world-select-btn");
-
-    $btn.addEventListener("click", () => {
+  var worldSelect = function worldSelect() {
+    var $menu = document.querySelector("#header .foreign-site-links");
+    var $btn = document.querySelector("#header .kbs-world-select-btn");
+    $btn.addEventListener("click", function () {
       $btn.classList.toggle("on");
       $menu.classList.toggle("on");
     });
   };
 
   // 햄버거 버튼 클릭 event
-  const hamburgerClick = () => {
-    const $btn = document.querySelector(".hamburger-btn");
-    const $navMenu = document.querySelector(".header-nav");
-    const $fullMenu = document.querySelector(".full-menu-wrapper");
-    const $navLinks = document.querySelectorAll(".nav-link");
-    const $commonMenues = document.querySelectorAll(".common-menu");
-    const $dim = document.querySelector(".dim");
-
-    $btn.addEventListener("click", () => {
+  var hamburgerClick = function hamburgerClick() {
+    var $btn = document.querySelector(".hamburger-btn");
+    var $navMenu = document.querySelector(".header-nav");
+    var $fullMenu = document.querySelector(".full-menu-wrapper");
+    var $navLinks = document.querySelectorAll(".nav-link");
+    var $commonMenues = document.querySelectorAll(".common-menu");
+    var $dim = document.querySelector(".dim");
+    $btn.addEventListener("click", function () {
       if ($btn.classList.contains("on")) {
         $btn.classList.remove("on");
         $navMenu.classList.remove("on");
         $fullMenu.classList.remove("on");
         $dim.classList.remove("on");
-        $navLinks.forEach(($navLink) => {
+        $navLinks.forEach(function ($navLink) {
           $navLink.classList.remove("on");
         });
-        $commonMenues.forEach(($commonMenu) => {
+        $commonMenues.forEach(function ($commonMenu) {
           $commonMenu.classList.remove("on");
         });
       } else if (!$btn.classList.contains("on")) {
@@ -99,36 +96,31 @@
   };
 
   // 네비게이션 메뉴 클릭 event
-  const navMenuClick = () => {
-    const menuNames = ["분야별", "TV 뉴스", "프리미엄K", "시사", "지역"];
-    const $navLinks = document.querySelectorAll(".nav-link");
-    const $fullMenu = document.querySelector(".full-menu-wrapper");
-    const $dim = document.querySelector(".dim");
-    const $fullMenuNames = document.querySelectorAll(".full-menu-heading");
-    let $onNavLink;
-
-    $navLinks.forEach(($navLink) => {
-      $navLink.addEventListener("click", () => {
-        const menuName = $navLink.innerText;
+  var navMenuClick = function navMenuClick() {
+    var menuNames = ["분야별", "TV 뉴스", "프리미엄K", "시사", "지역"];
+    var $navLinks = document.querySelectorAll(".nav-link");
+    var $fullMenu = document.querySelector(".full-menu-wrapper");
+    var $dim = document.querySelector(".dim");
+    var $fullMenuNames = document.querySelectorAll(".full-menu-heading");
+    var $onNavLink = void 0;
+    $navLinks.forEach(function ($navLink) {
+      $navLink.addEventListener("click", function () {
+        var menuName = $navLink.innerText;
         if (menuNames.includes(menuName)) {
           if ($onNavLink) {
             $onNavLink.classList.remove("on");
           }
-
           $navLink.classList.add("on");
           $onNavLink = $navLink;
-
-          $fullMenuNames.forEach(($fullMenuName) => {
-            const fullMenuName = $fullMenuName.innerText;
-            const $commonMenu = $fullMenuName.parentElement.parentElement;
+          $fullMenuNames.forEach(function ($fullMenuName) {
+            var fullMenuName = $fullMenuName.innerText;
+            var $commonMenu = $fullMenuName.parentElement.parentElement;
             $commonMenu.classList.remove("on");
-
             if (fullMenuName === menuName) {
               $commonMenu.classList.add("on");
             }
           });
         }
-
         if (!$fullMenu.classList.contains("on")) {
           $fullMenu.classList.add("on");
           $dim.classList.add("on");
@@ -138,44 +130,39 @@
   };
 
   // 서치 버튼 클릭 event
-  const searchClick = () => {
-    const $btn = document.querySelector(".hamburger-search-btns .search-btn");
-    const $closeBtn = document.querySelector(".search .close-btn");
-    const $hamburgerBtn = document.querySelector(".hamburger-btn");
-    const $fullMenu = document.querySelector(".full-menu-wrapper");
-    const $navLinks = document.querySelectorAll(".nav-link");
-    const $commonMenues = document.querySelectorAll(".full-menu .common-menu");
-    const $searchMenu = document.querySelector(".search-most-view");
-    const $dim = document.querySelector(".dim");
-
-    $btn.addEventListener("click", () => {
+  var searchClick = function searchClick() {
+    var $btn = document.querySelector(".hamburger-search-btns .search-btn");
+    var $closeBtn = document.querySelector(".search .close-btn");
+    var $hamburgerBtn = document.querySelector(".hamburger-btn");
+    var $fullMenu = document.querySelector(".full-menu-wrapper");
+    var $navLinks = document.querySelectorAll(".nav-link");
+    var $commonMenues = document.querySelectorAll(".full-menu .common-menu");
+    var $searchMenu = document.querySelector(".search-most-view");
+    var $dim = document.querySelector(".dim");
+    $btn.addEventListener("click", function () {
       if ($fullMenu.classList.contains("on")) {
         $fullMenu.classList.remove("on");
       }
-
       if ($hamburgerBtn.classList.contains("on")) {
         $hamburgerBtn.classList.remove("on");
       }
-
-      $navLinks.forEach(($navLink) => {
+      $navLinks.forEach(function ($navLink) {
         $navLink.classList.remove("on");
       });
-      $commonMenues.forEach(($commonMenu) => {
+      $commonMenues.forEach(function ($commonMenu) {
         $commonMenu.classList.remove("on");
       });
-
       $searchMenu.classList.add("on");
       $dim.classList.add("on");
     });
-
-    $closeBtn.addEventListener("click", () => {
+    $closeBtn.addEventListener("click", function () {
       $searchMenu.classList.remove("on");
       $dim.classList.remove("on");
     });
   };
 
   // 스크롤시 네비게이션 메뉴 고정 event
-  const navFixed = () => {
+  var navFixed = function navFixed() {
     var menuBar = $(".header-nav-wrapper");
     var point = menuBar.offset().top;
     $(window).on("scroll", function () {
@@ -188,31 +175,42 @@
   };
 
   // 딤 화면 클릭 event
-  const dimClick = () => {
-    const $dim = document.querySelector(".dim");
-    const $searchMenu = document.querySelector(".search-most-view");
-    const $nav = document.querySelector(".header-nav");
-    const $hamburgerBtn = document.querySelector(".hamburger-btn");
-    const $fullMenu = document.querySelector(".full-menu-wrapper");
-    const $navLinks = document.querySelectorAll(".nav-link");
-    const $commonMenues = document.querySelectorAll(".common-menu");
-
-    $dim.addEventListener("click", () => {
+  var dimClick = function dimClick() {
+    var $dim = document.querySelector(".dim");
+    var $searchMenu = document.querySelector(".search-most-view");
+    var $nav = document.querySelector(".header-nav");
+    var $hamburgerBtn = document.querySelector(".hamburger-btn");
+    var $fullMenu = document.querySelector(".full-menu-wrapper");
+    var $navLinks = document.querySelectorAll(".nav-link");
+    var $commonMenues = document.querySelectorAll(".common-menu");
+    $dim.addEventListener("click", function () {
       $dim.classList.remove("on");
       $searchMenu.classList.remove("on");
       $nav.classList.remove("on");
       $hamburgerBtn.classList.remove("on");
       $fullMenu.classList.remove("on");
-      $navLinks.forEach(($navLink) => {
+      $navLinks.forEach(function ($navLink) {
         $navLink.classList.remove("on");
       });
-      $commonMenues.forEach(($commonMenu) => {
+      $commonMenues.forEach(function ($commonMenu) {
         $commonMenu.classList.remove("on");
       });
     });
   };
 
-  window.addEventListener("load", () => {
+  // 속보 롤링 event
+  var breakingNewsRolling = function breakingNewsRolling() {
+    var weatherSwiper = new Swiper(".breaking-news-swiper", {
+      direction: "vertical",
+      loop: true,
+      loopAdditionalSlides: 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      }
+    });
+  };
+  window.addEventListener("load", function () {
     breakingNewsClick();
     weatherRolling();
     disasterRolling();
@@ -221,8 +219,8 @@
     navMenuClick();
     navFixed();
     searchClick();
-    liveClick();
     dimClick();
     disasterClick();
+    breakingNewsRolling();
   });
 })();

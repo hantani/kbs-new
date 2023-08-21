@@ -1,6 +1,8 @@
-(() => {
+"use strict";
+
+(function () {
   // 뉴스9 슬라이드
-  const nineSlide = () => {
+  var nineSlide = function nineSlide() {
     if ($(".news-9-slide .swiper-slide").length > 4) {
       var newsNine = new Swiper(".news-9-slide", {
         slidesPerView: 4,
@@ -21,9 +23,9 @@
   };
 
   // 주요영상 슬라이드
-  const mainVideoSlide = () => {
+  var mainVideoSlide = function mainVideoSlide() {
     if ($(".main-video-slide .swiper-slide").length > 2) {
-      var newsNine = new Swiper(".main-video-slide", {
+      var mainVideo = new Swiper(".main-video-slide", {
         slidesPerView: 2,
         spaceBetween: 24,
         slidesPerGroup: 2,
@@ -42,7 +44,7 @@
   };
 
   // 유튜브 라이브 뉴스 슬라이드
-  const youtubeLiveNewsSlide = () => {
+  var youtubeLiveNewsSlide = function youtubeLiveNewsSlide() {
     if ($(".youtube-live-news-slide .swiper-slide").length > 2) {
       var newsNine = new Swiper(".youtube-live-news-slide", {
         slidesPerView: 2,
@@ -63,7 +65,7 @@
   };
 
   // K-SHorts 슬라이드
-  const kshortsSlide = () => {
+  var kshortsSlide = function kshortsSlide() {
     if ($(".k-shorts-slide .swiper-slide").length > 2) {
       var newsNine = new Swiper(".k-shorts-slide", {
         slidesPerView: 4,
@@ -84,7 +86,7 @@
   };
 
   // PremiumK 슬라이드
-  const premiumkSlide = () => {
+  var premiumkSlide = function premiumkSlide() {
     if ($(".crab-slide .swiper-slide").length > 4) {
       var newsNine = new Swiper(".crab-slide", {
         slidesPerView: 4,
@@ -102,7 +104,6 @@
         },
       });
     }
-
     if ($(".site-video-slide .swiper-slide").length > 4) {
       var newsNine = new Swiper(".site-video-slide", {
         slidesPerView: 4,
@@ -120,7 +121,6 @@
         },
       });
     }
-
     if ($(".breaking-news-video-slide .swiper-slide").length > 4) {
       var newsNine = new Swiper(".breaking-news-video-slide", {
         slidesPerView: 4,
@@ -141,7 +141,7 @@
   };
 
   // 키워드롤
-  const keywordRoll = () => {
+  var keywordRoll = function keywordRoll() {
     var keywordSwiper = new Swiper(".rolling-keyword", {
       direction: "vertical",
       loop: true,
@@ -154,7 +154,7 @@
   };
 
   // 탭 클릭
-  const tabClick = () => {
+  var tabClick = function tabClick() {
     $(".tab-btn")
       .off("click")
       .on("click", function () {
@@ -173,50 +173,43 @@
   };
 
   // 툴팁 클릭
-  const tooltipClick = () => {
-    const $btns = document.querySelectorAll(".tooltip-btn");
-    const $closeBtns = document.querySelectorAll(".tooltip .close-btn");
-
-    $btns.forEach(($btn) => {
-      $btn.addEventListener("click", () => {
-        const $tooptip = $btn.nextElementSibling;
-
+  var tooltipClick = function tooltipClick() {
+    var $btns = document.querySelectorAll(".tooltip-btn");
+    var $closeBtns = document.querySelectorAll(".tooltip .close-btn");
+    $btns.forEach(function ($btn) {
+      $btn.addEventListener("click", function () {
+        var $tooptip = $btn.nextElementSibling;
         $tooptip.classList.toggle("on");
       });
     });
-
-    $closeBtns.forEach(($closeBtn) => {
-      $closeBtn.addEventListener("click", () => {
-        const $tooptip = $closeBtn.parentElement;
-
+    $closeBtns.forEach(function ($closeBtn) {
+      $closeBtn.addEventListener("click", function () {
+        var $tooptip = $closeBtn.parentElement;
         $tooptip.classList.remove("on");
       });
     });
   };
 
   // 라이브 섹션 클릭 event
-  const liveClick = () => {
-    const $btn = document.querySelector(".header-live .arrow-btn");
-    const $aside = document.querySelector(".aside");
-
-    $btn.addEventListener("click", () => {
-      const $headerLive = $btn.parentElement;
+  var liveClick = function liveClick() {
+    var $btn = document.querySelector(".header-live .arrow-btn");
+    var $aside = document.querySelector(".aside");
+    $btn.addEventListener("click", function () {
+      var $headerLive = $btn.parentElement;
       $headerLive.classList.toggle("on");
       $aside.classList.toggle("position-change");
       asideFixed();
     });
   };
 
-  // 사이드 메뉴 포지션
-  const setAsidePosition = () => {
-    const $aside = document.querySelector(".aside");
-    const $headLine = document.querySelector(".head-line");
-    const left = $headLine.getBoundingClientRect().left;
-
-    $aside.style.left = `${left - 98}px`;
+  // 사이드 메뉴 위치 세팅
+  var setAsidePosition = function setAsidePosition() {
+    var $aside = document.querySelector(".aside");
+    var $headLine = document.querySelector(".head-line");
+    var left = $headLine.getBoundingClientRect().left;
+    $aside.style.left = left - 98 + "px";
   };
-
-  const asideFixed = () => {
+  var asideFixed = function asideFixed() {
     var $aside = $(".aside");
     var point = $aside.offset().top - 120;
     var point02 = $aside.offset().top;
@@ -228,8 +221,7 @@
       }
     });
   };
-
-  window.addEventListener("load", () => {
+  window.addEventListener("load", function () {
     nineSlide();
     mainVideoSlide();
     keywordRoll();
@@ -239,7 +231,10 @@
     youtubeLiveNewsSlide();
     premiumkSlide();
     setAsidePosition();
-    asideFixed();
     liveClick();
+    asideFixed();
+  });
+  window.addEventListener("resize", function () {
+    setAsidePosition();
   });
 })();

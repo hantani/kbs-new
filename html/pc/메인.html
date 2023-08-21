@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>KBS NEWS - NEW</title>
     <!-- 라이브러리 CSS -->
-    <link rel="stylesheet" href="/css/mobile/common/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/pc/common/swiper-bundle.min.css" />
     <!-- 스타일 -->
     <link rel="stylesheet" href="/css/pc/style.css" />
   </head>
@@ -103,32 +104,32 @@
               href="#"
               class="kbs-link sns-link"
               target="_blank"
-              title="새창열림"
+              title="KBS 사이트"
               >KBS</a
             >
             <a
               href="#"
               class="youtube-link sns-link"
               target="_blank"
-              title="새창열림"
+              title="KBS 뉴스 유튜브 페이지"
             ></a>
             <a
               href="#"
               class="facebook-link sns-link"
               target="_blank"
-              title="새창열림"
+              title="KBS 뉴스 페이스북 페이지"
             ></a>
             <a
               href="#"
               class="instagram-link sns-link"
               target="_blank"
-              title="새창열림"
+              title="KBS 뉴스 인스타그램 페이지"
             ></a>
             <a
               href="#"
               class="text-version-link sns-link"
               target="_blank"
-              title="새창열림"
+              title="KBS 뉴스 텍스트 버전 페이지"
               >텍스트 버전</a
             >
           </div>
@@ -139,42 +140,14 @@
                 <li class="swiper-slide weather-info-list">
                   <img
                     src="/resource/image/pc/weather/dark/cloudy.png"
-                    alt="cloudy"
+                    alt="날씨 이미지"
                     class="weather-info-img"
                   />
-                  <span class="weather-info-txt"
-                    >서울&nbsp&nbsp31.7℃&nbsp&nbsp&nbsptest1</span
-                  >
-                </li>
-                <li class="swiper-slide weather-info-list">
-                  <img
-                    src="/resource/image/pc/weather/dark/cloudy.png"
-                    alt="cloudy"
-                    class="weather-info-img"
-                  />
-                  <span class="weather-info-txt"
-                    >서울&nbsp&nbsp31.7℃&nbsp&nbsp&nbsptest2</span
-                  >
-                </li>
-                <li class="swiper-slide weather-info-list">
-                  <img
-                    src="/resource/image/pc/weather/dark/cloudy.png"
-                    alt="cloudy"
-                    class="weather-info-img"
-                  />
-                  <span class="weather-info-txt"
-                    >서울&nbsp&nbsp31.7℃&nbsp&nbsp&nbsptest3</span
-                  >
-                </li>
-                <li class="swiper-slide weather-info-list">
-                  <img
-                    src="/resource/image/pc/weather/dark/cloudy.png"
-                    alt="cloudy"
-                    class="weather-info-img"
-                  />
-                  <span class="weather-info-txt"
-                    >서울&nbsp&nbsp31.7℃&nbsp&nbsp&nbsptest4</span
-                  >
+                  <p class="weather-info-txt">
+                    <span class="city-name">서울</span>
+                    <span class="temperature">31.7℃</span>
+                    <span class="weather-info">흐림</span>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -285,11 +258,11 @@
       <div class="header-title-menu-wrapper">
         <div class="header-title-menu">
           <!-- 메시지가 있는 경우 재난 포털 링크 -->
-          <a href="#" class="disaster-portal-link" href="#">
+          <div href="#" class="disaster-portal-link" href="#">
             <span class="siren-icon"></span>
-            <span class="default-txt">재난포털</span>
-            <span class="disaster-message">강릉 산불 확산, 지역 차단</span>
-          </a>
+            <a href="#" class="default-txt">재난포털</a>
+            <a href="#" class="disaster-message">강릉 산불 확산, 지역 차단</a>
+          </div>
           <!-- 메시지가 없는 경우 재난 포털 링크 -->
           <!-- <a href="#" class="disaster-portal-link" href="#">
             <span class="default-txt">재난포털</span>
@@ -407,10 +380,10 @@
             <div class="tv-menu common-menu">
               <div class="full-menu-links-wrapper">
                 <h2 class="full-menu-heading">TV 뉴스</h2>
-                <ul class="full-menu-links">
-                  <li class="full-menu-list">
-                    <h3 class="sub-heading">1TV 뉴스</h3>
-                  </li>
+                <div class="sub-heading-wrapper">
+                  <h3 class="sub-heading">1TV 뉴스</h3>
+                </div>
+                <ul class="full-menu-links has-sub-heading">
                   <li class="full-menu-list has-double-link">
                     <a href="#" class="full-menu-link">06:00 뉴스광장 1부</a>
                     <a href="#" class="full-menu-link">17:00 뉴스 5</a>
@@ -431,11 +404,11 @@
                     <a href="#" class="full-menu-link">14:00 뉴스 2</a>
                   </li>
                 </ul>
-                <ul class="full-menu-links">
-                  <li class="full-menu-list has-double-heading">
-                    <h3 class="sub-heading">2TV 뉴스</h3>
-                    <h3 class="sub-heading">1TV 경인</h3>
-                  </li>
+                <div class="sub-heading-wrapper has-margin">
+                  <h3 class="sub-heading">2TV 뉴스</h3>
+                  <h3 class="sub-heading">1TV 경인</h3>
+                </div>
+                <ul class="full-menu-links has-sub-heading">
                   <li class="full-menu-list has-double-link">
                     <a href="#" class="full-menu-link">09:00 아침뉴스타임</a>
                     <a href="#" class="full-menu-link">뉴스광장(경인)</a>
@@ -453,20 +426,20 @@
                     <a href="#" class="full-menu-link">뉴스9(경인)</a>
                   </li>
                 </ul>
-                <ul class="full-menu-links">
-                  <li class="full-menu-list has-double-heading">
-                    <a href="#" class="full-menu-link large-font">뉴스특보</a>
-                  </li>
-                </ul>
+                <div class="sub-heading-wrapper has-margin">
+                  <h3 class="sub-heading">
+                    <a href="#" class="sub-heading-link">뉴스특보</a>
+                  </h3>
+                </div>
               </div>
             </div>
             <div class="premiumk-menu common-menu">
               <div class="full-menu-links-wrapper">
                 <h2 class="full-menu-heading">프리미엄K</h2>
-                <ul class="full-menu-links">
-                  <li class="full-menu-list">
-                    <h3 class="sub-heading">취재K</h3>
-                  </li>
+                <div class="sub-heading-wrapper">
+                  <h3 class="sub-heading">취재K</h3>
+                </div>
+                <ul class="full-menu-links has-sub-heading">
                   <li class="full-menu-list has-double-link">
                     <a href="#" class="full-menu-link">심층K</a>
                     <a href="#" class="full-menu-link">단독</a>
@@ -499,25 +472,25 @@
                     <a href="#" class="full-menu-link">스포츠K</a>
                   </li>
                 </ul>
-                <ul class="full-menu-links">
-                  <li class="full-menu-list has-double-heading">
-                    <a href="#" class="full-menu-link large-font">글로벌K</a>
-                  </li>
-                </ul>
-                <ul class="full-menu-links">
-                  <li class="full-menu-list has-double-heading">
-                    <a href="#" class="full-menu-link large-font">영상K</a>
-                  </li>
-                </ul>
+                <div class="sub-heading-wrapper has-margin">
+                  <h3 class="sub-heading">
+                    <a href="#" class="sub-heading-link">글로벌K</a>
+                  </h3>
+                </div>
+                <div class="sub-heading-wrapper has-margin">
+                  <h3 class="sub-heading">
+                    <a href="#" class="sub-heading-link">영상K</a>
+                  </h3>
+                </div>
               </div>
             </div>
             <div class="current-affairs-menu common-menu">
               <div class="full-menu-links-wrapper">
                 <h2 class="full-menu-heading">시사</h2>
-                <ul class="full-menu-links">
-                  <li class="full-menu-list">
-                    <h3 class="sub-heading">시사</h3>
-                  </li>
+                <div class="sub-heading-wrapper">
+                  <h3 class="sub-heading">시사</h3>
+                </div>
+                <ul class="full-menu-links has-sub-heading">
                   <li class="full-menu-list">
                     <a href="#" class="full-menu-link">시사기획 창</a>
                   </li>
@@ -545,10 +518,10 @@
                     <a href="#" class="full-menu-link">인사이드 경인</a>
                   </li>
                 </ul>
-                <ul class="full-menu-links">
-                  <li class="full-menu-list">
-                    <h3 class="sub-heading">라디오</h3>
-                  </li>
+                <div class="sub-heading-wrapper has-margin">
+                  <h3 class="sub-heading">라디오</h3>
+                </div>
+                <ul class="full-menu-links has-sub-heading">
                   <li class="full-menu-list">
                     <a href="#" class="full-menu-link">최경영의 최강시사</a>
                   </li>
@@ -716,83 +689,95 @@
             <div class="most-view">
               <p class="most-view-title">많이 본 뉴스</p>
               <ul class="ranks">
-                <li class="rank-list">
-                  <div class="thumbnail">
-                    <img
-                      src="/resource/image/pc/thumb_most_viewed_1.jpg"
-                      alt="test img"
-                      class="thumbnail-img"
-                    />
-                    <span class="rank-badge">1</span>
-                  </div>
-                  <p class="title">
-                    새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
-                  </p>
+                <li class="ranks-list">
+                  <a class="ranks-link" href="#">
+                    <div class="thumbnail">
+                      <img
+                        src="/resource/image/pc/thumb_most_viewed_1.jpg"
+                        alt="test img"
+                        class="thumbnail-img"
+                      />
+                      <span class="rank-badge">1</span>
+                    </div>
+                    <p class="title">
+                      새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
+                    </p>
+                  </a>
                 </li>
-                <li class="rank-list">
-                  <div class="thumbnail">
-                    <img
-                      src="/resource/image/pc/thumb_most_viewed_1.jpg"
-                      alt="test img"
-                      class="thumbnail-img"
-                    />
-                    <span class="rank-badge">2</span>
-                  </div>
-                  <p class="title">
-                    새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
-                  </p>
+                <li class="ranks-list">
+                  <a href="#" class="ranks-link">
+                    <div class="thumbnail">
+                      <img
+                        src="/resource/image/pc/thumb_most_viewed_1.jpg"
+                        alt="test img"
+                        class="thumbnail-img"
+                      />
+                      <span class="rank-badge">2</span>
+                    </div>
+                    <p class="title">
+                      새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
+                    </p>
+                  </a>
                 </li>
-                <li class="rank-list">
-                  <div class="thumbnail">
-                    <img
-                      src="/resource/image/pc/thumb_most_viewed_1.jpg"
-                      alt="test img"
-                      class="thumbnail-img"
-                    />
-                    <span class="rank-badge">3</span>
-                  </div>
-                  <p class="title">
-                    새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
-                  </p>
+                <li class="ranks-list">
+                  <a href="#" class="ranks-link">
+                    <div class="thumbnail">
+                      <img
+                        src="/resource/image/pc/thumb_most_viewed_1.jpg"
+                        alt="test img"
+                        class="thumbnail-img"
+                      />
+                      <span class="rank-badge">3</span>
+                    </div>
+                    <p class="title">
+                      새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
+                    </p>
+                  </a>
                 </li>
-                <li class="rank-list">
-                  <div class="thumbnail">
-                    <img
-                      src="/resource/image/pc/thumb_most_viewed_1.jpg"
-                      alt="test img"
-                      class="thumbnail-img"
-                    />
-                    <span class="rank-badge">4</span>
-                  </div>
-                  <p class="title">
-                    새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
-                  </p>
+                <li class="ranks-list">
+                  <a href="#" class="ranks-link">
+                    <div class="thumbnail">
+                      <img
+                        src="/resource/image/pc/thumb_most_viewed_1.jpg"
+                        alt="test img"
+                        class="thumbnail-img"
+                      />
+                      <span class="rank-badge">4</span>
+                    </div>
+                    <p class="title">
+                      새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
+                    </p>
+                  </a>
                 </li>
-                <li class="rank-list">
-                  <div class="thumbnail">
-                    <img
-                      src="/resource/image/pc/thumb_most_viewed_1.jpg"
-                      alt="test img"
-                      class="thumbnail-img"
-                    />
-                    <span class="rank-badge">5</span>
-                  </div>
-                  <p class="title">
-                    새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
-                  </p>
+                <li class="ranks-list">
+                  <a href="#" class="ranks-link">
+                    <div class="thumbnail">
+                      <img
+                        src="/resource/image/pc/thumb_most_viewed_1.jpg"
+                        alt="test img"
+                        class="thumbnail-img"
+                      />
+                      <span class="rank-badge">5</span>
+                    </div>
+                    <p class="title">
+                      새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
+                    </p>
+                  </a>
                 </li>
-                <li class="rank-list">
-                  <div class="thumbnail">
-                    <img
-                      src="/resource/image/pc/thumb_most_viewed_1.jpg"
-                      alt="test img"
-                      class="thumbnail-img"
-                    />
-                    <span class="rank-badge">6</span>
-                  </div>
-                  <p class="title">
-                    새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
-                  </p>
+                <li class="ranks-list">
+                  <a href="#" class="ranks-link">
+                    <div class="thumbnail">
+                      <img
+                        src="/resource/image/pc/thumb_most_viewed_1.jpg"
+                        alt="test img"
+                        class="thumbnail-img"
+                      />
+                      <span class="rank-badge">6</span>
+                    </div>
+                    <p class="title">
+                      새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
+                    </p>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -806,6 +791,7 @@
             <ul class="swiper-wrapper">
               <li class="swiper-slide disaster-rolling-list">
                 <p class="rolling-message">
+                  <span class="caution">[주의]</span>
                   재난안내 문자입니다. test1재난안내 문자입니다. test1재난안내
                   문자입니다. test1재난안내 문자입니다. test1재난안내
                   문자입니다. test1재난안내 문자입니다. test1재난안내
@@ -820,16 +806,26 @@
                 </p>
               </li>
               <li class="swiper-slide disaster-rolling-list">
-                <p class="rolling-message">재난안내 문자입니다. test2</p>
+                <p class="rolling-message">
+                  <span class="caution">[주의]</span>
+                  재난안내 문자입니다. test2
+                </p>
               </li>
               <li class="swiper-slide disaster-rolling-list">
-                <p class="rolling-message">재난안내 문자입니다. test3</p>
+                <p class="rolling-message">
+                  <span class="caution">[주의]</span>
+                  재난안내 문자입니다. test3
+                </p>
               </li>
               <li class="swiper-slide disaster-rolling-list">
-                <p class="rolling-message">재난안내 문자입니다. test4</p>
+                <p class="rolling-message">
+                  <span class="caution">[주의]</span>재난안내 문자입니다. test4
+                </p>
               </li>
               <li class="swiper-slide disaster-rolling-list">
-                <p class="rolling-message">재난안내 문자입니다. test5</p>
+                <p class="rolling-message">
+                  <span class="caution">[주의]</span>재난안내 문자입니다. test5
+                </p>
               </li>
             </ul>
           </div>
@@ -848,28 +844,6 @@
     </header>
     <!-- 컨텐츠 메뉴 -->
     <main id="contents" class="has-live-wrapper">
-      <aside class="aside">
-        <ul class="aside-btns">
-          <li class="share-btn-wrapper aside-btns-list">
-            <button type="button" class="share-btn">
-              <span class="share-icon"></span>
-              <span clas="txt">공유</span>
-            </button>
-          </li>
-          <li class="txt-btn-wrapper aside-btns-list">
-            <button type="button" class="txt-btn">
-              <span class="txt-icon">가</span>
-              <span class="txt">확대</span>
-            </button>
-          </li>
-          <li class="dark-btn-wrapper aside-btns-list">
-            <button type="button" class="dark-btn">
-              <span class="dark-icon"></span>
-              <span class="txt">다크<br />모드</span>
-            </button>
-          </li>
-        </ul>
-      </aside>
       <!-- 라이브 섹션 -->
       <div class="header-live-wrapper">
         <div class="header-live on">
@@ -909,7 +883,7 @@
       </div>
       <div class="box head-line">
         <div class="box-title">
-          <p class="title">헤드라인</p>
+          <h4 class="title">헤드라인</h4>
           <p class="sub-title">KBS 뉴스의 빠르고 정확한 헤드라인 뉴스</p>
         </div>
         <div class="box-contents">
@@ -1010,7 +984,7 @@
       </div>
       <div class="box k-recommend-news">
         <div class="box-title">
-          <p class="title">K-추천 뉴스</p>
+          <h4 class="title">K-추천 뉴스</h4>
           <p class="sub-title">KBS 뉴스가 추천하는 오늘의 핵심 뉴스</p>
         </div>
         <div class="box-contents">
@@ -1168,7 +1142,7 @@
       </div>
       <div class="box news-9 no-padding">
         <div class="box-title space-between has-side-padding">
-          <p class="title">뉴스 9 방송 다시보기</p>
+          <h4 class="title">뉴스 9 방송 다시보기</h4>
           <a href="#" class="look-more">
             <span class="txt">더보기</span>
             <span class="plus-btn"></span>
@@ -1209,120 +1183,6 @@
                 <div class="txt-wrapper">
                   <p class="title normal-weight">
                     “5년간 피땀 포기할 순 없잖아요” 승마 국가대표의 한숨
-                    [취재후]
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide">
-              <a class="box-content video-content" href="#" role="button">
-                <div class="thumbnail width-294">
-                  <img
-                    class="img"
-                    src="/resource/image/pc/thum_nine.jpg"
-                    alt="test image"
-                  />
-                  <span class="play-icon"></span>
-                  <span class="play-time">2:30</span>
-                </div>
-                <div class="txt-wrapper">
-                  <p class="title normal-weight">
-                    “5년간 피땀 포기할 순 없잖아요” 승마 국가대표의 한숨
-                    [취재후]
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide">
-              <a class="box-content video-content" href="#" role="button">
-                <div class="thumbnail width-294">
-                  <img
-                    class="img"
-                    src="/resource/image/pc/thum_nine.jpg"
-                    alt="test image"
-                  />
-                  <span class="play-icon"></span>
-                  <span class="play-time">2:30</span>
-                </div>
-                <div class="txt-wrapper">
-                  <p class="title normal-weight">
-                    “5년간 피땀 포기할 순 없잖아요” 승마 국가대표의 한숨
-                    [취재후]
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide">
-              <a class="box-content video-content" href="#" role="button">
-                <div class="thumbnail width-294">
-                  <img
-                    class="img"
-                    src="/resource/image/pc/thum_nine.jpg"
-                    alt="test image"
-                  />
-                  <span class="play-icon"></span>
-                  <span class="play-time">2:30</span>
-                </div>
-                <div class="txt-wrapper">
-                  <p class="title normal-weight">
-                    “5년간 피땀 포기할 순 없잖아요” 승마 국가대표의 한숨
-                    [취재후]
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide">
-              <a class="box-content video-content" href="#" role="button">
-                <div class="thumbnail width-294">
-                  <img
-                    class="img"
-                    src="/resource/image/pc/thum_nine.jpg"
-                    alt="test image"
-                  />
-                  <span class="play-icon"></span>
-                  <span class="play-time">2:30</span>
-                </div>
-                <div class="txt-wrapper">
-                  <p class="title normal-weight">
-                    “5년간 피땀 포기할 순 없잖아요” 승마 국가대표의 한숨
-                    [취재후]
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide">
-              <a class="box-content video-content" href="#" role="button">
-                <div class="thumbnail width-294">
-                  <img
-                    class="img"
-                    src="/resource/image/pc/thum_nine.jpg"
-                    alt="test image"
-                  />
-                  <span class="play-icon"></span>
-                  <span class="play-time">2:30</span>
-                </div>
-                <div class="txt-wrapper">
-                  <p class="title normal-weight">
-                    “1년간 피땀 포기할 순 없잖아요” 승마 국가대표의 한숨
-                    [취재후]
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="swiper-slide">
-              <a class="box-content video-content" href="#" role="button">
-                <div class="thumbnail width-294">
-                  <img
-                    class="img"
-                    src="/resource/image/pc/thum_nine.jpg"
-                    alt="test image"
-                  />
-                  <span class="play-icon"></span>
-                  <span class="play-time">2:30</span>
-                </div>
-                <div class="txt-wrapper">
-                  <p class="title normal-weight">
-                    “1년간 피땀 포기할 순 없잖아요” 승마 국가대표의 한숨
                     [취재후]
                   </p>
                 </div>
@@ -1395,7 +1255,7 @@
       <div class="issue-main-video half-box-wrapper">
         <div class="box half-box no-padding issue">
           <div class="box-title space-between has-side-padding">
-            <p class="title">ISSUE</p>
+            <h4 class="title">ISSUE</h4>
             <ul class="tab-btns type-01" data-tab-contents="issue">
               <li class="tab-btns-list on">
                 <button type="button" class="tab-btn">#공영방송_수신료</button>
@@ -1492,7 +1352,7 @@
         </div>
         <div class="box half-box no-padding main-video">
           <div class="box-title has-side-padding">
-            <p class="title">주요영상</p>
+            <h4 class="title">주요영상</h4>
           </div>
           <div class="main-video-slide swiper has-padding">
             <ul class="swiper-wrapper">
@@ -1603,7 +1463,7 @@
       <div class="recent-most-viewed half-box-wrapper">
         <div class="box half-box recent-news">
           <div class="box-title">
-            <p class="title">최신 뉴스</p>
+            <h4 class="title">최신 뉴스</h4>
           </div>
           <div class="box-contents">
             <a href="#" class="box-content has-border">
@@ -1654,7 +1514,7 @@
         <div class="box half-box most-viewed">
           <div class="box-title space-between">
             <div class="title-wrapper has-tooltip">
-              <p class="title">많이 본 뉴스</p>
+              <h4 class="title">많이 본 뉴스</h4>
               <div class="tooltip-wrapper">
                 <button type="button" class="tooltip-btn"></button>
                 <div class="tooltip">
@@ -2037,7 +1897,7 @@
       <div class="shorts-youtube half-box-wrapper">
         <div class="k-shorts box half-box no-padding">
           <div class="box-title has-side-padding">
-            <p class="title">K-Shorts</p>
+            <h4 class="title">K-Shorts</h4>
             <p class="sub-title">KBS 뉴스가 전달하는 짧게 보는 뉴스입니다.</p>
           </div>
           <div class="k-shorts-slide swiper has-padding">
@@ -2154,7 +2014,7 @@
         </div>
         <div class="youtube-live-news box half-box no-padding">
           <div class="box-title has-side-padding">
-            <p class="title">유튜브 LIVE 뉴스</p>
+            <h4 class="title">유튜브 LIVE 뉴스</h4>
             <p class="sub-title">
               실시간 뉴스를 빠르고 생성하게 전달해 드립니다.
             </p>
@@ -2253,7 +2113,7 @@
         <div class="premium-k box no-padding">
           <div class="box-title space-between has-side-padding">
             <div class="title-wrapper">
-              <p class="title">프리미엄K</p>
+              <h4 class="title">프리미엄K</h4>
               <p class="sub-title">KBS 뉴스가 선별한 특별한 뉴스</p>
             </div>
             <div class="tab-btns-look-more">
@@ -2801,7 +2661,7 @@
       </div>
       <div class="sports box">
         <div class="box-title space-between">
-          <p class="title">스포츠</p>
+          <h4 class="title">스포츠</h4>
           <a href="#" class="look-more">
             <span class="txt">더보기</span>
             <span class="plus-btn"></span>
@@ -2902,7 +2762,7 @@
       </div>
       <div class="entertainment box">
         <div class="box-title space-between">
-          <p class="title">연예</p>
+          <h4 class="title">연예</h4>
           <a href="#" class="look-more">
             <span class="txt">더보기</span>
             <span class="plus-btn"></span>
@@ -3003,7 +2863,7 @@
       </div>
       <div class="nationwide-news box">
         <div class="box-title space-between">
-          <p class="title">전국뉴스</p>
+          <h4 class="title">전국뉴스</h4>
           <ul class="tab-btns type-02" data-tab-contents="nationwide-news">
             <li class="tab-btns-list on">
               <button type="button" class="tab-btn">전체</button>
@@ -4523,6 +4383,105 @@
     </main>
     <!-- 푸터 -->
     <footer id="footer">
+      <aside class="aside">
+        <ul class="aside-btns">
+          <li class="share-btn-wrapper aside-btns-list">
+            <button type="button" class="share-btn">
+              <span class="share-icon"></span>
+              <span class="txt">공유</span>
+            </button>
+          </li>
+          <li class="txt-btn-wrapper aside-btns-list">
+            <button type="button" class="txt-btn">
+              <span class="txt-icon">가</span>
+              <span class="txt">확대</span>
+              <span class="arrow-icon"></span>
+            </button>
+            <ul class="txt-menu">
+              <li class="txt-menu-list">
+                <button class="txt-menu-btn large" type="button">
+                  <span class="txt-sample">가</span>
+                  <span class="title">확대</span>
+                </button>
+              </li>
+              <li class="txt-menu-list">
+                <button class="txt-menu-btn normal" type="button">
+                  <span class="txt-sample">가</span>
+                  <span class="title">기본</span>
+                </button>
+              </li>
+              <li class="txt-menu-list">
+                <button class="txt-menu-btn small" type="button">
+                  <span class="txt-sample">가</span>
+                  <span class="title">축소</span>
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li class="dark-btn-wrapper aside-btns-list">
+            <button type="button" class="dark-btn">
+              <span class="dark-icon"></span>
+              <span class="txt">다크<br />모드</span>
+            </button>
+          </li>
+        </ul>
+      </aside>
+      <!-- 공유 메뉴 -->
+      <div class="share-menu">
+        <div class="title-wrapper">
+          <p class="title">공유하기</p>
+          <button type="button" class="close-btn"></button>
+        </div>
+        <div class="share-links-copy">
+          <ul class="share-links">
+            <li class="share-links-list">
+              <button type="button" class="share-link">
+                <span class="share-icon facebook-icon"></span>
+                <span class="txt">페이스북</span>
+              </button>
+            </li>
+            <li class="share-links-list">
+              <button type="button" class="share-link">
+                <span class="share-icon twitter-icon"></span>
+                <span class="txt">트위터</span>
+              </button>
+            </li>
+            <li class="share-links-list">
+              <button type="button" class="share-link">
+                <span class="share-icon kakao-icon"></span>
+                <span class="txt">카카오톡</span>
+              </button>
+            </li>
+            <li class="share-links-list">
+              <button type="button" class="share-link">
+                <span class="share-icon story-icon"></span>
+                <span class="txt">카카오스토리</span>
+              </button>
+            </li>
+            <li class="share-links-list">
+              <button type="button" class="share-link">
+                <span class="share-icon blog-icon"></span>
+                <span class="txt">네이버블로그</span>
+              </button>
+            </li>
+            <li class="share-links-list">
+              <button type="button" class="share-link">
+                <span class="share-icon band-icon"></span>
+                <span class="txt">네이버밴드</span>
+              </button>
+            </li>
+          </ul>
+          <div class="copy-input">
+            <input
+              readonly
+              type="text"
+              class="input"
+              value="https://news.kbs.co.kr/news/view.do?ncd=7703424"
+            />
+            <button type="button" class="copy-btn">링크복사</button>
+          </div>
+        </div>
+      </div>
       <div class="full-menu-wrapper">
         <div class="full-menu">
           <div class="field-menu common-menu">
@@ -4574,10 +4533,10 @@
           <div class="tv-menu common-menu">
             <div class="full-menu-links-wrapper">
               <h2 class="full-menu-heading">TV 뉴스</h2>
-              <ul class="full-menu-links">
-                <li class="full-menu-list">
-                  <h3 class="sub-heading">1TV 뉴스</h3>
-                </li>
+              <div class="sub-heading-wrapper">
+                <h3 class="sub-heading">1TV 뉴스</h3>
+              </div>
+              <ul class="full-menu-links has-sub-heading">
                 <li class="full-menu-list has-double-link">
                   <a href="#" class="full-menu-link">06:00 뉴스광장 1부</a>
                   <a href="#" class="full-menu-link">17:00 뉴스 5</a>
@@ -4598,11 +4557,11 @@
                   <a href="#" class="full-menu-link">14:00 뉴스 2</a>
                 </li>
               </ul>
-              <ul class="full-menu-links">
-                <li class="full-menu-list has-double-heading">
-                  <h3 class="sub-heading">2TV 뉴스</h3>
-                  <h3 class="sub-heading">1TV 경인</h3>
-                </li>
+              <div class="sub-heading-wrapper has-margin">
+                <h3 class="sub-heading">2TV 뉴스</h3>
+                <h3 class="sub-heading">1TV 경인</h3>
+              </div>
+              <ul class="full-menu-links has-sub-heading">
                 <li class="full-menu-list has-double-link">
                   <a href="#" class="full-menu-link">09:00 아침뉴스타임</a>
                   <a href="#" class="full-menu-link">뉴스광장(경인)</a>
@@ -4620,20 +4579,20 @@
                   <a href="#" class="full-menu-link">뉴스9(경인)</a>
                 </li>
               </ul>
-              <ul class="full-menu-links">
-                <li class="full-menu-list has-double-heading">
-                  <a href="#" class="full-menu-link large-font">뉴스특보</a>
-                </li>
-              </ul>
+              <div class="sub-heading-wrapper has-margin">
+                <h3 class="sub-heading">
+                  <a href="#" class="sub-heading-link">뉴스특보</a>
+                </h3>
+              </div>
             </div>
           </div>
           <div class="premiumk-menu common-menu">
             <div class="full-menu-links-wrapper">
               <h2 class="full-menu-heading">프리미엄K</h2>
-              <ul class="full-menu-links">
-                <li class="full-menu-list">
-                  <h3 class="sub-heading">취재K</h3>
-                </li>
+              <div class="sub-heading-wrapper">
+                <h3 class="sub-heading">취재K</h3>
+              </div>
+              <ul class="full-menu-links has-sub-heading">
                 <li class="full-menu-list has-double-link">
                   <a href="#" class="full-menu-link">심층K</a>
                   <a href="#" class="full-menu-link">단독</a>
@@ -4666,25 +4625,25 @@
                   <a href="#" class="full-menu-link">스포츠K</a>
                 </li>
               </ul>
-              <ul class="full-menu-links">
-                <li class="full-menu-list has-double-heading">
-                  <a href="#" class="full-menu-link large-font">글로벌K</a>
-                </li>
-              </ul>
-              <ul class="full-menu-links">
-                <li class="full-menu-list has-double-heading">
-                  <a href="#" class="full-menu-link large-font">영상K</a>
-                </li>
-              </ul>
+              <div class="sub-heading-wrapper has-margin">
+                <h3 class="sub-heading">
+                  <a href="#" class="sub-heading-link">글로벌K</a>
+                </h3>
+              </div>
+              <div class="sub-heading-wrapper has-margin">
+                <h3 class="sub-heading">
+                  <a href="#" class="sub-heading-link">영상K</a>
+                </h3>
+              </div>
             </div>
           </div>
           <div class="current-affairs-menu common-menu">
             <div class="full-menu-links-wrapper">
               <h2 class="full-menu-heading">시사</h2>
-              <ul class="full-menu-links">
-                <li class="full-menu-list">
-                  <h3 class="sub-heading">시사</h3>
-                </li>
+              <div class="sub-heading-wrapper">
+                <h3 class="sub-heading">시사</h3>
+              </div>
+              <ul class="full-menu-links has-sub-heading">
                 <li class="full-menu-list">
                   <a href="#" class="full-menu-link">시사기획 창</a>
                 </li>
@@ -4710,10 +4669,10 @@
                   <a href="#" class="full-menu-link">인사이드 경인</a>
                 </li>
               </ul>
-              <ul class="full-menu-links">
-                <li class="full-menu-list">
-                  <h3 class="sub-heading">라디오</h3>
-                </li>
+              <div class="sub-heading-wrapper has-margin">
+                <h3 class="sub-heading">라디오</h3>
+              </div>
+              <ul class="full-menu-links has-sub-heading">
                 <li class="full-menu-list">
                   <a href="#" class="full-menu-link">최경영의 최강시사</a>
                 </li>
@@ -4929,7 +4888,8 @@
     src="/resource/module/swiper-bundle/swiper-bundle.min.js"
   ></script>
   <!-- 인터랙션 script -->
-  <script type="text/javascript" src="/js/pc/common/header.js"></script>
-  <script type="text/javascript" src="/js/pc/common/footer.js"></script>
-  <script type="text/javascript" src="/js/pc/main/main.js"></script>
+  <script type="text/javascript" src="/js/pc/common/header-es6.js"></script>
+  <script type="text/javascript" src="/js/pc/common/footer-es6.js"></script>
+  <script type="text/javascript" src="/js/pc/common/common-es6.js"></script>
+  <script type="text/javascript" src="/js/pc/main/main-es6.js"></script>
 </html>

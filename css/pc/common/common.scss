@@ -15,6 +15,10 @@
   display: none;
   z-index: 100;
 
+  &.transparent {
+    opacity: 0;
+  }
+
   &.on {
     display: block;
   }

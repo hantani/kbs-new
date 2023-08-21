@@ -15,114 +15,6 @@
 #contents.has-live-wrapper {
   padding-top: 0;
 }
-#contents.has-live-wrapper .aside {
-  top: 176px;
-}
-#contents.has-live-wrapper .aside.position-change {
-  top: 94px;
-}
-#contents .aside {
-  position: absolute;
-  top: 24px;
-  left: 0;
-}
-#contents .aside.fixed {
-  position: fixed;
-  top: 74px;
-}
-#contents .aside .aside-btns {
-  width: 48px;
-  border-radius: 30px;
-  background: #fff;
-  border: 1px solid #ebeef0;
-  z-index: 100;
-}
-#contents .aside .aside-btns .aside-btns-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 16px 0;
-  border-bottom: 1px solid #ebeef0;
-}
-#contents .aside .aside-btns .aside-btns-list:last-child {
-  border-bottom: none;
-}
-#contents .aside .aside-btns .aside-btns-list .share-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-#contents .aside .aside-btns .aside-btns-list .share-btn .share-icon {
-  width: 24px;
-  height: 24px;
-  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 9C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6C15 7.65685 16.3431 9 18 9Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 15C7.65685 15 9 13.6569 9 12C9 10.3431 7.65685 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.3431 15 15 16.3431 15 18C15 19.6569 16.3431 21 18 21Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.58984 13.51L15 17.0002' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5 7.50024L8.58984 10.49' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
-}
-#contents .aside .aside-btns .aside-btns-list .share-btn .txt {
-  font-size: 12px;
-  line-height: 14px;
-  color: #484848;
-  margin-top: 2px;
-}
-#contents .aside .aside-btns .aside-btns-list .txt-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-#contents .aside .aside-btns .aside-btns-list .txt-btn .txt-icon {
-  font-size: 18px;
-  line-height: 24px;
-  color: #484848;
-  font-weight: 700;
-}
-#contents .aside .aside-btns .aside-btns-list .txt-btn .txt {
-  font-size: 12px;
-  line-height: 14px;
-  color: #484848;
-  margin-top: 2px;
-}
-#contents .aside .aside-btns .aside-btns-list .dark-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-#contents .aside .aside-btns .aside-btns-list .dark-btn .dark-icon {
-  width: 24px;
-  height: 24px;
-  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.9999 12.79C20.8426 14.4922 20.2038 16.1144 19.1581 17.4668C18.1125 18.8192 16.7034 19.8458 15.0956 20.4265C13.4878 21.0073 11.7479 21.1181 10.0794 20.7461C8.41092 20.3741 6.8829 19.5345 5.67413 18.3258C4.46536 17.117 3.62584 15.589 3.25381 13.9205C2.88178 12.252 2.99262 10.5121 3.57336 8.9043C4.15411 7.29651 5.18073 5.88737 6.53311 4.84175C7.8855 3.79614 9.5077 3.15731 11.2099 3C10.2133 4.34827 9.73375 6.00945 9.85843 7.68141C9.98312 9.35338 10.7038 10.9251 11.8893 12.1106C13.0748 13.2961 14.6465 14.0168 16.3185 14.1415C17.9905 14.2662 19.6516 13.7866 20.9999 12.79Z' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
-}
-#contents .aside .aside-btns .aside-btns-list .dark-btn .txt {
-  font-size: 12px;
-  line-height: 14px;
-  color: #484848;
-  margin-top: 2px;
-}
 #contents .header-live-wrapper {
   background-color: #333333;
   margin-bottom: 24px;
@@ -1015,7 +907,7 @@
   margin-top: 24px;
   background-color: #303237;
   border-radius: 10px 0 0 10px;
-  padding: 0 135px 0 100px;
+  padding: 0 120px 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
