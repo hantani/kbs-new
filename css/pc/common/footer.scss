@@ -308,9 +308,14 @@
   }
   // 사이드 메뉴
   .aside {
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 100;
+
+    &.fixed {
+      position: fixed;
+      top: 74px !important;
+    }
 
     .aside-btns {
       width: 48px;
@@ -353,26 +358,31 @@
           align-items: center;
           position: relative;
 
-          &.normal-txt {
-            .txt-icon {
-              font-size: 14px;
-              line-height: 20px;
-              font-weight: 500;
-            }
-          }
+          .txt-icon-wrapper {
+            width: 17px;
+            height: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-          &.small-txt {
             .txt-icon {
-              font-size: 13px;
-              line-height: 18px;
+              display: block;
+              &.large {
+                width: 16px;
+                height: 17px;
+                background: url($txtLarge) center center no-repeat;
+              }
+              &.normal {
+                width: 12px;
+                height: 13px;
+                background: url($txtNormal) center center no-repeat;
+              }
+              &.small {
+                width: 11px;
+                height: 12px;
+                background: url($txtSmall) center center no-repeat;
+              }
             }
-          }
-
-          .txt-icon {
-            font-size: 18px;
-            line-height: 24px;
-            color: $neutral800;
-            font-weight: 700;
           }
           .txt {
             font-size: 12px;
@@ -446,32 +456,48 @@
               &:hover {
                 background-color: $blue500;
 
-                .txt-sample,
+                .txt-icon-wrapper {
+                  .txt-icon {
+                    &.large {
+                      background: url($txtLargeOn) center center no-repeat;
+                    }
+                    &.normal {
+                      background: url($txtNormalOn) center center no-repeat;
+                    }
+                    &.small {
+                      background: url($txtSmallOn) center center no-repeat;
+                    }
+                  }
+                }
+
                 .title {
                   color: $white;
                 }
               }
 
-              &.large {
-                .txt-sample {
-                  font-size: 18px;
-                  line-height: 24px;
-                  font-weight: 700;
-                }
-              }
-
-              &.normal {
-                .txt-sample {
-                  font-size: 14px;
-                  line-height: 20px;
-                  font-weight: 500;
-                }
-              }
-
-              &.small {
-                .txt-sample {
-                  font-size: 13px;
-                  line-height: 18px;
+              .txt-icon-wrapper {
+                width: 17px;
+                height: 17px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .txt-icon {
+                  display: block;
+                  &.large {
+                    width: 16px;
+                    height: 17px;
+                    background: url($txtLarge) center center no-repeat;
+                  }
+                  &.normal {
+                    width: 12px;
+                    height: 13px;
+                    background: url($txtNormal) center center no-repeat;
+                  }
+                  &.small {
+                    width: 11px;
+                    height: 12px;
+                    background: url($txtSmall) center center no-repeat;
+                  }
                 }
               }
 

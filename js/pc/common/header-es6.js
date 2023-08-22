@@ -49,6 +49,9 @@
           disasterRolling();
           $(".disaster-rolling").removeClass("open");
           $(this).removeClass("on");
+          $(".rolling-message").each(function (index, el) {
+            $(el).removeClass("open");
+          });
           $(".rolling-message .caution").each(function (index, el) {
             $(el).removeClass("off");
           });
@@ -57,6 +60,9 @@
           $(".disaster-rolling-list").removeAttr("style");
           $(".disaster-rolling").addClass("open");
           $(this).addClass("on");
+          $(".rolling-message").each(function (index, el) {
+            $(el).addClass("open");
+          });
           $(".rolling-message .caution").each(function (index, el) {
             $(el).addClass("off");
           });

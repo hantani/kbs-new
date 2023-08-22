@@ -120,19 +120,47 @@
         justify-content: space-between;
 
         .histories {
-          width: calc(100% - 200px);
+          width: calc(100% - 210px);
 
           .history-list {
             display: flex;
             align-items: center;
             margin-bottom: 12px;
+            height: 40px;
 
-            .txt {
-              font-weight: 500;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              width: calc(100% - 80px);
+            .txt-wrapper {
+              display: flex;
+              align-items: center;
+              position: relative;
+              height: 100%;
+
+              &::after {
+                content: "";
+                width: 0.5px;
+                height: 40px;
+                display: block;
+                background-color: rgba(235, 248, 240, 0.5);
+                position: absolute;
+                top: calc(50% + 6px);
+                left: 21px;
+              }
+
+              .txt {
+                font-weight: 500;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                position: relative;
+                width: calc(100% - 44px);
+              }
+              .circle {
+                margin: 0 16px;
+                width: 12px;
+                height: 12px;
+                background: url($breakingDot) center center no-repeat;
+              }
             }
             .time,
             .txt {
@@ -140,37 +168,21 @@
               line-height: 20px;
               color: rgba(255, 255, 255, 0.7);
             }
-            .circle {
-              margin: 0 16px;
-              width: 12px;
-              height: 12px;
-              background: url($breakingDot) center center no-repeat;
-              position: relative;
-
-              &::after {
-                content: "";
-                width: 0.5px;
-                height: 20px;
-                display: block;
-                background-color: rgba(235, 248, 240, 0.5);
-                position: absolute;
-                top: 12px;
-                left: 50%;
-                transform: translateX(-50%);
-              }
-            }
 
             &:last-child {
               margin-bottom: 0;
+              .txt-wrapper {
+                &::after {
+                  display: none;
+                }
+              }
+
               .time,
               .txt {
                 color: $white;
               }
               .circle {
                 background: url($breakingDot2) center center no-repeat;
-                &::after {
-                  display: none;
-                }
               }
             }
           }
@@ -292,6 +304,7 @@
           }
         }
         .login,
+        .register,
         .my-page {
           color: $neutral400;
           font-size: 13px;
@@ -1022,12 +1035,6 @@
           &::-webkit-scrollbar-track {
             background-color: $white;
           }
-
-          .swiper-wrapper {
-            .disaster-rolling-list {
-              padding-right: 20px;
-            }
-          }
         }
 
         .swiper-slide {
@@ -1054,14 +1061,22 @@
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
+
+              &.open {
+                white-space: initial;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
               .caution {
                 display: inline-block;
                 color: $secondaryRed;
                 line-height: 22px;
                 font-weight: 500;
+                margin-right: 5px;
 
                 &.off {
-                  display: none;
+                  color: $black;
                 }
               }
             }

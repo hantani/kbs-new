@@ -11,9 +11,9 @@
     });
   };
 
-  // 날씨 롤링 event
-  var weatherRolling = function weatherRolling() {
-    var weatherSwiper = new Swiper(".weather", {
+  // 수직 롤링 함수
+  var verticalRollingFn = function verticalRollingFn(swiper) {
+    var retrunValue = new Swiper(swiper, {
       direction: "vertical",
       loop: true,
       loopAdditionalSlides: 1,
@@ -22,20 +22,23 @@
         disableOnInteraction: false
       }
     });
+    return retrunValue;
+  };
+
+  // 날씨 롤링 event
+  var weatherRolling = function weatherRolling() {
+    var weatherSwiper = verticalRollingFn(".weather");
   };
 
   // 재난 알림 롤링 event
   var disasterSwiper;
   var disasterRolling = function disasterRolling() {
-    disasterSwiper = new Swiper(".disaster-rolling-swiper", {
-      direction: "vertical",
-      loop: true,
-      loopAdditionalSlides: 1,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-      }
-    });
+    disasterSwiper = verticalRollingFn(".disaster-rolling-swiper");
+  };
+
+  // 속보 롤링 event
+  var breakingNewsRolling = function breakingNewsRolling() {
+    var weatherSwiper = verticalRollingFn(".breaking-news-swiper");
   };
   // 재난 알림 펼침 클릭 event
   var disasterClick = function disasterClick() {
@@ -44,11 +47,23 @@
         disasterRolling();
         $(".disaster-rolling").removeClass("open");
         $(this).removeClass("on");
+        $(".rolling-message").each(function (index, el) {
+          $(el).removeClass("open");
+        });
+        $(".rolling-message .caution").each(function (index, el) {
+          $(el).removeClass("off");
+        });
       } else {
         disasterSwiper.destroy();
         $(".disaster-rolling-list").removeAttr("style");
         $(".disaster-rolling").addClass("open");
         $(this).addClass("on");
+        $(".rolling-message").each(function (index, el) {
+          $(el).addClass("open");
+        });
+        $(".rolling-message .caution").each(function (index, el) {
+          $(el).addClass("off");
+        });
         if ($(".disaster-rolling .swiper-wrapper").height() > 414) {
           $(".disaster-rolling-swiper").addClass("overflow-y");
         }
@@ -60,9 +75,12 @@
   var worldSelect = function worldSelect() {
     var $menu = document.querySelector("#header .foreign-site-links");
     var $btn = document.querySelector("#header .kbs-world-select-btn");
+    var $dim = document.querySelector(".dim");
     $btn.addEventListener("click", function () {
       $btn.classList.toggle("on");
       $menu.classList.toggle("on");
+      $dim.classList.toggle("transparent");
+      $dim.classList.toggle("on");
     });
   };
 
@@ -183,6 +201,8 @@
     var $fullMenu = document.querySelector(".full-menu-wrapper");
     var $navLinks = document.querySelectorAll(".nav-link");
     var $commonMenues = document.querySelectorAll(".common-menu");
+    var $worldSelectBtn = document.querySelector(".kbs-world-select-btn");
+    var $foreignSiteMenu = document.querySelector(".foreign-site-links");
     $dim.addEventListener("click", function () {
       $dim.classList.remove("on");
       $searchMenu.classList.remove("on");
@@ -195,18 +215,10 @@
       $commonMenues.forEach(function ($commonMenu) {
         $commonMenu.classList.remove("on");
       });
-    });
-  };
-
-  // 속보 롤링 event
-  var breakingNewsRolling = function breakingNewsRolling() {
-    var weatherSwiper = new Swiper(".breaking-news-swiper", {
-      direction: "vertical",
-      loop: true,
-      loopAdditionalSlides: 1,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
+      $worldSelectBtn.classList.remove("on");
+      $foreignSiteMenu.classList.remove("on");
+      if ($dim.classList.contains("transparent")) {
+        $dim.classList.remove("transparent");
       }
     });
   };
