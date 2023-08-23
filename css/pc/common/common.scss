@@ -3,6 +3,79 @@
 
 #contents {
   min-height: calc(100vh - 1001px);
+
+  .tab-btns {
+    &.type-01 {
+      display: flex;
+      .tab-btns-list {
+        margin-right: 8px;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.on {
+          .tab-btn {
+            background-color: $blue500;
+            border: 1px solid $blue500;
+            color: $white;
+          }
+        }
+
+        .tab-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          padding: 0 16px;
+          border: 1px solid $neutral1400;
+          border-radius: 15px;
+          font-size: 14px;
+          font-weight: 500;
+          color: $blue500;
+        }
+      }
+    }
+    &.type-02 {
+      display: flex;
+      .tab-btns-list {
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 12px;
+          background-color: $neutral2000;
+          margin-left: 12px;
+        }
+
+        &:last-child {
+          padding-right: 0;
+          margin-right: 0;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        &.on {
+          .tab-btn {
+            color: $blue600;
+            font-weight: 700;
+          }
+        }
+
+        .tab-btn {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          color: $neutral700;
+        }
+      }
+    }
+  }
 }
 
 .dim {
