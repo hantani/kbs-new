@@ -12,9 +12,11 @@
   display: none;
   z-index: 100;
 }
+
 .dim.transparent {
   opacity: 0;
 }
+
 .dim.on {
   display: block;
 }

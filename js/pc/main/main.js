@@ -144,40 +144,10 @@
         var $headerLive = $btn.parentElement;
         $headerLive.classList.toggle("on");
         $aside.classList.toggle("position-change");
-        setAsidePosition();
       });
     }
   };
-
-  // 사이드 메뉴 위치 세팅
-  var setAsidePosition = function setAsidePosition() {
-    var $aside = document.querySelector(".aside");
-    var $headLine = document.querySelector(".head-line");
-    var $body = document.querySelector("body");
-    var top = $headLine.getBoundingClientRect().top;
-    var left = $headLine.getBoundingClientRect().left;
-    if ($body.classList.contains("has-live-wrapper")) {
-      $aside.style.top = top + 234 + "px";
-    } else {
-      $aside.style.top = top + "px";
-    }
-    $aside.style.left = left - 98 + "px";
-  };
-
-  // 스크롤시 어사이드 고정 event
-  var asideFixed = function asideFixed() {
-    var $aside = $(".aside");
-    var $headLine = $(".head-line");
-    var point = $headLine.offset().top;
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop() > point - 20) {
-        $aside.addClass("fixed");
-      } else if ($(window).scrollTop() <= point) {
-        $aside.removeClass("fixed");
-      }
-    });
-  };
-  window.addEventListener("load", function () {
+  var init = function init() {
     nineSlide();
     mainVideoSlide();
     keywordRoll();
@@ -186,11 +156,7 @@
     kshortsSlide();
     youtubeLiveNewsSlide();
     premiumkSlide();
-    setAsidePosition();
     liveClick();
-    asideFixed();
-  });
-  window.addEventListener("resize", function () {
-    setAsidePosition();
-  });
+  };
+  init();
 })();

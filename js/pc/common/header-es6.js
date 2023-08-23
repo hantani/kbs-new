@@ -238,7 +238,37 @@
     });
   };
 
-  window.addEventListener("load", () => {
+  // 추천 검색어
+  const recommendSearch = () => {
+    const $input = document.querySelector(
+      ".header-nav-wrapper .search-box .search-box-input"
+    );
+    const $recommend = document.querySelector(".recommend-search");
+    const $wrapper = document.querySelector(".search-most-view");
+    const $dim = document.querySelector(".dim");
+
+    $input.addEventListener("focus", () => {
+      $recommend.classList.add("on");
+      $input.classList.add("focus");
+    });
+
+    $wrapper.addEventListener("click", (e) => {
+      const target = e.target;
+
+      if (target !== $input) {
+        $recommend.classList.remove("on");
+        $input.classList.remove("focus");
+      }
+    });
+
+    $dim.addEventListener("click", () => {
+      $recommend.classList.remove("on");
+      $input.classList.remove("focus");
+    });
+  };
+
+  // 초기 함수
+  const init = () => {
     breakingNewsClick();
     weatherRolling();
     disasterRolling();
@@ -250,5 +280,8 @@
     dimClick();
     disasterClick();
     breakingNewsRolling();
-  });
+    recommendSearch();
+  };
+
+  init();
 })();

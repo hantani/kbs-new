@@ -814,6 +814,10 @@
                   font-size: 16px;
                   color: $neutral800;
                 }
+
+                &.focus {
+                  border-radius: 5px 0 0 0;
+                }
               }
 
               .cancel-btn {
@@ -834,6 +838,10 @@
                 border-top: none;
                 display: none;
                 z-index: 50;
+
+                &.on {
+                  display: block;
+                }
 
                 .recommend-search-list {
                   width: 100%;
@@ -905,6 +913,11 @@
                     line-height: 22px;
                     border: 1px solid $blue100;
                     align-items: center;
+
+                    &:hover {
+                      background-color: $white;
+                      color: $blue600;
+                    }
                   }
                 }
               }
@@ -1076,7 +1089,7 @@
                 margin-right: 5px;
 
                 &.off {
-                  color: $black;
+                  color: none;
                 }
               }
             }

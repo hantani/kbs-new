@@ -4,12 +4,27 @@
   // 셀렉트 메뉴 클릭 event
   var selectClick = function selectClick() {
     var $btns = document.querySelectorAll(".footer-select-btn");
+    var $dim = document.querySelector(".dim");
+    var $onBtn = void 0;
+    var $onLink = void 0;
     $btns.forEach(function ($btn) {
       $btn.addEventListener("click", function () {
         var $commonSelectLinks = $btn.nextElementSibling;
+        $onBtn = $btn;
+        $onLink = $commonSelectLinks;
         $btn.classList.toggle("on");
         $commonSelectLinks.classList.toggle("on");
+        $dim.classList.toggle("transparent");
+        $dim.classList.toggle("on");
       });
+    });
+    $dim.addEventListener("click", function () {
+      $dim.classList.remove("on");
+      $dim.classList.remove("on");
+      if ($onBtn && $onLink) {
+        $onBtn.classList.remove("on");
+        $onLink.classList.remove("on");
+      }
     });
   };
 
@@ -97,10 +112,41 @@
       }
     });
   };
-  window.addEventListener("load", function () {
+
+  // 사이드 메뉴 위치 세팅
+  var setAsidePosition = function setAsidePosition() {
+    var $aside = document.querySelector(".aside");
+    var $contents = document.querySelector("#contents");
+    var $headerNav = document.querySelector(".header-nav");
+    var top = $contents.getBoundingClientRect().top;
+    var left = $headerNav.getBoundingClientRect().left;
+    $aside.style.top = top + "px";
+    $aside.style.left = left - 98 + "px";
+  };
+
+  // 스크롤시 어사이드 고정 event
+  var asideFixed = function asideFixed() {
+    var $aside = $(".aside");
+    var $contents = $("#contents");
+    var point = $contents.offset().top;
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > point) {
+        $aside.addClass("fixed");
+      } else if ($(window).scrollTop() <= point) {
+        $aside.removeClass("fixed");
+      }
+    });
+  };
+  var init = function init() {
     selectClick();
     asideShareClick();
     asideTxtClick();
     asideDarkClick();
+    setAsidePosition();
+    asideFixed();
+  };
+  init();
+  window.addEventListener("resize", function () {
+    setAsidePosition();
   });
 })();
