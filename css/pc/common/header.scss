@@ -568,37 +568,6 @@
           }
         }
       }
-      .hashtag-links {
-        display: flex;
-
-        .hashtag-list {
-          margin-right: 8px;
-
-          &:last-child {
-            margin-right: 0;
-          }
-
-          .hashtag-link {
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $blue500;
-            height: 30px;
-            border-radius: 15px;
-            padding: 0 16px;
-            border: 1px solid #ebebeb;
-
-            &:hover {
-              border: 1px solid $blue500;
-              color: $white;
-              background-color: $blue500;
-            }
-          }
-        }
-      }
     }
 
     .full-menu-wrapper {
@@ -786,7 +755,7 @@
 
           .search-box-wrapper {
             width: 880px;
-            padding-bottom: 40px;
+            padding-bottom: 24px;
             margin: 0 auto;
 
             .search-title {
@@ -846,21 +815,17 @@
                 .recommend-search-list {
                   width: 100%;
                   background-color: $white;
-                  padding: 10px 16px;
+                  padding: 12px 16px;
+                  cursor: pointer;
 
-                  &:first-child {
-                    padding-top: 16px;
-                    padding-bottom: 20px;
-                  }
-                  &:nth-child(2) {
-                    padding-top: 0;
-                  }
-                  &:last-child {
-                    padding-bottom: 20px;
+                  &.on {
+                    background-color: $blue100 !important;
                   }
 
                   .recommend-word {
                     line-height: 20px;
+                    width: 100%;
+                    text-align: left;
 
                     .search-word {
                       font-weight: 700;
@@ -900,9 +865,11 @@
               .keywords {
                 margin-top: 24px;
                 display: flex;
+                flex-wrap: wrap;
 
                 .keyword-list {
                   margin-right: 16px;
+                  margin-bottom: 16px;
                   .keyword-link {
                     display: flex;
                     padding: 0 16px;
@@ -968,6 +935,18 @@
                   margin-bottom: 8px;
                   position: relative;
                   overflow: hidden;
+
+                  .play-icon {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 8px;
+                    display: block;
+                    width: 28px;
+                    height: 28px;
+                    background: url("/resource/image/pc/play.png") center center
+                      no-repeat;
+                    background-size: 28px 28px;
+                  }
 
                   .thumbnail-img {
                     width: 100%;
@@ -1089,7 +1068,7 @@
                 margin-right: 5px;
 
                 &.off {
-                  color: none;
+                  display: none;
                 }
               }
             }

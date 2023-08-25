@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>KBS NEWS - NEW</title>
+    <title>KBS NEWS - MAIN</title>
     <!-- 라이브러리 CSS -->
     <link rel="stylesheet" href="/css/pc/common/swiper-bundle.min.css" />
     <!-- 스타일 -->
@@ -631,7 +631,7 @@
                         value="추천어"
                         class="recommend-word"
                       >
-                        추<strong class="search-word">천어</strong>
+                        <strong class="search-word">추천</strong>어어
                       </button>
                     </li>
                     <li class="recommend-search-list">
@@ -640,7 +640,7 @@
                         value="추천어"
                         class="recommend-word"
                       >
-                        추추<strong class="search-word">천어</strong>
+                        <strong class="search-word">추천</strong>어어
                       </button>
                     </li>
                     <li class="recommend-search-list">
@@ -649,7 +649,7 @@
                         value="추천어"
                         class="recommend-word"
                       >
-                        추추<strong class="search-word">천어</strong>
+                        <strong class="search-word">추천</strong>어어어
                       </button>
                     </li>
                   </ul>
@@ -683,6 +683,15 @@
                     <li class="keyword-list">
                       <a href="#" class="keyword-link"># 마약검거</a>
                     </li>
+                    <li class="keyword-list">
+                      <a href="#" class="keyword-link"># 마약검거중 </a>
+                    </li>
+                    <li class="keyword-list">
+                      <a href="#" class="keyword-link"># 마약검거중 </a>
+                    </li>
+                    <li class="keyword-list">
+                      <a href="#" class="keyword-link"># 마약검거중 </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -702,6 +711,7 @@
                         class="thumbnail-img"
                       />
                       <span class="rank-badge">1</span>
+                      <span class="play-icon"></span>
                     </div>
                     <p class="title">
                       새 아파트 현관문에 둘러진 쇠파이프... 무슨 일이?
@@ -847,7 +857,7 @@
       </div>
     </header>
     <!-- 컨텐츠 메뉴 -->
-    <main id="contents" class="has-live-wrapper">
+    <main id="contents">
       <!-- 라이브 섹션 -->
       <div class="header-live-wrapper">
         <div class="header-live on">
@@ -863,7 +873,7 @@
                 <p class="red-txt">LIVE</p>
                 <span class="red-dot"></span>
               </div>
-              <p class="title">
+              <a class="title" href="#">
                 [뉴스 특보] 오염수 시찰단 결과보고[뉴스 특보] 오염수 시찰단
                 결과보고[뉴스 특보] 오염수 시찰단 결과보고[뉴스 특보] 오염수
                 시찰단 결과보고[뉴스 특보] 오염수 시찰단 결과보고[뉴스 특보]
@@ -879,12 +889,13 @@
                 특보] 오염수 시찰단 결과보고[뉴스 특보] 오염수 시찰단
                 결과보고[뉴스 특보] 오염수 시찰단 결과보고[뉴스 특보] 오염수
                 시찰단 결과보고
-              </p>
+              </a>
             </div>
           </div>
           <button type="button" class="arrow-btn"></button>
         </div>
       </div>
+      <div class="head-line-wrapper"></div>
       <div class="box head-line">
         <div class="box-title">
           <h4 class="title">헤드라인</h4>
@@ -899,7 +910,7 @@
                   src="/resource/image/pc/thum_headline_1.jpg"
                   alt="test image"
                 />
-                <span class="play-icon"></span>
+                <span class="play-icon large"></span>
               </div>
               <div class="txt-wrapper">
                 <p class="title">
@@ -2741,7 +2752,7 @@
                   src="/resource/image/pc/thum_sports_1.jpg"
                   alt="test img"
                 />
-                <span class="play-icon"></span>
+                <span class="play-icon large"></span>
               </div>
               <div class="txt-wrapper">
                 <p class="title">
@@ -2773,7 +2784,7 @@
                   src="/resource/image/pc/thum_sports_1.jpg"
                   alt="test img"
                 />
-                <span class="play-icon"></span>
+                <span class="play-icon large"></span>
               </div>
               <div class="txt-wrapper">
                 <p class="title">
@@ -2802,7 +2813,7 @@
                   src="/resource/image/pc/thum_sports_1.jpg"
                   alt="test img"
                 />
-                <span class="play-icon"></span>
+                <span class="play-icon large"></span>
               </div>
               <div class="txt-wrapper">
                 <p class="title">
@@ -4159,38 +4170,38 @@
       <aside class="aside">
         <ul class="aside-btns">
           <li class="share-btn-wrapper aside-btns-list">
-            <button type="button" class="share-btn">
+            <button type="button" class="share-btn common-btn">
               <span class="share-icon"></span>
-              <span class="txt">공유</span>
+              <span class="common-btn-txt">공유</span>
             </button>
           </li>
           <li class="txt-btn-wrapper aside-btns-list">
-            <button type="button" class="txt-btn">
+            <button type="button" class="txt-btn common-btn">
               <div class="txt-icon-wrapper">
                 <span class="txt-icon normal"></span>
               </div>
-              <span class="txt">기본</span>
+              <span class="common-btn-txt">기본</span>
               <span class="arrow-icon"></span>
             </button>
-            <ul class="txt-menu">
-              <li class="txt-menu-list">
-                <button class="txt-menu-btn large" type="button">
+            <ul class="txt-menu open-menu">
+              <li class="txt-menu-list open-menu-list">
+                <button class="txt-menu-btn large open-menu-btn" type="button">
                   <div class="txt-icon-wrapper">
                     <span class="txt-icon large"></span>
                   </div>
                   <span class="title">확대</span>
                 </button>
               </li>
-              <li class="txt-menu-list">
-                <button class="txt-menu-btn normal" type="button">
+              <li class="txt-menu-list open-menu-list">
+                <button class="txt-menu-btn normal open-menu-btn" type="button">
                   <div class="txt-icon-wrapper">
                     <span class="txt-icon normal"></span>
                   </div>
                   <span class="title">기본</span>
                 </button>
               </li>
-              <li class="txt-menu-list">
-                <button class="txt-menu-btn small" type="button">
+              <li class="txt-menu-list open-menu-list">
+                <button class="txt-menu-btn small open-menu-btn" type="button">
                   <div class="txt-icon-wrapper">
                     <span class="txt-icon small"></span>
                   </div>
@@ -4200,9 +4211,9 @@
             </ul>
           </li>
           <li class="dark-btn-wrapper aside-btns-list">
-            <button type="button" class="dark-btn">
+            <button type="button" class="dark-btn common-btn">
               <span class="dark-icon"></span>
-              <span class="txt">다크<br />모드</span>
+              <span class="common-btn-txt">다크<br />모드</span>
             </button>
           </li>
         </ul>
@@ -4669,7 +4680,13 @@
     src="/resource/module/swiper-bundle/swiper-bundle.min.js"
   ></script>
   <!-- 인터랙션 script -->
-  <script type="text/javascript" src="/js/pc/common/header.js"></script>
-  <script type="text/javascript" src="/js/pc/common/footer.js"></script>
-  <script type="text/javascript" src="/js/pc/main/main.js"></script>
+  <script type="text/javascript" src="/js/pc/common/ui_header.js"></script>
+  <script type="text/javascript" src="/js/pc/common/ui_footer.js"></script>
+  <script type="text/javascript" src="/js/pc/common/ui_main.js"></script>
+  <script type="text/javascript" src="/js/pc/common/ui_common.js"></script>
+  <!-- 인터랙션 테스트 script -->
+  <!-- <script type="text/javascript" src="/js/pc/common/ui_header-es6.js"></script>
+  <script type="text/javascript" src="/js/pc/common/ui_footer-es6.js"></script>
+  <script type="text/javascript" src="/js/pc/common/ui_main-es6.js"></script>
+  <script type="text/javascript" src="/js/pc/common/ui_common-es6.js"></script> -->
 </html>

@@ -261,5 +261,7 @@
     breakingNewsRolling();
     recommendSearch();
   };
-  init();
+  window.addEventListener("load", function () {
+    init();
+  });
 })();

@@ -56,7 +56,7 @@
   var asideTxtClick = function asideTxtClick() {
     var $btn = document.querySelector(".aside-btns-list .txt-btn");
     var $txtIcon = document.querySelector(".aside-btns-list .txt-btn .txt-icon");
-    var $btnTxt = document.querySelector(".aside-btns-list .txt-btn .txt");
+    var $btnTxt = document.querySelector(".aside-btns-list .txt-btn .common-btn-txt");
     var $menu = document.querySelector(".aside-btns-list .txt-menu");
 
     // 텍스트 메뉴 펼침
@@ -124,6 +124,44 @@
     $aside.style.left = left - 98 + "px";
   };
 
+  // 사이드 메뉴 댓글 클릭
+  var asideCommentClick = function asideCommentClick() {
+    var $btn = document.querySelector(".aside-btns-list .comment-btn");
+    if ($btn) {
+      var $commentArea = document.querySelector(".comment-area");
+      $btn.addEventListener("click", function () {
+        $commentArea.scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    }
+  };
+
+  // 사이드 메뉴 좋아요 클릭
+  var asideLikeClick = function asideLikeClick() {
+    var $btn = document.querySelector(".aside-btns-list .like-btn");
+    if ($btn) {
+      var $openMenu = document.querySelector(".like-menu.open-menu");
+      $btn.addEventListener("click", function () {
+        $btn.classList.toggle("on");
+        $openMenu.classList.toggle("on");
+      });
+    }
+  };
+
+  // 사이드 오픈 메뉴 클릭
+  var asideOpenMenuClick = function asideOpenMenuClick() {
+    var $btns = document.querySelectorAll(".open-menu-btn");
+    $btns.forEach(function ($btn) {
+      var $openMenu = $btn.parentElement.parentElement;
+      var $asideBtn = $openMenu.previousElementSibling;
+      $btn.addEventListener("click", function () {
+        $openMenu.classList.remove("on");
+        $asideBtn.classList.remove("on");
+      });
+    });
+  };
+
   // 스크롤시 어사이드 고정 event
   var asideFixed = function asideFixed() {
     var $aside = $(".aside");
@@ -144,8 +182,13 @@
     asideDarkClick();
     setAsidePosition();
     asideFixed();
+    asideCommentClick();
+    asideLikeClick();
+    asideOpenMenuClick();
   };
-  init();
+  window.addEventListener("load", function () {
+    init();
+  });
   window.addEventListener("resize", function () {
     setAsidePosition();
   });

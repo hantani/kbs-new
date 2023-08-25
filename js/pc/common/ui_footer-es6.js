@@ -62,7 +62,9 @@
     const $txtIcon = document.querySelector(
       ".aside-btns-list .txt-btn .txt-icon"
     );
-    const $btnTxt = document.querySelector(".aside-btns-list .txt-btn .txt");
+    const $btnTxt = document.querySelector(
+      ".aside-btns-list .txt-btn .common-btn-txt"
+    );
     const $menu = document.querySelector(".aside-btns-list .txt-menu");
 
     // 텍스트 메뉴 펼침
@@ -138,6 +140,47 @@
     $aside.style.left = `${left - 98}px`;
   };
 
+  // 사이드 메뉴 댓글 클릭
+  const asideCommentClick = () => {
+    const $btn = document.querySelector(".aside-btns-list .comment-btn");
+
+    if ($btn) {
+      const $commentArea = document.querySelector(".comment-area");
+
+      $btn.addEventListener("click", () => {
+        $commentArea.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  };
+
+  // 사이드 메뉴 좋아요 클릭
+  const asideLikeClick = () => {
+    const $btn = document.querySelector(".aside-btns-list .like-btn");
+
+    if ($btn) {
+      const $openMenu = document.querySelector(".like-menu.open-menu");
+
+      $btn.addEventListener("click", () => {
+        $btn.classList.toggle("on");
+        $openMenu.classList.toggle("on");
+      });
+    }
+  };
+
+  // 사이드 오픈 메뉴 클릭
+  const asideOpenMenuClick = () => {
+    const $btns = document.querySelectorAll(".open-menu-btn");
+
+    $btns.forEach(($btn) => {
+      const $openMenu = $btn.parentElement.parentElement;
+      const $asideBtn = $openMenu.previousElementSibling;
+      $btn.addEventListener("click", () => {
+        $openMenu.classList.remove("on");
+        $asideBtn.classList.remove("on");
+      });
+    });
+  };
+
   // 스크롤시 어사이드 고정 event
   const asideFixed = () => {
     var $aside = $(".aside");
@@ -159,9 +202,14 @@
     asideDarkClick();
     setAsidePosition();
     asideFixed();
+    asideCommentClick();
+    asideLikeClick();
+    asideOpenMenuClick();
   };
 
-  init();
+  window.addEventListener("load", () => {
+    init();
+  });
 
   window.addEventListener("resize", () => {
     setAsidePosition();

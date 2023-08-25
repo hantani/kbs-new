@@ -283,5 +283,7 @@
     recommendSearch();
   };
 
-  init();
+  window.addEventListener("load", () => {
+    init();
+  });
 })();

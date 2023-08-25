@@ -5,13 +5,8 @@
 #contents {
   min-height: calc(100vh - 1001px);
   background-color: $lightPcBG;
-  padding-top: 24px;
   padding-bottom: 24px;
   position: relative;
-
-  &.has-live-wrapper {
-    padding-top: 0;
-  }
 
   .iframe-area {
     padding: 40px 0;
@@ -34,7 +29,6 @@
   // 라이브 섹션
   .header-live-wrapper {
     background-color: $black200;
-    margin-bottom: 24px;
 
     .header-live {
       width: 1280px;
@@ -43,6 +37,12 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 16px 20px 20px;
+
+      &:not(.on) {
+        #JW_PLAYER_LIVE {
+          display: none;
+        }
+      }
 
       .live-video {
         .video {
@@ -74,6 +74,7 @@
             }
           }
           .title {
+            display: block;
             color: $white;
             font-size: 27px;
             line-height: 32px;
@@ -82,6 +83,10 @@
             overflow: hidden;
             text-overflow: ellipsis;
             max-width: 930px;
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -95,6 +100,9 @@
       }
 
       &.on {
+        #JW_PLAYER_LIVE {
+          display: block;
+        }
         .live-video {
           display: flex;
           align-items: center;
@@ -119,6 +127,10 @@
         }
       }
     }
+  }
+
+  .head-line-wrapper {
+    padding-top: 24px;
   }
 
   .box {
@@ -256,6 +268,14 @@
           height: 28px;
           background: url("/resource/image/pc/play.png") center center no-repeat;
           background-size: 28px 28px;
+
+          &.large {
+            width: 42px;
+            height: 42px;
+            background-size: 42px 42px;
+            bottom: 16px;
+            right: 16px;
+          }
         }
         .play-time {
           display: flex;
@@ -300,14 +320,6 @@
 
         &.width-612 {
           height: 344px;
-
-          .play-icon {
-            width: 42px;
-            height: 42px;
-            background-size: 42px 42px;
-            bottom: 16px;
-            right: 16px;
-          }
         }
 
         &.width-400 {
@@ -734,55 +746,6 @@
           overflow: hidden;
           clip-path: polygon(0 0, 0 0, 0 0);
         }
-      }
-    }
-  }
-
-  .tooltip-wrapper {
-    position: relative;
-    .tooltip-btn {
-      width: 24px;
-      height: 24px;
-      background: url($tooltipBtn02) center center no-repeat;
-    }
-    .tooltip {
-      background-color: $white;
-      padding: 20px 30px 20px 16px;
-      border: 1px solid $neutral2000;
-      border-radius: 5px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 220px;
-      right: -235px;
-      display: none;
-      z-index: 50;
-
-      &.on {
-        display: block;
-      }
-
-      .triangle {
-        width: 12px;
-        height: 21px;
-        background: url($directionLeft) center center no-repeat;
-        position: absolute;
-        left: -10px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      .tooltip-txt {
-        font-size: 14px;
-        line-height: 20px;
-        color: $neutral800;
-      }
-      .close-btn {
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        background: url($clear) center center no-repeat;
       }
     }
   }
