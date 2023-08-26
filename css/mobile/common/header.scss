@@ -1,0 +1,118 @@
+@charset 'utf-8';
+@import "_variable";
+@import "_svg";
+
+#header {
+  .top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 48px;
+    background-color: $neutral200;
+
+    .report-link {
+      width: 38px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      border: 1px solid $blue2200;
+      background-color: $white;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      color: $blue1300;
+    }
+
+    .top-logo {
+      width: 81px;
+      height: 16px;
+      .home-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .search-hamburger {
+      .search-btn {
+        width: 24px;
+        height: 24px;
+        background: url($search) center center no-repeat;
+        margin-right: 8px;
+      }
+      .hamburger-btn {
+        width: 24px;
+        height: 24px;
+        background: url($menu) center center no-repeat;
+      }
+    }
+  }
+  .top-quick-menu {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    padding: 0 44px 0 16px;
+    background-color: $white;
+    border-top: 1px solid $neutral1400;
+    border-bottom: 1px solid $neutral1400;
+
+    .on-air-link {
+      width: 67px;
+      height: 22px;
+      border-radius: 100px;
+      border: 1px solid $neutral1700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .txt {
+        font-weight: 700;
+        font-size: 13px;
+        color: $neutral700;
+      }
+      .red-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $red300;
+        position: absolute;
+        top: 5px;
+        right: 6px;
+        animation: liveActionTop 2s ease infinite;
+      }
+    }
+    .quick-links {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 67px);
+      padding-left: 16px;
+      .quick-link {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+@keyframes liveActionTop {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}

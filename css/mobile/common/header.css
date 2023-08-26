@@ -1,0 +1,155 @@
+/* button */
+/* sns */
+/* categories */
+/* all menu */
+/* share */
+/* aside */
+/* icon */
+#header .top-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 16px;
+  height: 48px;
+  background-color: #f9f9f9;
+}
+#header .top-menu .report-link {
+  width: 38px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  border: 1px solid #c0d2ff;
+  background-color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #456bcd;
+}
+#header .top-menu .top-logo {
+  width: 81px;
+  height: 16px;
+}
+#header .top-menu .top-logo .home-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#header .top-menu .top-logo .home-link .img {
+  width: 100%;
+  height: 100%;
+}
+#header .top-menu .search-hamburger .search-btn {
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.5 17C13.0899 17 16 14.0899 16 10.5C16 6.91015 13.0899 4 9.5 4C5.91015 4 3 6.91015 3 10.5C3 14.0899 5.91015 17 9.5 17Z' stroke='%23484848' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.7929 21.2071C19.1834 21.5976 19.8166 21.5976 20.2071 21.2071C20.5976 20.8166 20.5976 20.1834 20.2071 19.7929L18.7929 21.2071ZM15.2071 14.7929L14.5 14.0858L13.0858 15.5L13.7929 16.2071L15.2071 14.7929ZM20.2071 19.7929L15.2071 14.7929L13.7929 16.2071L18.7929 21.2071L20.2071 19.7929Z' fill='%23484848'/%3E%3C/svg%3E%0A") center center no-repeat;
+  margin-right: 8px;
+}
+#header .top-menu .search-hamburger .hamburger-btn {
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 5H21' stroke='%23484848' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M3 12H21' stroke='%23484848' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M3 19H21' stroke='%23484848' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A") center center no-repeat;
+}
+#header .top-quick-menu {
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 44px 0 16px;
+  background-color: #fff;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+#header .top-quick-menu .on-air-link {
+  width: 67px;
+  height: 22px;
+  border-radius: 100px;
+  border: 1px solid #e0e0e0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+#header .top-quick-menu .on-air-link .txt {
+  font-weight: 700;
+  font-size: 13px;
+  color: #7c7c7c;
+}
+#header .top-quick-menu .on-air-link .red-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ff3535;
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  -webkit-animation: liveActionTop 2s ease infinite;
+          animation: liveActionTop 2s ease infinite;
+}
+#header .top-quick-menu .quick-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 67px);
+  padding-left: 16px;
+}
+#header .top-quick-menu .quick-links .quick-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@-webkit-keyframes liveActionTop {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes liveActionTop {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
