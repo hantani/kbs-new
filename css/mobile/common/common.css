@@ -1,0 +1,15 @@
+/* button */
+/* sns */
+/* categories */
+/* all menu */
+/* share */
+/* aside */
+/* icon */
+a.more-btn.white {
+  width: 16px;
+  height: 16px;
+  display: block;
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 4V12' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4 8H12' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center center no-repeat;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}

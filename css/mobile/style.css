@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-@import "common/reset.css";
-@import "common/font.css";
-@import "common/header.css";
-@import "main/main.css";
+@import "./common/reset.css";
+@import "./common/font.css";
+@import "./common/common.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+@import "./main/main.css";

@@ -38,7 +38,7 @@
 
   // 속보 롤링 event
   const breakingNewsRolling = () => {
-    var weatherSwiper = verticalRollingFn(".breaking-news-swiper");
+    var breakingNewsSwiper = verticalRollingFn(".breaking-news-swiper");
   };
   // 재난 알림 펼침 클릭 event
   const disasterClick = () => {
