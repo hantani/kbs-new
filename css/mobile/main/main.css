@@ -35,7 +35,7 @@
           align-items: center;
 }
 #contents .box > .title-wrapper.flex .title {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 #contents .box > .title-wrapper.space-between {
   display: -webkit-box;
@@ -59,6 +59,12 @@
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.025em;
+}
+#contents .box > .title-wrapper .title .date {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-weight: 400;
 }
 #contents .box > .title-wrapper .sub-title {
   font-size: 12px;
@@ -217,7 +223,6 @@
   padding: 8px;
 }
 #contents .box .box-contents.horizontal .title-wrapper .title {
-  font-weight: 500;
   line-height: 18px;
   height: 36px;
   overflow: hidden;
@@ -253,7 +258,6 @@
 }
 #contents .box .box-contents.vertical .box-content .title-wrapper .title {
   line-height: 18px;
-  font-weight: 500;
   height: 56px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -352,8 +356,8 @@
 }
 #contents .box.nationwide-news .box-content-wrapper .nation-link {
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 1px;
+  left: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,6 +381,34 @@
   height: 12px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M4.5 9L7.5 6L4.5 3' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
   display: block;
+}
+#contents .box.nationwide-news .desc-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 12px;
+}
+#contents .box.nationwide-news .desc-wrapper .desc-box {
+  width: calc(50% - 4px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f3f3f3;
+  border: 1px solid #ebeef0;
+  border-radius: 5px;
+}
+#contents .box.nationwide-news .desc-wrapper .desc-box .txt {
+  font-size: 15px;
+  line-height: 18px;
 }
 #contents .hashtags-wrapper {
   padding: 12px 0 12px 16px;
@@ -403,7 +435,7 @@
 #contents .hashtags-wrapper .hashtags .hashtags-list .hashtags-link {
   padding: 5px 15px;
   color: #126eba;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   display: inline-block;
   white-space: nowrap;

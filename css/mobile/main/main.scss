@@ -28,7 +28,7 @@
         align-items: center;
 
         .title {
-          margin-right: 5px;
+          margin-right: 8px;
         }
       }
 
@@ -51,6 +51,12 @@
         font-size: 18px;
         font-weight: 700;
         letter-spacing: -0.025em;
+        .date {
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: -0.025em;
+          font-weight: 400;
+        }
       }
 
       .sub-title {
@@ -205,7 +211,6 @@
         .title-wrapper {
           padding: 8px;
           .title {
-            font-weight: 500;
             line-height: 18px;
             height: 36px;
             overflow: hidden;
@@ -244,7 +249,6 @@
             padding: 17px 8px 17px 16px;
             .title {
               line-height: 18px;
-              font-weight: 500;
               height: 56px;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -380,8 +384,8 @@
         }
         .nation-link {
           position: absolute;
-          top: 2px;
-          left: 2px;
+          top: 1px;
+          left: 1px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -399,6 +403,25 @@
             height: 12px;
             background: url($arrowRightSmall) center center no-repeat;
             display: block;
+          }
+        }
+      }
+      .desc-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+        .desc-box {
+          width: calc(50% - 4px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $neutral3000;
+          border: 1px solid $neutral300;
+          border-radius: 5px;
+
+          .txt {
+            font-size: 15px;
+            line-height: 18px;
           }
         }
       }
@@ -429,7 +452,7 @@
         .hashtags-link {
           padding: 5px 15px;
           color: $blue600;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 500;
           display: inline-block;
           white-space: nowrap;
