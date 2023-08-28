@@ -191,7 +191,6 @@
 }
 #contents .box .box-contents.horizontal .title-wrapper .title {
   font-weight: 500;
-  font-size: 14px;
   line-height: 18px;
   height: 36px;
   overflow: hidden;
@@ -226,7 +225,6 @@
   padding: 17px 8px 17px 16px;
 }
 #contents .box .box-contents.vertical .box-content .title-wrapper .title {
-  font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   height: 56px;
