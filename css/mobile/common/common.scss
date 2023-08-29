@@ -10,3 +10,18 @@ a.more-btn.white {
   border: 1px solid $white;
   border-radius: 50%;
 }
+
+@keyframes liveActionTop {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}

@@ -69,9 +69,9 @@
       border-radius: 100px;
       border: 1px solid $neutral1700;
       display: flex;
-      justify-content: center;
       align-items: center;
       position: relative;
+      padding-left: 8px;
       .txt {
         font-weight: 700;
         font-size: 13px;
@@ -313,20 +313,5 @@
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
     }
-  }
-}
-
-@keyframes liveActionTop {
-  0% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.25;
   }
 }
