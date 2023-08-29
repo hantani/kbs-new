@@ -193,6 +193,123 @@
           시스템 전면 개편합니다.</a
         >
       </div>
+      <div class="search-menu">
+        <div class="search-input-keywords">
+          <button type="button" class="close-btn"></button>
+          <div class="search-input-wrapper">
+            <p class="title">어떤 기사를 찾으시나요?</p>
+            <div class="search-box">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="원하는 검색어를 입력해주세요"
+              />
+              <button type="button" class="search-btn">
+                <span class="search-img"></span>
+              </button>
+              <button type="button" class="close-btn"></button>
+              <ul class="recommend-search">
+                <li class="recommend-search-list">
+                  <button type="button" class="recommend-word">
+                    <strong>추천</strong>어
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="keywords">
+            <a href="#" class="keyword"># 누리호</a>
+            <a href="#" class="keyword"># 마약검거</a>
+            <a href="#" class="keyword"># 노시니어존</a>
+            <a href="#" class="keyword"># 태영호</a>
+            <a href="#" class="keyword"># 날씨</a>
+            <a href="#" class="keyword"># 김남국</a>
+          </div>
+        </div>
+        <div class="most-viewed">
+          <h4 class="title">많이 본 뉴스</h4>
+          <div class="box-contents horizontal">
+            <a href="#" class="box-content">
+              <div class="thumbnail">
+                <img
+                  class="img"
+                  src="../../../../resource/image/mobile/thum_headerline1.jpg"
+                  alt="test img"
+                />
+                <div class="rank-badge">1</div>
+              </div>
+              <div class="title-wrapper">
+                <p class="title">제주 여행 찍어 올린 타이완 유튜버…‘불티’</p>
+              </div>
+            </a>
+            <a href="#" class="box-content">
+              <div class="thumbnail">
+                <img
+                  class="img"
+                  src="../../../../resource/image/mobile/thum_headerline1.jpg"
+                  alt="test img"
+                />
+                <div class="rank-badge">2</div>
+              </div>
+              <div class="title-wrapper">
+                <p class="title">제주 여행 찍어 올린 타이완 유튜버…‘불티’</p>
+              </div>
+            </a>
+            <a href="#" class="box-content">
+              <div class="thumbnail">
+                <img
+                  class="img"
+                  src="../../../../resource/image/mobile/thum_headerline1.jpg"
+                  alt="test img"
+                />
+                <div class="rank-badge">3</div>
+              </div>
+              <div class="title-wrapper">
+                <p class="title">제주 여행 찍어 올린 타이완 유튜버…‘불티’</p>
+              </div>
+            </a>
+            <a href="#" class="box-content">
+              <div class="thumbnail">
+                <img
+                  class="img"
+                  src="../../../../resource/image/mobile/thum_headerline1.jpg"
+                  alt="test img"
+                />
+                <div class="rank-badge">4</div>
+              </div>
+              <div class="title-wrapper">
+                <p class="title">제주 여행 찍어 올린 타이완 유튜버…‘불티’</p>
+              </div>
+            </a>
+            <a href="#" class="box-content">
+              <div class="thumbnail">
+                <img
+                  class="img"
+                  src="../../../../resource/image/mobile/thum_headerline1.jpg"
+                  alt="test img"
+                />
+                <div class="rank-badge">5</div>
+              </div>
+              <div class="title-wrapper">
+                <p class="title">제주 여행 찍어 올린 타이완 유튜버…‘불티’</p>
+              </div>
+            </a>
+            <a href="#" class="box-content">
+              <div class="thumbnail">
+                <img
+                  class="img"
+                  src="../../../../resource/image/mobile/thum_headerline1.jpg"
+                  alt="test img"
+                />
+                <div class="rank-badge">6</div>
+              </div>
+              <div class="title-wrapper">
+                <p class="title">제주 여행 찍어 올린 타이완 유튜버…‘불티’</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
     <main id="contents">
       <div class="live">
@@ -2440,6 +2557,11 @@
       </div>
     </main>
     <footer id="footer">
+      <div class="dim"></div>
+      <button type="button" class="top-btn">
+        <span class="arrow"></span>
+        <span class="txt">TOP</span>
+      </button>
       <aside class="aside">
         <ul class="aside-btns">
           <li class="aside-btns-list">
@@ -2454,21 +2576,61 @@
             </button>
             <ul class="btn-menu">
               <li class="btn-menu-list">
-                <span class="txt-img"></span>
+                <button type="button" class="common-btn txt-btn">
+                  <span class="txt-img"></span>
+                </button>
               </li>
               <li class="btn-menu-list">
-                <button type="button" class="common-btn larg-btn">확대</button>
+                <button type="button" class="common-btn large-btn">확대</button>
               </li>
               <li class="btn-menu-list">
-                <button type="button" class="common-btn larg-btn">기본</button>
+                <button type="button" class="common-btn normal-btn">
+                  기본
+                </button>
               </li>
               <li class="btn-menu-list">
-                <button type="button" class="common-btn larg-btn">축소</button>
+                <button type="button" class="common-btn small-btn">축소</button>
               </li>
             </ul>
           </li>
         </ul>
       </aside>
+      <div class="popup share-menu">
+        <div class="title-wrapper">
+          <p class="title">공유하기</p>
+        </div>
+        <div class="share-sns">
+          <button href="#" class="share-sns-btn">
+            <span class="sns-img facebook"></span>
+            <span class="txt">페이스북</span>
+          </button>
+          <button href="#" class="share-sns-btn">
+            <span class="sns-img twitter"></span>
+            <span class="txt">트위터</span>
+          </button>
+          <button href="#" class="share-sns-btn">
+            <span class="sns-img kakao"></span>
+            <span class="txt">카카오톡</span>
+          </button>
+          <button href="#" class="share-sns-btn">
+            <span class="sns-img kakao-story"></span>
+            <span class="txt">카카오스토리</span>
+          </button>
+          <a href="#" class="share-sns-btn">
+            <span class="sns-img naver-blog"></span>
+            <span class="txt">네이버블로그</span>
+          </a>
+          <button href="#" class="share-sns-btn">
+            <span class="sns-img naver-band"></span>
+            <span class="txt">네이버밴드</span>
+          </button>
+          <button href="#" class="share-sns-btn">
+            <span class="sns-img link-copy"></span>
+            <span class="txt">링크복사</span>
+          </button>
+        </div>
+        <button type="button" class="primary-btn close-btn">닫기</button>
+      </div>
       <div class="notice-alarm-wrapper">
         <div class="notice-alarm">
           <div class="footer-notice">

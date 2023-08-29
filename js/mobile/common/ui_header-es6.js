@@ -74,12 +74,55 @@
     });
   };
 
+  // 서치메뉴 On, Off
+  const searchMenuOnOff = () => {
+    const $btn = document.querySelector(".search-hamburger .search-btn");
+    const $searchMenu = document.querySelector("#header .search-menu");
+    const $closeBtn = document.querySelector(
+      ".search-input-keywords .close-btn"
+    );
+
+    $btn.addEventListener("click", () => {
+      $searchMenu.classList.add("on");
+    });
+
+    $closeBtn.addEventListener("click", () => {
+      $searchMenu.classList.remove("on");
+    });
+  };
+
+  // 서치 인풋 포커스
+  const searchFocus = () => {
+    const $searchMenu = document.querySelector("#header .search-menu");
+    const $input = document.querySelector(".search-box .search-input");
+    const $recommend = document.querySelector(".search-box .recommend-search");
+    const $recommendBtn = document.querySelector(
+      ".recommend-search-list .recommend-word"
+    );
+
+    $input.addEventListener("focus", () => {
+      $input.classList.add("on");
+      $recommend.classList.add("on");
+    });
+
+    $searchMenu.addEventListener("click", (e) => {
+      const target = e.target;
+
+      if (target !== $input && target !== $recommendBtn) {
+        $input.classList.remove("on");
+        $recommend.classList.remove("on");
+      }
+    });
+  };
+
   const init = () => {
     breakingNewsRolling();
     breakingNewsClick();
     disasterRolling();
     disasterClick();
     headerSticky();
+    searchMenuOnOff();
+    searchFocus();
   };
 
   window.addEventListener("load", () => {

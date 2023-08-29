@@ -5,6 +5,21 @@
 #footer {
   background-color: $white;
 
+  .dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+
+    &.on {
+      display: block;
+    }
+  }
+
   .notice-alarm-wrapper {
     background-color: $neutral2900;
     padding-bottom: 20px;
@@ -300,11 +315,16 @@
             align-items: center;
             border-right: 1px solid $neutral3100;
 
-            .txt-img {
-              display: block;
-              width: 15px;
-              height: 20px;
-              background: url($txtImgOn) center center no-repeat;
+            .txt-btn {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .txt-img {
+                display: block;
+                width: 15px;
+                height: 20px;
+                background: url($txtImgOn) center center no-repeat;
+              }
             }
 
             &:first-child {
@@ -324,6 +344,33 @@
           }
         }
       }
+    }
+  }
+
+  .top-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    padding: 4px 0;
+    border-radius: 50%;
+    background-color: $primary;
+    position: fixed;
+    right: 16px;
+    bottom: 80px;
+    z-index: 50;
+    .arrow {
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: url($goTop) center center no-repeat;
+    }
+    .txt {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 18px;
+      color: $white;
     }
   }
 }

@@ -8,6 +8,19 @@
 #footer {
   background-color: #fff;
 }
+#footer .dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+}
+#footer .dim.on {
+  display: block;
+}
 #footer .notice-alarm-wrapper {
   background-color: #ececec;
   padding-bottom: 20px;
@@ -338,7 +351,18 @@
           align-items: center;
   border-right: 1px solid #ededed;
 }
-#footer .aside .aside-btns .aside-btns-list .btn-menu .btn-menu-list .txt-img {
+#footer .aside .aside-btns .aside-btns-list .btn-menu .btn-menu-list .txt-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#footer .aside .aside-btns .aside-btns-list .btn-menu .btn-menu-list .txt-btn .txt-img {
   display: block;
   width: 15px;
   height: 20px;
@@ -356,4 +380,37 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
+}
+#footer .top-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 4px 0;
+  border-radius: 50%;
+  background-color: #1e82b9;
+  position: fixed;
+  right: 16px;
+  bottom: 80px;
+  z-index: 50;
+}
+#footer .top-btn .arrow {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M3 4.5L6 1.5L9 4.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 10.5V1.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
+}
+#footer .top-btn .txt {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
 }
