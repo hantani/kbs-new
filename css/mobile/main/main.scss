@@ -643,26 +643,29 @@
     }
   }
 
-  .categories-wrapper {
-    padding: 20px 0 32px 17px;
+  .categories-box {
     background-color: $blue2400;
     position: relative;
-    overflow-x: auto;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
 
     .title-img-wrapper {
       position: absolute;
-      top: 20px;
+      top: 21px;
       left: 50%;
       transform: translateX(-50%);
     }
 
+    .categories-wrapper {
+      padding: 21px 0 21px 17px;
+      position: relative;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
     .categories {
       display: inline-flex;
-      margin-top: 68px;
+      margin-top: 58px;
       .categories-list {
         width: 56px;
         margin-right: 9px;
@@ -731,6 +734,15 @@
           }
         }
       }
+    }
+
+    .deco-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 150px;
+      background: url($categoryDeco) center center no-repeat;
     }
   }
 }

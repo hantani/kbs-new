@@ -59,11 +59,27 @@
       });
   };
 
+  // 헤더고정
+  const headerSticky = () => {
+    var $topMenu = $(".top-menu");
+    var point = $topMenu.offset().top;
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > point) {
+        $topMenu.addClass("sticky");
+        $(".top-quick-menu").addClass("sticky");
+      } else {
+        $topMenu.removeClass("sticky");
+        $(".top-quick-menu").removeClass("sticky");
+      }
+    });
+  };
+
   const init = () => {
     breakingNewsRolling();
     breakingNewsClick();
     disasterRolling();
     disasterClick();
+    headerSticky();
   };
 
   window.addEventListener("load", () => {

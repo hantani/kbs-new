@@ -226,4 +226,104 @@
     line-height: 16px;
     color: $neutral600;
   }
+
+  .aside {
+    padding: 8px 16px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $neutral200;
+    border-top: 1px solid $neutral500;
+    z-index: 50;
+    .aside-btns {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 32px;
+
+      .aside-btns-list {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        margin-right: 36px;
+        &:last-child {
+          margin-right: 0;
+        }
+        .aside-btn {
+          width: 24px;
+          height: 24px;
+
+          &.share-btn {
+            background: url($share) center center no-repeat;
+          }
+          &.dark-btn {
+            background: url($asideDarkMode) center center no-repeat;
+          }
+          &.txt-btn {
+            width: 32px;
+            height: 32px;
+            background-color: $white;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.off {
+              display: none;
+            }
+
+            .txt-img {
+              display: block;
+              width: 15px;
+              height: 20px;
+              background: url($txtImg) center center no-repeat;
+            }
+          }
+        }
+        .btn-menu {
+          display: none;
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+          border-radius: 20px;
+
+          &.on {
+            display: flex;
+          }
+
+          .btn-menu-list {
+            width: 36px;
+            height: 32px;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid $neutral3100;
+
+            .txt-img {
+              display: block;
+              width: 15px;
+              height: 20px;
+              background: url($txtImgOn) center center no-repeat;
+            }
+
+            &:first-child {
+              border-radius: 20px 0 0 20px;
+            }
+            &:last-child {
+              border-radius: 0 20px 20px 0;
+            }
+
+            .common-btn {
+              width: 100%;
+              height: 100%;
+              font-size: 12px;
+              line-height: 16px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
 }

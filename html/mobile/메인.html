@@ -1443,7 +1443,7 @@
           </div>
         </div>
       </div>
-      <div class="categories-wrapper">
+      <div class="categories-box">
         <div class="title-img-wrapper">
           <img
             class="categories-title"
@@ -1451,68 +1451,71 @@
             alt="타이틀 이미지"
           />
         </div>
-        <ul class="categories">
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img politics"></span>
-              <span class="txt">정치</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img economy"></span>
-              <span class="txt">경제</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img society"></span>
-              <span class="txt">사회</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img culture"></span>
-              <span class="txt">문화</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img it"></span>
-              <span class="txt">IT·과학</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img international"></span>
-              <span class="txt">국제</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img environment"></span>
-              <span class="txt">재난·환경</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img life"></span>
-              <span class="txt">생활·건강</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img sports"></span>
-              <span class="txt">스포츠</span>
-            </a>
-          </li>
-          <li class="categories-list">
-            <a href="#" class="categories-link">
-              <span class="img entertainments"></span>
-              <span class="txt">연예</span>
-            </a>
-          </li>
-        </ul>
+        <div class="categories-wrapper">
+          <ul class="categories">
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img politics"></span>
+                <span class="txt">정치</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img economy"></span>
+                <span class="txt">경제</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img society"></span>
+                <span class="txt">사회</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img culture"></span>
+                <span class="txt">문화</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img it"></span>
+                <span class="txt">IT·과학</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img international"></span>
+                <span class="txt">국제</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img environment"></span>
+                <span class="txt">재난·환경</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img life"></span>
+                <span class="txt">생활·건강</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img sports"></span>
+                <span class="txt">스포츠</span>
+              </a>
+            </li>
+            <li class="categories-list">
+              <a href="#" class="categories-link">
+                <span class="img entertainments"></span>
+                <span class="txt">연예</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="deco-img"></div>
       </div>
       <div class="k-shorts box">
         <div class="title-wrapper flex">
@@ -2437,6 +2440,35 @@
       </div>
     </main>
     <footer id="footer">
+      <aside class="aside">
+        <ul class="aside-btns">
+          <li class="aside-btns-list">
+            <button type="button" class="aside-btn share-btn"></button>
+          </li>
+          <li class="aside-btns-list">
+            <button type="button" class="aside-btn dark-btn"></button>
+          </li>
+          <li class="aside-btns-list">
+            <button type="button" class="aside-btn txt-btn">
+              <span class="txt-img"></span>
+            </button>
+            <ul class="btn-menu">
+              <li class="btn-menu-list">
+                <span class="txt-img"></span>
+              </li>
+              <li class="btn-menu-list">
+                <button type="button" class="common-btn larg-btn">확대</button>
+              </li>
+              <li class="btn-menu-list">
+                <button type="button" class="common-btn larg-btn">기본</button>
+              </li>
+              <li class="btn-menu-list">
+                <button type="button" class="common-btn larg-btn">축소</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
       <div class="notice-alarm-wrapper">
         <div class="notice-alarm">
           <div class="footer-notice">
@@ -2532,7 +2564,7 @@
     src="../../resource/module/jquery-3.7.0/jquery-3.7.0.min.js"
   ></script>
   <script src="../../resource/module/swiper-bundle/swiper-bundle.min.js"></script>
-  <script
+  <!-- <script
     type="text/javascript"
     src="../../js/mobile/common/ui_main.js"
   ></script>
@@ -2543,5 +2575,18 @@
   <script
     type="text/javascript"
     src="../../js/mobile/common/ui_footer.js"
+  ></script> -->
+  <!-- 테스트 스크립트 -->
+  <script
+    type="text/javascript"
+    src="../../js/mobile/common/ui_main-es6.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../../js/mobile/common/ui_header-es6.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../../js/mobile/common/ui_footer-es6.js"
   ></script>
 </html>

@@ -19,6 +19,14 @@
   height: 48px;
   background-color: #f9f9f9;
 }
+#header .top-menu.sticky {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  top: env(safe-area-inset-top);
+  left: 0;
+  z-index: 50;
+}
 #header .top-menu .report-link {
   width: 38px;
   height: 20px;
@@ -75,6 +83,13 @@
   background-color: #fff;
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
+}
+#header .top-quick-menu.sticky {
+  width: 100%;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  z-index: 50;
 }
 #header .top-quick-menu .on-air-link {
   width: 67px;
