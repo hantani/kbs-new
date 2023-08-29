@@ -81,13 +81,16 @@
     const $closeBtn = document.querySelector(
       ".search-input-keywords .close-btn"
     );
+    const $body = document.querySelector("body");
 
     $btn.addEventListener("click", () => {
       $searchMenu.classList.add("on");
+      $body.classList.add("hidden");
     });
 
     $closeBtn.addEventListener("click", () => {
       $searchMenu.classList.remove("on");
+      $body.classList.remove("hidden");
     });
   };
 

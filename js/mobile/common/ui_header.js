@@ -56,11 +56,64 @@
       }
     });
   };
+
+  // 헤더고정
+  var headerSticky = function headerSticky() {
+    var $topMenu = $(".top-menu");
+    var point = $topMenu.offset().top;
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > point) {
+        $topMenu.addClass("sticky");
+        $(".top-quick-menu").addClass("sticky");
+      } else {
+        $topMenu.removeClass("sticky");
+        $(".top-quick-menu").removeClass("sticky");
+      }
+    });
+  };
+
+  // 서치메뉴 On, Off
+  var searchMenuOnOff = function searchMenuOnOff() {
+    var $btn = document.querySelector(".search-hamburger .search-btn");
+    var $searchMenu = document.querySelector("#header .search-menu");
+    var $closeBtn = document.querySelector(".search-input-keywords .close-btn");
+    var $body = document.querySelector("body");
+    $btn.addEventListener("click", function () {
+      $searchMenu.classList.add("on");
+      $body.classList.add("hidden");
+    });
+    $closeBtn.addEventListener("click", function () {
+      $searchMenu.classList.remove("on");
+      $body.classList.remove("hidden");
+    });
+  };
+
+  // 서치 인풋 포커스
+  var searchFocus = function searchFocus() {
+    var $searchMenu = document.querySelector("#header .search-menu");
+    var $input = document.querySelector(".search-box .search-input");
+    var $recommend = document.querySelector(".search-box .recommend-search");
+    var $recommendBtn = document.querySelector(".recommend-search-list .recommend-word");
+    $input.addEventListener("focus", function () {
+      $input.classList.add("on");
+      $recommend.classList.add("on");
+    });
+    $searchMenu.addEventListener("click", function (e) {
+      var target = e.target;
+      if (target !== $input && target !== $recommendBtn) {
+        $input.classList.remove("on");
+        $recommend.classList.remove("on");
+      }
+    });
+  };
   var init = function init() {
     breakingNewsRolling();
     breakingNewsClick();
     disasterRolling();
     disasterClick();
+    headerSticky();
+    searchMenuOnOff();
+    searchFocus();
   };
   window.addEventListener("load", function () {
     init();

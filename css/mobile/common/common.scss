@@ -2,6 +2,12 @@
 @import "_variable";
 @import "_svg";
 
+body {
+  &.hidden {
+    overflow-y: hidden;
+  }
+}
+
 .box-content {
   border: 1px solid $neutral300;
   .thumbnail {

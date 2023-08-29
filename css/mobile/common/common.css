@@ -5,6 +5,10 @@
 /* share */
 /* aside */
 /* icon */
+body.hidden {
+  overflow-y: hidden;
+}
+
 .box-content {
   border: 1px solid #ebeef0;
 }
