@@ -7,3 +7,6 @@
 @import "common/footer.css";
 @import "main/main.css";
 @import "view/view.css";
+
+@import "common/common-dark.css";
+@import "main/main-dark.css";

@@ -644,6 +644,7 @@
               &.live {
                 background-color: $blue600;
                 position: relative;
+                padding-left: 8px;
                 .txt {
                   color: $white;
                   font-size: 16px;
@@ -658,6 +659,7 @@
                   position: absolute;
                   top: 9px;
                   right: 9px;
+                  animation: liveActionTop 2s ease infinite;
                 }
               }
             }

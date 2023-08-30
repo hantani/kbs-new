@@ -7,6 +7,7 @@
     $btn.addEventListener("click", () => {
       $btn.classList.toggle("on");
       $history.classList.toggle("on");
+      setAsidePos();
     });
   };
 
@@ -70,6 +71,7 @@
             $(".disaster-rolling-swiper").addClass("overflow-y");
           }
         }
+        setAsidePos();
       });
   };
 
@@ -265,6 +267,23 @@
       $recommend.classList.remove("on");
       $input.classList.remove("focus");
     });
+  };
+
+  // 어사이드 포지션 설정
+  const setAsidePos = () => {
+    const $aside = document.querySelector("#footer .aside");
+    const $iframe = document.querySelector("#contents .iframe-area");
+    const $headLine = document.querySelector("#contents .box.head-line");
+
+    if ($headLine) {
+      if ($iframe) {
+        const top = $iframe.getBoundingClientRect().top;
+        $aside.style.top = `${top}px`;
+      } else if (!$iframe) {
+        const top = $headLine.getBoundingClientRect().top;
+        $aside.style.top = `${top}px`;
+      }
+    }
   };
 
   // 초기 함수

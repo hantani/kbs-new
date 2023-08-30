@@ -28,8 +28,6 @@
 
   // 라이브 섹션
   .header-live-wrapper {
-    background-color: $black200;
-
     .header-live {
       width: 1280px;
       margin: 0 auto;
@@ -37,6 +35,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 16px 20px 20px;
+      background-color: $black200;
+      border-radius: 0 0 12px 12px;
 
       &:not(.on) {
         #JW_PLAYER_LIVE {
@@ -239,7 +239,7 @@
           width: 100%;
           background-color: rgba(0, 0, 0, 0.7);
           padding: 8px 16px 12px 16px;
-          border-radius: 0 0 10px 10px;
+          border-radius: 0 0 5px 5px;
 
           &.video {
             padding: 8px 48px 12px 16px;
@@ -248,7 +248,6 @@
           .title {
             color: $white;
             font-size: 24px;
-            font-weight: 500;
             line-height: 32px;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -364,16 +363,20 @@
             font-size: 16px;
           }
         }
-        .time {
-          font-size: 14px;
-          font-weight: 500;
-          color: $gray;
-          padding: 6px 16px;
-          border-radius: 20px;
-          border: 1px solid $neutral1700;
-          background-color: $white;
-          margin-top: 8px;
-          display: inline-block;
+        .time-wrapper {
+          display: flex;
+          justify-content: flex-end;
+          .time {
+            font-size: 14px;
+            font-weight: 500;
+            color: $gray;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid $neutral1700;
+            background-color: $white;
+            margin-top: 8px;
+            display: inline-block;
+          }
         }
       }
 

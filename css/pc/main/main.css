@@ -28,9 +28,6 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
-#contents .header-live-wrapper {
-  background-color: #333333;
-}
 #contents .header-live-wrapper .header-live {
   width: 1280px;
   margin: 0 auto;
@@ -44,6 +41,8 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 16px 20px 20px;
+  background-color: #333333;
+  border-radius: 0 0 12px 12px;
 }
 #contents .header-live-wrapper .header-live:not(.on) #JW_PLAYER_LIVE {
   display: none;
@@ -239,7 +238,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 8px 16px 12px 16px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 5px 5px;
 }
 #contents .box .box-content .thumbnail .overlay-txt.video {
   padding: 8px 48px 12px 16px;
@@ -247,7 +246,6 @@
 #contents .box .box-content .thumbnail .overlay-txt .title {
   color: #fff;
   font-size: 24px;
-  font-weight: 500;
   line-height: 32px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -363,7 +361,15 @@
 #contents .box .box-content .txt-wrapper .title.small-font {
   font-size: 16px;
 }
-#contents .box .box-content .txt-wrapper .time {
+#contents .box .box-content .txt-wrapper .time-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+#contents .box .box-content .txt-wrapper .time-wrapper .time {
   font-size: 14px;
   font-weight: 500;
   color: #666;

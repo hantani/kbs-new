@@ -132,7 +132,22 @@
         var $headerLive = $btn.parentElement;
         $headerLive.classList.toggle("on");
         $aside.classList.toggle("position-change");
+        setAsidePos();
       });
+    }
+  };
+
+  // 어사이드 포지션 설정
+  var setAsidePos = function setAsidePos() {
+    var $aside = document.querySelector("#footer .aside");
+    var $iframe = document.querySelector("#contents .iframe-area");
+    var $headLine = document.querySelector("#contents .box.head-line");
+    if ($iframe) {
+      var top = $iframe.getBoundingClientRect().top;
+      $aside.style.top = top + "px";
+    } else if (!$iframe) {
+      var _top = $headLine.getBoundingClientRect().top;
+      $aside.style.top = _top + "px";
     }
   };
   var init = function init() {
@@ -144,6 +159,7 @@
     youtubeLiveNewsSlide();
     premiumkSlide();
     liveClick();
+    setAsidePos();
   };
   window.addEventListener("load", function () {
     init();

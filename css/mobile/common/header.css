@@ -693,6 +693,7 @@
 #header .hamburger-menu .nav-links-slide-wrapper .nav-links-slide .nav-links .nav-links-list .nav-link.live {
   background-color: #126eba;
   position: relative;
+  padding-left: 8px;
 }
 #header .hamburger-menu .nav-links-slide-wrapper .nav-links-slide .nav-links .nav-links-list .nav-link.live .txt {
   color: #fff;
@@ -708,6 +709,8 @@
   position: absolute;
   top: 9px;
   right: 9px;
+  -webkit-animation: liveActionTop 2s ease infinite;
+          animation: liveActionTop 2s ease infinite;
 }
 #header .hamburger-menu .nav-links-slide-wrapper .deco-img {
   position: absolute;
