@@ -317,7 +317,11 @@
             <a href="#" class="disaster-portal">재난포털</a>
           </div>
           <h1 class="ham-top-logo">
-            <img src="/resource/image/mobile/mo_logo_dark.png" alt="top logo" />
+            <img
+              class="img"
+              src="/resource/image/mobile/mo_logo_dark.png"
+              alt="top logo"
+            />
           </h1>
           <div class="setting-close">
             <a href="#" class="setting-btn"></a>
@@ -339,30 +343,36 @@
           </a>
         </div>
         <div class="divide-border"></div>
-        <div class="nav-links-wrapper">
-          <ul class="nav-links">
-            <li class="nav-link-list">
-              <a href="#" class="nav-link live">
-                <span class="txt">LIVE</span>
-                <span class="red-dot"></span>
-              </a>
-            </li>
-            <li class="nav-link-list">
-              <a href="#" class="nav-link">뉴스9</a>
-            </li>
-            <li class="nav-link-list">
-              <a href="#" class="nav-link">속보</a>
-            </li>
-            <li class="nav-link-list">
-              <a href="#" class="nav-link">프리미엄K</a>
-            </li>
-          </ul>
+        <div class="nav-links-slide-wrapper">
+          <div class="nav-links-slide">
+            <ul class="nav-links">
+              <li class="nav-links-list">
+                <a href="#" class="nav-link live">
+                  <span class="txt">LIVE</span>
+                  <span class="white-dot"></span>
+                </a>
+              </li>
+              <li class="nav-links-list">
+                <a href="#" class="nav-link">뉴스9</a>
+              </li>
+              <li class="nav-links-list">
+                <a href="#" class="nav-link">속보</a>
+              </li>
+              <li class="nav-links-list">
+                <a href="#" class="nav-link">프리미엄K</a>
+              </li>
+              <li class="nav-links-list">
+                <a href="#" class="nav-link">재난</a>
+              </li>
+            </ul>
+          </div>
+          <div class="deco-img"></div>
         </div>
         <ul class="full-menu">
           <li class="full-menu-list">
             <button type="button" class="common-btn">
               <span class="menu-name">분야별</span>
-              <span clas="arrow"></span>
+              <span class="arrow"></span>
             </button>
             <div class="menu-links-wrapper">
               <ul class="menu-links">
@@ -395,7 +405,7 @@
           <li class="full-menu-list">
             <button type="button" class="common-btn">
               <span class="menu-name">TV뉴스</span>
-              <span clas="arrow"></span>
+              <span class="arrow"></span>
             </button>
             <div class="menu-links-wrapper">
               <ul class="menu-links">
@@ -446,7 +456,7 @@
           <li class="full-menu-list">
             <button type="button" class="common-btn">
               <span class="menu-name">프리미엄K</span>
-              <span clas="arrow"></span>
+              <span class="arrow"></span>
             </button>
             <div class="menu-links-wrapper">
               <ul class="menu-links">
@@ -498,7 +508,7 @@
           <li class="full-menu-list">
             <button type="button" class="common-btn">
               <span class="menu-name">시사</span>
-              <span clas="arrow"></span>
+              <span class="arrow"></span>
             </button>
             <div class="menu-links-wrapper">
               <ul class="menu-links">
@@ -539,7 +549,7 @@
           <li class="full-menu-list">
             <button type="button" class="common-btn">
               <span class="menu-name">지역</span>
-              <span clas="arrow"></span>
+              <span class="arrow"></span>
             </button>
             <div class="menu-links-wrapper">
               <ul class="menu-links">
@@ -559,23 +569,23 @@
                   <a href="#" class="menu-link">진주</a>
                   <a href="#" class="menu-link">청주</a>
                 </li>
-                <li class="menu-links-list">
+                <li class="menu-links-list two-links">
                   <a href="#" class="menu-link">대구</a>
                   <a href="#" class="menu-link">충주</a>
                 </li>
-                <li class="menu-links-list">
+                <li class="menu-links-list two-links">
                   <a href="#" class="menu-link">안동</a>
                   <a href="#" class="menu-link">춘천</a>
                 </li>
-                <li class="menu-links-list">
+                <li class="menu-links-list two-links">
                   <a href="#" class="menu-link">포항</a>
                   <a href="#" class="menu-link">강릉</a>
                 </li>
-                <li class="menu-links-list">
+                <li class="menu-links-list two-links">
                   <a href="#" class="menu-link">광주</a>
                   <a href="#" class="menu-link">원주</a>
                 </li>
-                <li class="menu-links-list">
+                <li class="menu-links-list two-links">
                   <a href="#" class="menu-link">목포</a>
                   <a href="#" class="menu-link">제주</a>
                 </li>
@@ -585,7 +595,7 @@
           <li class="full-menu-list">
             <button type="button" class="common-btn">
               <span class="menu-name">바로가기</span>
-              <span clas="arrow"></span>
+              <span class="arrow"></span>
             </button>
             <div class="menu-links-wrapper">
               <ul class="menu-links">
@@ -3030,7 +3040,7 @@
     src="../../resource/module/jquery-3.7.0/jquery-3.7.0.min.js"
   ></script>
   <script src="../../resource/module/swiper-bundle/swiper-bundle.min.js"></script>
-  <script
+  <!-- <script
     type="text/javascript"
     src="../../js/mobile/common/ui_main.js"
   ></script>
@@ -3041,9 +3051,9 @@
   <script
     type="text/javascript"
     src="../../js/mobile/common/ui_footer.js"
-  ></script>
+  ></script> -->
   <!-- 테스트 스크립트 -->
-  <!-- <script
+  <script
     type="text/javascript"
     src="../../js/mobile/common/ui_main-es6.js"
   ></script>
@@ -3054,5 +3064,5 @@
   <script
     type="text/javascript"
     src="../../js/mobile/common/ui_footer-es6.js"
-  ></script> -->
+  ></script>
 </html>

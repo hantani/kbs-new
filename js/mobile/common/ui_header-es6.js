@@ -118,6 +118,41 @@
     });
   };
 
+  // 햄버거메뉴 On, Off
+  const hamburgerMenuOnOff = () => {
+    const $btn = document.querySelector(".search-hamburger .hamburger-btn");
+    const $hamburgerMenu = document.querySelector("#header .hamburger-menu");
+    const $closeBtn = document.querySelector(
+      ".ham-top-menu .setting-close .close-btn"
+    );
+    const $body = document.querySelector("body");
+
+    $btn.addEventListener("click", () => {
+      $hamburgerMenu.classList.add("on");
+      $body.classList.add("hidden");
+    });
+
+    $closeBtn.addEventListener("click", () => {
+      $hamburgerMenu.classList.remove("on");
+      $body.classList.remove("hidden");
+    });
+  };
+
+  // 햄버거풀메뉴
+  const fullMenu = () => {
+    const $btns = document.querySelectorAll(
+      ".hamburger-menu .full-menu .full-menu-list .common-btn"
+    );
+
+    $btns.forEach(($btn) => {
+      $btn.addEventListener("click", () => {
+        const $menu = $btn.nextElementSibling;
+        $btn.classList.toggle("on");
+        $menu.classList.toggle("on");
+      });
+    });
+  };
+
   const init = () => {
     breakingNewsRolling();
     breakingNewsClick();
@@ -126,6 +161,8 @@
     headerSticky();
     searchMenuOnOff();
     searchFocus();
+    hamburgerMenuOnOff();
+    fullMenu();
   };
 
   window.addEventListener("load", () => {

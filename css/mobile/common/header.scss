@@ -340,6 +340,7 @@
     background-color: $white;
     z-index: 150;
     display: none;
+    overflow-y: auto;
 
     &.on {
       display: block;
@@ -472,6 +473,324 @@
         font-weight: 700;
         color: $black;
         margin-bottom: 16px;
+      }
+    }
+  }
+  .hamburger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    background-color: $white;
+    overflow-y: auto;
+    display: none;
+
+    &.on {
+      display: block;
+    }
+
+    .ham-top-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px;
+      background-color: $blue600;
+      border-bottom: 1px solid $blue400;
+      position: relative;
+
+      .report-disaster-link {
+        display: flex;
+
+        .report-link {
+          width: 38px;
+          height: 20px;
+          background-color: $blue2700;
+          border-radius: 100px;
+          border: 1px solid $blue600;
+          color: $blue600;
+          font-size: 12px;
+          line-height: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 4px;
+          font-weight: 500;
+        }
+        .disaster-portal {
+          width: 60px;
+          height: 20px;
+          background-color: $red500;
+          border-radius: 100px;
+          border: 1px solid $red400;
+          color: $secondaryRed;
+          font-size: 12px;
+          line-height: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 500;
+        }
+      }
+      .ham-top-logo {
+        width: 81px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .setting-close {
+        display: flex;
+        align-items: center;
+        .setting-btn {
+          display: block;
+          width: 24px;
+          height: 24px;
+          background: url($setting) center center no-repeat;
+          margin-right: 8px;
+        }
+        .close-btn {
+          width: 24px;
+          height: 24px;
+          background: url($closeWhite) center center no-repeat;
+        }
+      }
+    }
+    .login-signup {
+      padding: 24px 49px 30px 49px;
+      background-color: $blue600;
+      display: flex;
+      justify-content: space-between;
+
+      .common-btn {
+        width: 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &.login {
+          .img {
+            background: url($allMenuLogin) center center no-repeat;
+          }
+        }
+
+        &.signup {
+          .img {
+            background: url($allMenuJoin) center center no-repeat;
+          }
+        }
+
+        &.dark-mode {
+          .img {
+            background: url($allMenuDarkMode) center center no-repeat;
+          }
+        }
+
+        .img {
+          width: 48px;
+          height: 48px;
+          margin-bottom: 11px;
+        }
+
+        .txt {
+          color: $blue100;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+      }
+    }
+    .divide-border {
+      height: 8px;
+      background-color: $neutral400;
+    }
+    .nav-links-slide-wrapper {
+      border-bottom: 1px solid $neutral400;
+      position: relative;
+      .nav-links-slide {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .nav-links {
+          display: inline-flex;
+          padding: 17px 0 17px 24px;
+
+          .nav-links-list {
+            margin-right: 8px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            .nav-link {
+              border-radius: 100px;
+              height: 36px;
+              display: inline-block;
+              padding: 8px 16px;
+              font-size: 14px;
+              color: $neutral700;
+              border: 1px solid $neutral700;
+              white-space: nowrap;
+
+              &.live {
+                background-color: $blue600;
+                position: relative;
+                .txt {
+                  color: $white;
+                  font-size: 16px;
+                  font-weight: 700;
+                }
+                .white-dot {
+                  display: block;
+                  width: 4px;
+                  height: 4px;
+                  border-radius: 50%;
+                  background-color: $white;
+                  position: absolute;
+                  top: 9px;
+                  right: 9px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .deco-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15px;
+        height: 70px;
+        background: url($hamDeco) center center no-repeat;
+      }
+    }
+    .full-menu {
+      .full-menu-list {
+        border-bottom: 1px solid $neutral400;
+        .common-btn {
+          width: 100%;
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          padding: 18px 24px;
+          .menu-name {
+            color: $neutral800;
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .arrow {
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: url($down) center center no-repeat;
+          }
+
+          &.on {
+            background-color: $neutral200;
+
+            .arrow {
+              transform: rotateX(180deg);
+            }
+          }
+        }
+        .menu-links-wrapper {
+          background-color: $neutral200;
+          padding: 0 24px 30px 24px;
+          display: none;
+
+          &.on {
+            display: block;
+          }
+
+          .menu-links {
+            &:nth-child(n + 2) {
+              margin-top: 20px;
+            }
+
+            .menu-links-list {
+              display: flex;
+              margin-bottom: 16px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              &.header {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+              }
+
+              &.two-links {
+                .menu-link {
+                  width: 50%;
+                }
+              }
+
+              &.three-links {
+                .menu-link {
+                  width: 33.33%;
+                }
+              }
+
+              .menu-link {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                color: $neutral700;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ham-footer {
+      height: 61px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $neutral300;
+
+      .home-link {
+        color: $neutral800;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        margin-right: 16px;
+      }
+
+      .common-link {
+        width: 18px;
+        height: 18px;
+        margin-right: 16px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.youtube {
+          background: url($hamYoutube) center center no-repeat;
+        }
+        &.kakao {
+          background: url($hamKakao) center center no-repeat;
+        }
+        &.facebook {
+          background: url($hamFacebook) center center no-repeat;
+        }
+        &.twitter {
+          background: url($hamTwitter) center center no-repeat;
+        }
+        &.instagram {
+          background: url($hamInstagram) center center no-repeat;
+        }
       }
     }
   }
