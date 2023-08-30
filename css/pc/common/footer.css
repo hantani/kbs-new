@@ -250,6 +250,7 @@
   border-bottom: none;
   padding: 8px 16px 0;
   display: none;
+  z-index: 150;
 }
 #footer .footer-util-menu-wrapper .footer-util-menu .footer-common-select .common-select-links.on {
   display: block;
@@ -264,6 +265,7 @@
   font-size: 12px;
   line-height: 18px;
   font-weight: 700;
+  display: block;
 }
 #footer .footer-util-menu-wrapper .footer-util-menu .about-kbs-menu {
   display: -webkit-box;
@@ -689,6 +691,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
+  border-radius: 5px 0 0 5px;
 }
 #footer .share-menu .share-links-copy .copy-input .copy-btn {
   width: 107px;

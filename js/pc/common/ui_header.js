@@ -8,6 +8,7 @@
     $btn.addEventListener("click", function () {
       $btn.classList.toggle("on");
       $history.classList.toggle("on");
+      setAsidePos();
     });
   };
 
@@ -38,7 +39,7 @@
 
   // 속보 롤링 event
   var breakingNewsRolling = function breakingNewsRolling() {
-    var weatherSwiper = verticalRollingFn(".breaking-news-swiper");
+    var breakingNewsSwiper = verticalRollingFn(".breaking-news-swiper");
   };
   // 재난 알림 펼침 클릭 event
   var disasterClick = function disasterClick() {
@@ -68,6 +69,7 @@
           $(".disaster-rolling-swiper").addClass("overflow-y");
         }
       }
+      setAsidePos();
     });
   };
 
@@ -244,6 +246,22 @@
       $recommend.classList.remove("on");
       $input.classList.remove("focus");
     });
+  };
+
+  // 어사이드 포지션 설정
+  var setAsidePos = function setAsidePos() {
+    var $aside = document.querySelector("#footer .aside");
+    var $iframe = document.querySelector("#contents .iframe-area");
+    var $headLine = document.querySelector("#contents .box.head-line");
+    if ($headLine) {
+      if ($iframe) {
+        var top = $iframe.getBoundingClientRect().top;
+        $aside.style.top = top + "px";
+      } else if (!$iframe) {
+        var _top = $headLine.getBoundingClientRect().top;
+        $aside.style.top = _top + "px";
+      }
+    }
   };
 
   // 초기 함수

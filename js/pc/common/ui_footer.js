@@ -101,7 +101,7 @@
   // 사이드 메뉴 다크 클릭 event
   var asideDarkClick = function asideDarkClick() {
     var $btn = document.querySelector(".dark-btn");
-    var $btnTxt = document.querySelector(".dark-btn .txt");
+    var $btnTxt = document.querySelector(".dark-btn .common-btn-txt");
     var $body = document.querySelector("body");
     $btn.addEventListener("click", function () {
       $body.classList.toggle("dark");
