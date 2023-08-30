@@ -3,6 +3,8 @@
 @import "./common/reset.css";
 @import "./common/font.css";
 @import "./common/common.css";
+@import "./common/common-dark.css";
 @import "./common/header.css";
 @import "./common/footer.css";
 @import "./main/main.css";
+@import "./main/main-dark.css";

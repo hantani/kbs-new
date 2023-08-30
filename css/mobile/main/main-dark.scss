@@ -1,0 +1,64 @@
+@charset 'utf-8';
+@import "../common/_variable";
+@import "../common/_dark-variable";
+@import "../common/_svg";
+
+body.dark {
+  #header {
+    .top-menu {
+      background: $black;
+
+      .top-logo {
+        .home-link {
+          .img {
+            content: url(/resource/image/mobile/mo_logo_dark.png);
+          }
+        }
+      }
+      .search-hamburger {
+        .search-btn {
+          background: url($searchWhite) center center no-repeat;
+        }
+        .hamburger-btn {
+          background: url($menuWhite) center center no-repeat;
+        }
+      }
+    }
+    .search-menu {
+      .search-input-keywords {
+        background-color: $neutral800;
+
+        .search-input-wrapper {
+          .search-box {
+            .search-input {
+              border: 1px solid $neutral2000;
+              background-color: $neutral800;
+              color: $neutral200;
+
+              &::placeholder {
+                color: $neutral200;
+              }
+            }
+            .recommend-search {
+              .recommend-search-list {
+                .recommend-word {
+                  background-color: $neutral800;
+                  color: $neutral200;
+
+                  strong {
+                    color: $neutral200;
+                  }
+                }
+              }
+            }
+            .close-btn {
+              background: url($clearWhite) center center no-repeat;
+            }
+            .search-btn {
+            }
+          }
+        }
+      }
+    }
+  }
+}

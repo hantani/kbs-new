@@ -1,0 +1,10 @@
+@charset 'utf-8';
+@import "../common/_variable";
+@import "../common/_dark-variable";
+@import "../common/_svg";
+
+body.dark {
+  * {
+    color: $white;
+  }
+}

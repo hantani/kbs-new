@@ -202,6 +202,11 @@ body.dark {
             .ranks {
               .ranks-list {
                 .ranks-link {
+                  &:hover {
+                    .title {
+                      color: $darkBlue;
+                    }
+                  }
                   .title {
                     color: #fff;
                   }

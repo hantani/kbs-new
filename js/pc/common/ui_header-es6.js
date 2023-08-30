@@ -277,10 +277,10 @@
 
     if ($headLine) {
       if ($iframe) {
-        const top = $iframe.getBoundingClientRect().top;
+        const top = window.scrollY + $iframe.getBoundingClientRect().top;
         $aside.style.top = `${top}px`;
       } else if (!$iframe) {
-        const top = $headLine.getBoundingClientRect().top;
+        const top = window.scrollY + $headLine.getBoundingClientRect().top;
         $aside.style.top = `${top}px`;
       }
     }

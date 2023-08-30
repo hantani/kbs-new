@@ -400,6 +400,7 @@
 }
 #contents .box.head-line {
   margin-top: 0;
+  padding-top: 24px;
 }
 #contents .box.head-line .box-contents .main-news-wrapper {
   width: 612px;

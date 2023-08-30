@@ -131,6 +131,9 @@ body.dark #header .header-nav-wrapper .search-most-view .most-view-wrapper {
 body.dark #header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .most-view-title {
   color: #fff;
 }
+body.dark #header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link:hover .title {
+  color: #53acff;
+}
 body.dark #header .header-nav-wrapper .search-most-view .most-view-wrapper .most-view .ranks .ranks-list .ranks-link .title {
   color: #fff;
 }
