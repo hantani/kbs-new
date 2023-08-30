@@ -100,12 +100,22 @@
       });
     });
   };
+
+  // 다크모드
+  var asideDark = function asideDark() {
+    var $btn = document.querySelector(".aside-btn.dark-btn");
+    var $body = document.querySelector("body");
+    $btn.addEventListener("click", function () {
+      $body.classList.toggle("dark");
+    });
+  };
   var init = function init() {
     appLinkClick();
     asideScroll();
     asideShare();
     asideTxt();
     topBtn();
+    asideDark();
   };
   window.addEventListener("load", function () {
     init();

@@ -106,6 +106,49 @@
       }
     });
   };
+
+  // 햄버거메뉴 On, Off
+  var hamburgerMenuOnOff = function hamburgerMenuOnOff() {
+    var $btn = document.querySelector(".search-hamburger .hamburger-btn");
+    var $hamburgerMenu = document.querySelector("#header .hamburger-menu");
+    var $closeBtn = document.querySelector(".ham-top-menu .setting-close .close-btn");
+    var $body = document.querySelector("body");
+    $btn.addEventListener("click", function () {
+      $hamburgerMenu.classList.add("on");
+      $body.classList.add("hidden");
+    });
+    $closeBtn.addEventListener("click", function () {
+      $hamburgerMenu.classList.remove("on");
+      $body.classList.remove("hidden");
+    });
+  };
+
+  // 햄버거풀메뉴
+  var fullMenu = function fullMenu() {
+    var $btns = document.querySelectorAll(".hamburger-menu .full-menu .full-menu-list .common-btn");
+    $btns.forEach(function ($btn) {
+      $btn.addEventListener("click", function () {
+        var $menu = $btn.nextElementSibling;
+        $btn.classList.toggle("on");
+        $menu.classList.toggle("on");
+      });
+    });
+  };
+
+  // 다크모드
+  var darkMode = function darkMode() {
+    var $btn = document.querySelector(".login-signup .common-btn.dark-mode");
+    var $txt = document.querySelector(".login-signup .common-btn.dark-mode .txt");
+    var $body = document.querySelector("body");
+    $btn.addEventListener("click", function () {
+      $body.classList.toggle("dark");
+      if ($body.classList.contains("dark")) {
+        $txt.innerText = "라이트모드";
+      } else {
+        $txt.innerText = "다크모드";
+      }
+    });
+  };
   var init = function init() {
     breakingNewsRolling();
     breakingNewsClick();
@@ -114,6 +157,9 @@
     headerSticky();
     searchMenuOnOff();
     searchFocus();
+    hamburgerMenuOnOff();
+    fullMenu();
+    darkMode();
   };
   window.addEventListener("load", function () {
     init();

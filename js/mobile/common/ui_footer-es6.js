@@ -117,12 +117,23 @@
     });
   };
 
+  // 다크모드
+  const asideDark = () => {
+    const $btn = document.querySelector(".aside-btn.dark-btn");
+    const $body = document.querySelector("body");
+
+    $btn.addEventListener("click", () => {
+      $body.classList.toggle("dark");
+    });
+  };
+
   const init = () => {
     appLinkClick();
     asideScroll();
     asideShare();
     asideTxt();
     topBtn();
+    asideDark();
   };
 
   window.addEventListener("load", () => {

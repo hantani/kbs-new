@@ -633,8 +633,9 @@
             .nav-link {
               border-radius: 100px;
               height: 36px;
-              display: inline-block;
-              padding: 8px 16px;
+              display: flex;
+              align-items: center;
+              padding: 0 16px;
               font-size: 14px;
               color: $neutral700;
               border: 1px solid $neutral700;
@@ -666,10 +667,16 @@
       .deco-img {
         position: absolute;
         top: 0;
-        right: 0;
         width: 15px;
         height: 70px;
-        background: url($hamDeco) center center no-repeat;
+        &.left {
+          background: url($hamDeco2) center center no-repeat;
+          left: 0;
+        }
+        &.right {
+          background: url($hamDeco) center center no-repeat;
+          right: 0;
+        }
       }
     }
     .full-menu {

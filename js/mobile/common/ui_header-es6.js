@@ -153,6 +153,25 @@
     });
   };
 
+  // 다크모드
+  const darkMode = () => {
+    const $btn = document.querySelector(".login-signup .common-btn.dark-mode");
+    const $txt = document.querySelector(
+      ".login-signup .common-btn.dark-mode .txt"
+    );
+    const $body = document.querySelector("body");
+
+    $btn.addEventListener("click", () => {
+      $body.classList.toggle("dark");
+
+      if ($body.classList.contains("dark")) {
+        $txt.innerText = "라이트모드";
+      } else {
+        $txt.innerText = "다크모드";
+      }
+    });
+  };
+
   const init = () => {
     breakingNewsRolling();
     breakingNewsClick();
@@ -163,6 +182,7 @@
     searchFocus();
     hamburgerMenuOnOff();
     fullMenu();
+    darkMode();
   };
 
   window.addEventListener("load", () => {
