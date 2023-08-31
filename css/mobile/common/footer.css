@@ -178,9 +178,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 68px 32px;
 }
 #footer .sns-links .sns-links-list {
@@ -197,6 +197,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 16px;
+}
+#footer .sns-links .sns-links-list:last-child {
+  margin-right: 0;
 }
 #footer .sns-links .sns-link {
   display: block;
@@ -225,9 +229,15 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#footer .site-links-wrapper .site-links .site-links-list {
+  margin-right: 8px;
+}
+#footer .site-links-wrapper .site-links .site-links-list:nth-child(4) {
+  margin-right: 0;
 }
 #footer .site-links-wrapper .site-links .site-links-list .site-link {
   font-size: 13px;
@@ -236,12 +246,6 @@
 }
 #footer .site-links-wrapper .site-links .site-links-list .site-link.kbs-introduce {
   color: #7c7c7c;
-}
-#footer .site-links-wrapper .site-links .site-links-list .site-link.viewer-center {
-  padding-left: 30px;
-}
-#footer .site-links-wrapper .site-links .site-links-list .site-link.pc-version {
-  padding-right: 30px;
 }
 #footer .site-links-wrapper .site-links:nth-child(2) {
   margin-top: 8px;

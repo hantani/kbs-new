@@ -4,6 +4,7 @@
   var swiperFn = function swiperFn(slide, indicator) {
     var rtValue = new Swiper(slide, {
       slidesPerView: 1,
+      spaceBetween: 8,
       loop: true,
       pagination: {
         el: indicator

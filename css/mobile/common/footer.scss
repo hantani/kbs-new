@@ -170,7 +170,7 @@
 
   .sns-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 68px 32px;
     .sns-links-list {
       width: 32px;
@@ -180,6 +180,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
     .sns-link {
       display: block;
@@ -208,8 +212,14 @@
       padding: 0 42px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       .site-links-list {
+        margin-right: 8px;
+
+        &:nth-child(4) {
+          margin-right: 0;
+        }
+
         .site-link {
           font-size: 13px;
           line-height: 16px;
@@ -217,13 +227,6 @@
 
           &.kbs-introduce {
             color: $neutral700;
-          }
-
-          &.viewer-center {
-            padding-left: 30px;
-          }
-          &.pc-version {
-            padding-right: 30px;
           }
         }
       }
