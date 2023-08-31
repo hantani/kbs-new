@@ -195,6 +195,18 @@
     });
   };
 
+  // 탑버튼 클릭
+  const topBtnClick = () => {
+    const $btn = document.querySelector("#footer .top-btn");
+
+    $btn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  };
+
   const init = () => {
     selectClick();
     asideShareClick();
@@ -205,6 +217,7 @@
     asideCommentClick();
     asideLikeClick();
     asideOpenMenuClick();
+    topBtnClick();
   };
 
   window.addEventListener("load", () => {

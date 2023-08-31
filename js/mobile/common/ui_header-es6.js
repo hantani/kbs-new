@@ -66,10 +66,10 @@
     $(window).on("scroll", function () {
       if ($(window).scrollTop() > point) {
         $topMenu.addClass("sticky");
-        $(".top-quick-menu").addClass("sticky");
+        $(".top-quick-menu-wrapper").addClass("sticky");
       } else {
         $topMenu.removeClass("sticky");
-        $(".top-quick-menu").removeClass("sticky");
+        $(".top-quick-menu-wrapper").removeClass("sticky");
       }
     });
   };

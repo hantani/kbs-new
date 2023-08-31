@@ -571,7 +571,6 @@
       }
     }
   }
-
   // 공유 메뉴
   .share-menu {
     z-index: 150;
@@ -687,7 +686,6 @@
       }
     }
   }
-
   .common-popup {
     z-index: 150;
     position: fixed;
@@ -740,5 +738,16 @@
         border-top: 1px solid $neutral1100;
       }
     }
+  }
+  .top-btn {
+    border-radius: 50%;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 42px;
+    height: 42px;
+    background: url($topBtn) center center no-repeat;
+    background-size: 42px 42px;
   }
 }

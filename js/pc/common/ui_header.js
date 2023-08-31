@@ -255,10 +255,10 @@
     var $headLine = document.querySelector("#contents .box.head-line");
     if ($headLine) {
       if ($iframe) {
-        var top = $iframe.getBoundingClientRect().top;
+        var top = window.scrollY + $iframe.getBoundingClientRect().top;
         $aside.style.top = top + "px";
       } else if (!$iframe) {
-        var _top = $headLine.getBoundingClientRect().top;
+        var _top = window.scrollY + $headLine.getBoundingClientRect().top;
         $aside.style.top = _top + "px";
       }
     }

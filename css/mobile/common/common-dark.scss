@@ -7,27 +7,20 @@ body.dark {
   * {
     color: $white;
   }
-}
-
-.box-content {
-  border: 1px solid $neutral800;
-}
-
-.popup {
-  background-color: $neutral800;
-  .title-wrapper {
-    border-bottom: 1px solid $darkNeutral200;
+  .box-content {
+    border: 1px solid $neutral800;
   }
-  .share-sns {
-    .share-sns-btn {
-      .txt {
-        color: $neutral200;
+  .popup {
+    background-color: $neutral800;
+    .title-wrapper {
+      border-bottom: 1px solid $neutral2700;
+    }
+    .share-sns {
+      .share-sns-btn {
+        .txt {
+          color: $neutral200;
+        }
       }
     }
-  }
-}
-
-.box-contents {
-  &.horizontal {
   }
 }

@@ -18,6 +18,10 @@
   padding: 0 16px;
   height: 48px;
   background-color: #f9f9f9;
+  z-index: 100;
+}
+#header .top-menu.index-changed {
+  z-index: 150;
 }
 #header .top-menu.sticky {
   width: 100%;
@@ -25,7 +29,6 @@
   top: 0;
   top: env(safe-area-inset-top);
   left: 0;
-  z-index: 50;
 }
 #header .top-menu .report-link {
   width: 42px;
@@ -71,7 +74,21 @@
   height: 24px;
   background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 5H21' stroke='%23484848' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M3 12H21' stroke='%23484848' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M3 19H21' stroke='%23484848' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A") center center no-repeat;
 }
-#header .top-quick-menu {
+#header .top-quick-menu-wrapper {
+  background-color: #fff;
+  z-index: 100;
+  position: relative;
+}
+#header .top-quick-menu-wrapper.sticky {
+  width: 100%;
+  position: fixed;
+  top: 48px;
+  left: 0;
+}
+#header .top-quick-menu-wrapper.index-changed {
+  z-index: 150;
+}
+#header .top-quick-menu-wrapper .top-quick-menu {
   height: 42px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,19 +96,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 44px 0 16px;
   background-color: #fff;
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
+  padding-left: 16px;
+  position: relative;
+  overflow-x: auto;
 }
-#header .top-quick-menu.sticky {
-  width: 100%;
-  position: fixed;
-  top: 48px;
-  left: 0;
-  z-index: 50;
+#header .top-quick-menu-wrapper .top-quick-menu::-webkit-scrollbar {
+  display: none;
 }
-#header .top-quick-menu .on-air-link {
+#header .top-quick-menu-wrapper .top-quick-menu .on-air-link {
   width: 67px;
   height: 22px;
   border-radius: 100px;
@@ -105,12 +120,12 @@
   position: relative;
   padding-left: 8px;
 }
-#header .top-quick-menu .on-air-link .txt {
+#header .top-quick-menu-wrapper .top-quick-menu .on-air-link .txt {
   font-weight: 700;
   font-size: 13px;
   color: #7c7c7c;
 }
-#header .top-quick-menu .on-air-link .red-dot {
+#header .top-quick-menu-wrapper .top-quick-menu .on-air-link .red-dot {
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -121,20 +136,36 @@
   -webkit-animation: liveActionTop 2s ease infinite;
           animation: liveActionTop 2s ease infinite;
 }
-#header .top-quick-menu .quick-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#header .top-quick-menu-wrapper .top-quick-menu .quick-links {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: calc(100% - 67px);
   padding-left: 16px;
 }
-#header .top-quick-menu .quick-links .quick-link {
+#header .top-quick-menu-wrapper .top-quick-menu .quick-links .quick-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 16px;
+}
+#header .top-quick-menu-wrapper .premiumk-menu {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 150;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 16px 16px 16px;
+  display: none;
+}
+#header .top-quick-menu-wrapper .premiumk-menu .divide-line {
+  height: 6px;
+}
+#header .top-quick-menu-wrapper .premiumk-menu .menu-links {
+  z-index: 150;
 }
 #header .breaking-news {
   background-color: #17478e;
@@ -186,6 +217,13 @@
 }
 #header .breaking-news.rolling .breaking-news-swiper .swiper-wrapper .swiper-slide .title {
   width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #header .breaking-news.rolling .arrow-btn {
   width: 16px;
@@ -340,6 +378,8 @@
 #header .disaster-rolling-message .disaster-rolling-swiper .rolling-message .txt {
   font-weight: 500;
   line-height: 18px;
+  display: block;
+  text-align: left;
 }
 #header .disaster-rolling-message .arrow-btn {
   width: 16px;

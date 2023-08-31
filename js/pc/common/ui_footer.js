@@ -175,6 +175,17 @@
       }
     });
   };
+
+  // 탑버튼 클릭
+  var topBtnClick = function topBtnClick() {
+    var $btn = document.querySelector("#footer .top-btn");
+    $btn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  };
   var init = function init() {
     selectClick();
     asideShareClick();
@@ -185,6 +196,7 @@
     asideCommentClick();
     asideLikeClick();
     asideOpenMenuClick();
+    topBtnClick();
   };
   window.addEventListener("load", function () {
     init();

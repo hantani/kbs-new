@@ -2,6 +2,7 @@
   const swiperFn = (slide, indicator) => {
     const rtValue = new Swiper(slide, {
       slidesPerView: 1,
+      spaceBetween: 8,
       loop: true,
       pagination: {
         el: indicator,

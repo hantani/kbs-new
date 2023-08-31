@@ -8,17 +8,15 @@
 body.dark * {
   color: #fff;
 }
-
-.box-content {
+body.dark .box-content {
   border: 1px solid #484848;
 }
-
-.popup {
+body.dark .popup {
   background-color: #484848;
 }
-.popup .title-wrapper {
-  border-bottom: 1px solid #6f6f6f;
+body.dark .popup .title-wrapper {
+  border-bottom: 1px solid #545454;
 }
-.popup .share-sns .share-sns-btn .txt {
+body.dark .popup .share-sns .share-sns-btn .txt {
   color: #f9f9f9;
 }
