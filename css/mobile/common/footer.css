@@ -239,6 +239,9 @@
 #footer .site-links-wrapper .site-links .site-links-list:nth-child(4) {
   margin-right: 0;
 }
+#footer .site-links-wrapper .site-links .site-links-list:last-child {
+  margin-right: 0;
+}
 #footer .site-links-wrapper .site-links .site-links-list .site-link {
   font-size: 13px;
   line-height: 16px;

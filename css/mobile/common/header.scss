@@ -192,11 +192,11 @@
           height: 36px;
 
           .swiper-slide {
+            position: relative;
+            display: flex;
+            align-items: center;
             .title {
               width: 100%;
-              height: 100%;
-              display: flex;
-              align-items: center;
             }
           }
         }
@@ -641,6 +641,12 @@
         &.login {
           .img {
             background: url($allMenuLogin) center center no-repeat;
+          }
+        }
+
+        &.logout {
+          .img {
+            background: url($logOut) center center no-repeat;
           }
         }
 

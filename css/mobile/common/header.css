@@ -215,15 +215,17 @@
 #header .breaking-news.rolling .breaking-news-swiper .swiper-wrapper {
   height: 36px;
 }
-#header .breaking-news.rolling .breaking-news-swiper .swiper-wrapper .swiper-slide .title {
-  width: 100%;
-  height: 100%;
+#header .breaking-news.rolling .breaking-news-swiper .swiper-wrapper .swiper-slide {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+#header .breaking-news.rolling .breaking-news-swiper .swiper-wrapper .swiper-slide .title {
+  width: 100%;
 }
 #header .breaking-news.rolling .arrow-btn {
   width: 16px;
@@ -697,6 +699,9 @@
 }
 #header .hamburger-menu .login-signup .common-btn.login .img {
   background: url("data:image/svg+xml,%3Csvg width='49' height='48' viewBox='0 0 49 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.168 38.5H14.5013C13.6172 38.5 12.7694 38.1605 12.1443 37.5562C11.5192 36.952 11.168 36.1324 11.168 35.2778V12.7222C11.168 11.8676 11.5192 11.0481 12.1443 10.4438C12.7694 9.83948 13.6172 9.5 14.5013 9.5H24.168' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M28.834 29L23.834 24.5L28.834 20' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24.834 24.5H35.834' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
+}
+#header .hamburger-menu .login-signup .common-btn.logout .img {
+  background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.667 38.5H14.0003C13.1163 38.5 12.2684 38.1605 11.6433 37.5562C11.0182 36.952 10.667 36.1324 10.667 35.2778V12.7222C10.667 11.8676 11.0182 11.0481 11.6433 10.4438C12.2684 9.83948 13.1163 9.5 14.0003 9.5H23.667' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M32.333 29L37.333 24.5L32.333 20' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M36.333 24.5H25.333' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
 }
 #header .hamburger-menu .login-signup .common-btn.signup .img {
   background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='18.75' y='12.25' width='10.5' height='10.5' rx='5.25' stroke='white' stroke-width='1.5'/%3E%3Cpath d='M12 36.5C13.6025 31.2837 18.369 27.5 24 27.5C29.631 27.5 34.3975 31.2837 36 36.5' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") center center no-repeat;
