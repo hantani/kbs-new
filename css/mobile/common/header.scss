@@ -176,12 +176,12 @@
   }
   .breaking-news-history-wrapper {
     display: none;
+    background-color: $blue2000;
 
     &.on {
       display: block;
     }
     .breaking-news-history {
-      background-color: $blue2000;
       padding: 16px;
 
       .breaking-news-history-list {
@@ -235,6 +235,34 @@
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
+        }
+      }
+    }
+    .link-wrapper {
+      padding-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      .all-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 253px;
+        height: 36px;
+        border-radius: 5px;
+        border: 1px solid $blue2100;
+
+        .text {
+          font-size: 14px;
+          font-weight: 700;
+          color: $blue200;
+          margin-right: 4px;
+        }
+
+        .arrow {
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: url($breakingNewsArrow) center center no-repeat;
         }
       }
     }
@@ -504,8 +532,8 @@
         display: flex;
 
         .report-link {
-          width: 38px;
-          height: 20px;
+          width: 42px;
+          height: 24px;
           background-color: $blue2700;
           border-radius: 100px;
           border: 1px solid $blue600;
@@ -643,6 +671,7 @@
 
               &.live {
                 background-color: $blue600;
+                border: 1px solid $blue600;
                 position: relative;
                 padding-left: 8px;
                 .txt {

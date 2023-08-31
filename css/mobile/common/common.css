@@ -11,6 +11,7 @@ body.hidden {
 
 .box-content {
   border: 1px solid #ebeef0;
+  display: block;
 }
 .box-content .thumbnail {
   aspect-ratio: 16/9;
@@ -60,7 +61,7 @@ body.hidden {
   border-radius: 5px 0 5px 0;
 }
 .box-content.overlay-txt-content {
-  border: none;
+  border-radius: 5px;
 }
 .box-content.overlay-txt-content .thumbnail {
   border-radius: 5px;
@@ -227,7 +228,7 @@ a.more-btn.white {
   }
 }
 .popup {
-  width: calc(100% - 48px);
+  width: 312px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -272,6 +273,9 @@ a.more-btn.white {
           align-items: center;
   margin-bottom: 20px;
   margin-right: 20px;
+}
+.popup .share-sns .share-sns-btn:nth-child(4) {
+  margin-right: 0;
 }
 .popup .share-sns .share-sns-btn .sns-img {
   display: block;

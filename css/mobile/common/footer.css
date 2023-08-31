@@ -351,6 +351,9 @@
           align-items: center;
   border-right: 1px solid #ededed;
 }
+#footer .aside .aside-btns .aside-btns-list .btn-menu .btn-menu-list:last-child {
+  border-right: none;
+}
 #footer .aside .aside-btns .aside-btns-list .btn-menu .btn-menu-list .txt-btn {
   display: -webkit-box;
   display: -ms-flexbox;

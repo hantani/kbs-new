@@ -315,6 +315,10 @@
             align-items: center;
             border-right: 1px solid $neutral3100;
 
+            &:last-child {
+              border-right: none;
+            }
+
             .txt-btn {
               display: flex;
               justify-content: center;

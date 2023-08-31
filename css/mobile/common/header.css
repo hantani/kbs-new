@@ -201,12 +201,12 @@
 }
 #header .breaking-news-history-wrapper {
   display: none;
+  background-color: #0e3673;
 }
 #header .breaking-news-history-wrapper.on {
   display: block;
 }
 #header .breaking-news-history-wrapper .breaking-news-history {
-  background-color: #0e3673;
   padding: 16px;
 }
 #header .breaking-news-history-wrapper .breaking-news-history .breaking-news-history-list {
@@ -260,6 +260,42 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+#header .breaking-news-history-wrapper .link-wrapper {
+  padding-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#header .breaking-news-history-wrapper .link-wrapper .all-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 253px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid #406eb1;
+}
+#header .breaking-news-history-wrapper .link-wrapper .all-link .text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b2cff1;
+  margin-right: 4px;
+}
+#header .breaking-news-history-wrapper .link-wrapper .all-link .arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 13.5L10.5 8.5L5.5 3.5' stroke='%23B2CFF1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
 }
 #header .disaster-rolling-message {
   background-color: #f4f6f8;
@@ -533,8 +569,8 @@
   display: flex;
 }
 #header .hamburger-menu .ham-top-menu .report-disaster-link .report-link {
-  width: 38px;
-  height: 20px;
+  width: 42px;
+  height: 24px;
   background-color: #eff9ff;
   border-radius: 100px;
   border: 1px solid #126eba;
@@ -692,6 +728,7 @@
 }
 #header .hamburger-menu .nav-links-slide-wrapper .nav-links-slide .nav-links .nav-links-list .nav-link.live {
   background-color: #126eba;
+  border: 1px solid #126eba;
   position: relative;
   padding-left: 8px;
 }
