@@ -322,9 +322,6 @@
       }
 
       .rolling-message {
-        display: flex;
-        align-items: center;
-        overflow: hidden;
         overflow: hidden;
         white-space: normal;
         text-overflow: ellipsis;
@@ -332,17 +329,13 @@
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         line-height: 18px;
+        font-weight: 500;
+        line-height: 18px;
 
         .caution {
           margin-right: 2px;
           font-weight: 700;
           color: $secondaryRed;
-        }
-        .txt {
-          font-weight: 500;
-          line-height: 18px;
-          display: block;
-          text-align: left;
         }
       }
     }

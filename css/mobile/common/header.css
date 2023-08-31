@@ -356,12 +356,6 @@
   height: 18px;
 }
 #header .disaster-rolling-message .disaster-rolling-swiper .rolling-message {
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
   overflow: hidden;
   white-space: normal;
   text-overflow: ellipsis;
@@ -369,17 +363,13 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   line-height: 18px;
+  font-weight: 500;
+  line-height: 18px;
 }
 #header .disaster-rolling-message .disaster-rolling-swiper .rolling-message .caution {
   margin-right: 2px;
   font-weight: 700;
   color: #f8364b;
-}
-#header .disaster-rolling-message .disaster-rolling-swiper .rolling-message .txt {
-  font-weight: 500;
-  line-height: 18px;
-  display: block;
-  text-align: left;
 }
 #header .disaster-rolling-message .arrow-btn {
   width: 16px;
