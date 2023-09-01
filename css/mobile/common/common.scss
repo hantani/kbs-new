@@ -197,6 +197,31 @@ a.more-btn.white {
   border-radius: 50%;
 }
 
+.hashtags {
+  display: inline-flex;
+
+  .hashtags-list {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .hashtags-link {
+      padding: 5px 15px;
+      color: $blue600;
+      font-size: 15px;
+      font-weight: 500;
+      display: inline-block;
+      white-space: nowrap;
+      background: $white;
+      border: 1px solid $neutral500;
+      border-radius: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
 @keyframes liveActionTop {
   0% {
     opacity: 0.25;

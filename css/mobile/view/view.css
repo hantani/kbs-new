@@ -1,0 +1,261 @@
+/* button */
+/* sns */
+/* categories */
+/* all menu */
+/* share */
+/* aside */
+/* icon */
+#contents .view-headline {
+  padding: 16px;
+  background-color: #f9f9f9;
+  position: relative;
+  border-bottom: 1px solid #ebeef0;
+}
+#contents .view-headline .category-issue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+#contents .view-headline .category-issue .category-name {
+  padding: 5px 8px;
+  border: 1px solid #c0d2ff;
+  background-color: #fff;
+  color: #456bcd;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+#contents .view-headline .category-issue .issue-name {
+  color: #2282b9;
+  font-size: 14px;
+  font-weight: 500;
+}
+#contents .view-headline .headline-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+#contents .view-headline .dates {
+  margin-top: 14px;
+}
+#contents .view-headline .dates .input-date,
+#contents .view-headline .dates .edit-date {
+  font-size: 12px;
+  line-height: 16px;
+  color: #484848;
+}
+#contents .view-headline .dates .edit-date {
+  margin-top: 4px;
+}
+#contents .view-headline .tts-summary {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#contents .view-headline .tts-summary .tts-btn {
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 9.76436C18.6138 10.3137 19 11.112 19 12.0005C19 12.889 18.6138 13.6873 18 14.2366M20 7.52803C21.2275 8.62667 22 10.2232 22 12.0002C22 13.7772 21.2275 15.3738 20 16.4725M4 16.0004H5C5.55229 16.0004 6 15.5527 6 15.0004V9.00044C6 8.44816 5.55229 8.00044 5 8.00044H4C2.89543 8.00044 2 8.89587 2 10.0004V14.0004C2 15.105 2.89543 16.0004 4 16.0004ZM6.55279 7.72405L12.5528 4.72405C13.2177 4.3916 14 4.8751 14 5.61848V18.3824C14 19.1258 13.2177 19.6093 12.5528 19.2768L6.55279 16.2768C6.214 16.1074 6 15.7612 6 15.3824V8.61848C6 8.23971 6.214 7.89344 6.55279 7.72405Z' stroke='%23333333' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center center no-repeat;
+  margin-right: 8px;
+}
+#contents .view-headline .tts-summary .summary-btn {
+  padding: 5px 8px;
+  background-color: #fff;
+  border: 1px solid #c6cbd0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  border-radius: 20px;
+}
+#contents .view-article {
+  background: #fff;
+  padding: 18px 16px 22px 16px;
+  margin-top: 0;
+}
+#contents .view-article .player-area {
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+  background-color: #ededed;
+}
+#contents .view-article .prev-next-links {
+  position: relative;
+  height: auto;
+  margin-top: 27px;
+  height: 66px;
+}
+#contents .view-article .prev-next-links .prev-link {
+  display: block;
+  width: 152px;
+  height: 66px;
+  border-radius: 12px 6px 6px 12px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+}
+#contents .view-article .prev-next-links .prev-link .title-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 128px;
+  height: 100%;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 12px;
+}
+#contents .view-article .prev-next-links .prev-link .title-wrapper .prev-text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+#contents .view-article .prev-next-links .prev-link .title-wrapper .title {
+  font-size: 13px;
+  line-height: 16px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-top: 4px;
+}
+#contents .view-article .prev-next-links .prev-link .img {
+  width: 100%;
+  height: 100%;
+}
+#contents .view-article .prev-next-links .prev-link .arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 3L5.5 8L10.5 13' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
+  position: absolute;
+  top: 25px;
+  left: 4px;
+}
+#contents .view-article .prev-next-links .next-link {
+  display: block;
+  width: 152px;
+  height: 66px;
+  border-radius: 6px 12px 12px 6px;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 6px;
+  top: 0;
+  right: 0;
+}
+#contents .view-article .prev-next-links .next-link .title-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 128px;
+  height: 100%;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 12px;
+}
+#contents .view-article .prev-next-links .next-link .title-wrapper .prev-text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+#contents .view-article .prev-next-links .next-link .title-wrapper .title {
+  font-size: 13px;
+  line-height: 16px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-top: 4px;
+}
+#contents .view-article .prev-next-links .next-link .img {
+  width: 100%;
+  height: 100%;
+}
+#contents .view-article .prev-next-links .next-link .arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 3L5.5 8L10.5 13' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
+  position: absolute;
+  top: 25px;
+  right: 4px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+#contents .view-article .related-articles {
+  margin-top: 24px;
+}
+#contents .view-article .related-articles .title {
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ededed;
+}
+#contents .view-article .related-articles .related-articles-links .related-articles-list {
+  padding: 8px 0;
+  border-bottom: 1px solid #ebeef0;
+}
+#contents .view-article .related-articles .related-articles-links .related-articles-list .related-articles-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 15px;
+  line-height: 18px;
+}
+#contents .view-article .hashtags {
+  margin-top: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#contents .view-article .hashtags .hashtags-list {
+  margin-bottom: 8px;
+}
+#contents .view-reporter {
+  padding: 24px 16px;
+}
+#contents .view-reporter .reporter-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#contents .view-reporter .reporter-info .reporter-img-wrapper {
+  width: 42px;
+  height: 42px;
+  margin-right: 16px;
+}
+#contents .view-reporter .reporter-info .reporter-img-wrapper .default-img {
+  display: block;
+  background: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='21' fill='%23BBBBBB'/%3E%3Cmask id='mask0_219_4334' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='1' y='1' width='40' height='40'%3E%3Ccircle cx='21' cy='21' r='20' fill='%23484848'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_219_4334)'%3E%3Crect x='14' y='8.8457' width='14' height='14' rx='7' fill='white'/%3E%3Cpath d='M20.6933 25.7705C12.3912 25.7705 5.3636 30.9448 3.00098 38.0782V50.3859H38.3856V38.0782C36.023 30.9448 28.9953 25.7705 20.6933 25.7705Z' fill='white'/%3E%3C/g%3E%3C/svg%3E") center center no-repeat;
+  width: 100%;
+  height: 100%;
+}
+#contents .view-reporter .reporter-info .reporter-img-wrapper .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#contents .view-reporter .reporter-info .reporter-name-mailto {
+  width: calc(100% - 58px);
+}

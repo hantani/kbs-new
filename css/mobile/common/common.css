@@ -198,6 +198,30 @@ a.more-btn.white {
   border-radius: 50%;
 }
 
+.hashtags {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.hashtags .hashtags-list {
+  margin-right: 8px;
+}
+.hashtags .hashtags-list:last-child {
+  margin-right: 0;
+}
+.hashtags .hashtags-list .hashtags-link {
+  padding: 5px 15px;
+  color: #126eba;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px solid #c6cbd0;
+  border-radius: 20px;
+  line-height: 20px;
+}
+
 @-webkit-keyframes liveActionTop {
   0% {
     opacity: 0.25;

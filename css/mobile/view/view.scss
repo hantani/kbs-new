@@ -1,0 +1,257 @@
+@charset 'utf-8';
+@import "../common/_variable";
+@import "../common/_svg";
+
+#contents {
+  .view-headline {
+    padding: 16px;
+    background-color: $neutral200;
+    position: relative;
+    border-bottom: 1px solid $neutral300;
+    .category-issue {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      .category-name {
+        padding: 5px 8px;
+        border: 1px solid $blue2200;
+        background-color: $white;
+        color: $blue1300;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+      .issue-name {
+        color: $blue500;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    .headline-title {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $black;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .dates {
+      margin-top: 14px;
+      .input-date,
+      .edit-date {
+        font-size: 12px;
+        line-height: 16px;
+        color: $neutral800;
+      }
+      .edit-date {
+        margin-top: 4px;
+      }
+    }
+    .tts-summary {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      .tts-btn {
+        width: 24px;
+        height: 24px;
+        background: url($ttsBtn) center center no-repeat;
+        margin-right: 8px;
+      }
+      .summary-btn {
+        padding: 5px 8px;
+        background-color: $white;
+        border: 1px solid $neutral500;
+        font-size: 14px;
+        font-weight: 700;
+        color: $black;
+        border-radius: 20px;
+      }
+    }
+  }
+  .view-article {
+    background: $white;
+    padding: 18px 16px 22px 16px;
+    margin-top: 0;
+    .player-area {
+      aspect-ratio: 16 / 9;
+      border-radius: 5px;
+      background-color: $neutral3100;
+    }
+    .prev-next-links {
+      position: relative;
+      height: auto;
+      margin-top: 27px;
+      height: 66px;
+      .prev-link {
+        display: block;
+        width: 152px;
+        height: 66px;
+        border-radius: 12px 6px 6px 12px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 6px;
+
+        .title-wrapper {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 128px;
+          height: 100%;
+          border-radius: 6px;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 8px 12px;
+          .prev-text {
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 700;
+            color: $white;
+          }
+          .title {
+            font-size: 13px;
+            line-height: 16px;
+            color: $white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin-top: 4px;
+          }
+        }
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+        .arrow {
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: url($viewArrow) center center no-repeat;
+          position: absolute;
+          top: 25px;
+          left: 4px;
+        }
+      }
+      .next-link {
+        display: block;
+        width: 152px;
+        height: 66px;
+        border-radius: 6px 12px 12px 6px;
+        overflow: hidden;
+        position: absolute;
+        border-radius: 6px;
+        top: 0;
+        right: 0;
+
+        .title-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 128px;
+          height: 100%;
+          border-radius: 6px;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 8px 12px;
+          .prev-text {
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 700;
+            color: $white;
+          }
+          .title {
+            font-size: 13px;
+            line-height: 16px;
+            color: $white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin-top: 4px;
+          }
+        }
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+        .arrow {
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: url($viewArrow) center center no-repeat;
+          position: absolute;
+          top: 25px;
+          right: 4px;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+    .related-articles {
+      margin-top: 24px;
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $neutral3100;
+      }
+      .related-articles-links {
+        .related-articles-list {
+          padding: 8px 0;
+          border-bottom: 1px solid $neutral300;
+          .related-articles-link {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            font-size: 15px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+    .hashtags {
+      margin-top: 16px;
+      flex-wrap: wrap;
+      .hashtags-list {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .view-reporter {
+    padding: 24px 16px;
+    .reporter-info {
+      display: flex;
+
+      .reporter-img-wrapper {
+        width: 42px;
+        height: 42px;
+        margin-right: 16px;
+        .default-img {
+          display: block;
+          background: url($reporterProfile) center center no-repeat;
+          width: 100%;
+          height: 100%;
+        }
+        .image {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      .reporter-name-mailto {
+        width: calc(100% - 58px);
+      }
+    }
+  }
+  .view-like {
+    .title {
+    }
+  }
+}

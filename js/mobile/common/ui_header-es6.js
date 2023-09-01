@@ -24,10 +24,12 @@
     const $btn = document.querySelector(".breaking-news.rolling .arrow-btn");
     const $history = document.querySelector(".breaking-news-history-wrapper");
 
-    $btn.addEventListener("click", () => {
-      $btn.classList.toggle("on");
-      $history.classList.toggle("on");
-    });
+    if ($btn) {
+      $btn.addEventListener("click", () => {
+        $btn.classList.toggle("on");
+        $history.classList.toggle("on");
+      });
+    }
   };
 
   // 재난 알림 롤링 event
