@@ -270,18 +270,25 @@
   background-color: #f9f9f9;
   border-top: 1px solid #c6cbd0;
   z-index: 50;
+  overflow-x: auto;
+}
+#footer .aside::-webkit-scrollbar {
+  display: none;
 }
 #footer .aside .aside-btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 32px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow-x: auto;
+}
+#footer .aside .aside-btns::-webkit-scrollbar {
+  display: none;
 }
 #footer .aside .aside-btns .aside-btns-list {
   height: 32px;
@@ -299,6 +306,15 @@
 #footer .aside .aside-btns .aside-btns-list .aside-btn {
   width: 24px;
   height: 24px;
+}
+#footer .aside .aside-btns .aside-btns-list .aside-btn.back-btn {
+  background: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 3.26758L7 12.2676L16 21.2676' stroke='%23484848' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
+}
+#footer .aside .aside-btns .aside-btns-list .aside-btn.comment-btn {
+  background: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 15.5176C6.77216 15.5176 6.55668 15.6211 6.41435 15.7991L3.75 19.1295V5.26758C3.75 4.93606 3.8817 4.61811 4.11612 4.38369C4.35054 4.14927 4.66848 4.01758 5 4.01758H19C19.3315 4.01758 19.6495 4.14927 19.8839 4.38369C20.1183 4.61812 20.25 4.93606 20.25 5.26758V14.2676C20.25 14.5991 20.1183 14.917 19.8839 15.1515C19.6495 15.3859 19.3315 15.5176 19 15.5176H7Z' stroke='%23484848' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
+}
+#footer .aside .aside-btns .aside-btns-list .aside-btn.like-btn {
+  background: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.4847 4.93531C14.6812 4.03675 16.6881 3.43972 19.0704 4.90104C20.5285 5.79546 21.5266 7.79472 21.1821 10.363C20.8396 12.9166 19.1525 16.0332 15.2143 18.9481C13.6321 20.1192 13.0546 20.5176 12 20.5176C10.9454 20.5176 10.3679 20.1192 8.78573 18.9481C4.84752 16.0332 3.16037 12.9166 2.81789 10.363C2.47343 7.79472 3.47146 5.79546 4.92959 4.90104C7.31191 3.43972 9.31875 4.03675 10.5153 4.93531L10.5361 4.95098C10.8065 5.15407 11.0388 5.3285 11.2246 5.45014C11.3212 5.51336 11.4281 5.57773 11.5391 5.62788C11.6444 5.67547 11.8062 5.73501 12 5.73501C12.1938 5.73501 12.3556 5.67547 12.4609 5.62788C12.5719 5.57773 12.6788 5.51336 12.7754 5.45014C12.9612 5.32851 13.1934 5.15409 13.4638 4.95102L13.4847 4.93531Z' stroke='%23484848' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") center center no-repeat;
 }
 #footer .aside .aside-btns .aside-btns-list .aside-btn.share-btn {
   background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M18.5 9.00879C20.1569 9.00879 21.5 7.66564 21.5 6.00879C21.5 4.35193 20.1569 3.00879 18.5 3.00879C16.8431 3.00879 15.5 4.35193 15.5 6.00879C15.5 7.66564 16.8431 9.00879 18.5 9.00879Z' stroke='%23484848' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.5 15.0088C8.15685 15.0088 9.5 13.6656 9.5 12.0088C9.5 10.3519 8.15685 9.00879 6.5 9.00879C4.84315 9.00879 3.5 10.3519 3.5 12.0088C3.5 13.6656 4.84315 15.0088 6.5 15.0088Z' stroke='%23484848' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.5 21.0088C20.1569 21.0088 21.5 19.6656 21.5 18.0088C21.5 16.3519 20.1569 15.0088 18.5 15.0088C16.8431 15.0088 15.5 16.3519 15.5 18.0088C15.5 19.6656 16.8431 21.0088 18.5 21.0088Z' stroke='%23484848' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.08984 13.5186L15.5 17.0088' stroke='%23484848' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15 7.50879L9.08984 10.4986' stroke='%23484848' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;

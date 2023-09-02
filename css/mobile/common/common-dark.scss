@@ -23,4 +23,23 @@ body.dark {
       }
     }
   }
+  #footer {
+    .aside {
+      .aside-btns {
+        .aside-btns-list {
+          .aside-btn {
+            &.back-btn {
+              background: url($asideBackDark) center center no-repeat;
+            }
+            &.comment-btn {
+              background: url($asideCommentDark) center center no-repeat;
+            }
+            &.like-btn {
+              background: url($asideLikeDark) center center no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
 }

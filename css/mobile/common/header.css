@@ -20,9 +20,6 @@
   background-color: #f9f9f9;
   z-index: 100;
 }
-#header .top-menu.index-changed {
-  z-index: 150;
-}
 #header .top-menu.sticky {
   width: 100%;
   position: fixed;
@@ -915,4 +912,15 @@
 #header .progress-bar {
   height: 3px;
   background-color: #d9d9d9;
+  width: 100%;
+  z-index: 100;
+}
+#header .progress-bar.sticky {
+  position: fixed;
+  top: 48px;
+  left: 0;
+}
+#header .progress-bar .status {
+  height: 100%;
+  background-color: #239fe7;
 }

@@ -12,10 +12,6 @@
     background-color: $neutral200;
     z-index: 100;
 
-    &.index-changed {
-      z-index: 150;
-    }
-
     &.sticky {
       width: 100%;
       position: fixed;
@@ -877,5 +873,18 @@
   .progress-bar {
     height: 3px;
     background-color: $neutral2800;
+    width: 100%;
+    z-index: 100;
+
+    &.sticky {
+      position: fixed;
+      top: 48px;
+      left: 0;
+    }
+
+    .status {
+      height: 100%;
+      background-color: $blue2800;
+    }
   }
 }

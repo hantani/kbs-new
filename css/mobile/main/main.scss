@@ -24,6 +24,13 @@
       padding-right: 0;
     }
 
+    > .sub-title {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 500;
+      padding: 16px 0 2px 0;
+    }
+
     > .title-wrapper {
       padding: 16px 0;
 
@@ -492,6 +499,7 @@
   .categories-box {
     background-color: $blue2400;
     position: relative;
+    margin-top: 20px;
 
     .title-img-wrapper {
       position: absolute;

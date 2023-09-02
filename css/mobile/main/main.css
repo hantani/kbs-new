@@ -26,6 +26,12 @@
   padding-left: 0;
   padding-right: 0;
 }
+#contents .box > .sub-title {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  padding: 16px 0 2px 0;
+}
 #contents .box > .title-wrapper {
   padding: 16px 0;
 }
@@ -470,6 +476,7 @@
 #contents .categories-box {
   background-color: #384566;
   position: relative;
+  margin-top: 20px;
 }
 #contents .categories-box .title-img-wrapper {
   position: absolute;

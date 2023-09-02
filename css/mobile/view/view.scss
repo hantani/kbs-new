@@ -32,7 +32,7 @@
       font-size: 18px;
       line-height: 24px;
       font-weight: 700;
-      color: $black;
+
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -245,13 +245,175 @@
           border-radius: 50%;
         }
       }
+      .reporter-links-text {
+        .reporter-name-link {
+          display: flex;
+          align-items: center;
+          .home-icon {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url($reporterHome) center center no-repeat;
+            margin-right: 8px;
+          }
+          .reporter-name {
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 2px;
+          }
+          .arrow {
+            display: block;
+            width: 14px;
+            height: 14px;
+            background: url($reporterArrow) center center no-repeat;
+          }
+        }
+        .mailto-btn {
+          display: flex;
+          align-items: center;
+          margin-top: 8px;
+          .mail-icon {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url($reporterMail) center center no-repeat;
+            margin-right: 8px;
+          }
+          .mail-txt {
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 500;
+          }
+        }
+        .reporter-text {
+          font-weight: 500;
+          color: $gray;
+          font-size: 14px;
+          line-height: 22px;
+          margin-top: 16px;
+        }
+      }
       .reporter-name-mailto {
         width: calc(100% - 58px);
       }
     }
   }
   .view-like {
-    .title {
+    padding: 16px 16px 24px 16px;
+    > .title {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $neutral400;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .like-btns {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .like-button,
+      .cheer-button,
+      .want-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .image {
+          width: 50px;
+          height: 50px;
+        }
+        .text-wrapper {
+          .title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            color: $neutral800;
+            margin: 16px 0 4px 0;
+          }
+          .numbers {
+            font-size: 14px;
+            line-height: 18px;
+            color: $blue600;
+            font-weight: 500;
+            margin-bottom: 4px;
+          }
+        }
+      }
+
+      .like-button {
+        .image {
+          background: url($viewLike) center center no-repeat;
+          background-size: 50px 50px;
+        }
+        &.on {
+          .image {
+            background: url($viewLikeOn) center center no-repeat;
+            background-size: 50px 50px;
+          }
+        }
+      }
+
+      .cheer-button {
+        margin: 0 34px;
+        .image {
+          background: url($viewCheer) center center no-repeat;
+          background-size: 50px 50px;
+        }
+        &.on {
+          .image {
+            background: url($viewCheerOn) center center no-repeat;
+            background-size: 50px 50px;
+          }
+        }
+      }
+
+      .want-button {
+        .image {
+          background: url($viewWant) center center no-repeat;
+          background-size: 50px 50px;
+        }
+        &.on {
+          .image {
+            background: url($viewWantOn) center center no-repeat;
+            background-size: 50px 50px;
+          }
+        }
+      }
+    }
+  }
+  .view-series {
+    .view-series-swiper {
+      overflow: hidden;
+    }
+    > .sub-title {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 500;
+      padding: 16px 0 2px 0;
+    }
+  }
+  .comment-guide {
+    margin-top: 20px;
+    padding: 20px 16px 24px 16px;
+    background-color: $white;
+    border-top: 1px solid $neutral500;
+    border-bottom: 1px solid $neutral300;
+    .info-icon {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: 0 auto;
+      background: url($infoIcon) center center no-repeat;
+      background-size: 24px 24px;
+    }
+    .description {
+      font-size: 13px;
+      line-height: 24px;
+      font-weight: 500;
+      color: $gray;
+      text-align: center;
+      margin-top: 12px;
     }
   }
 }

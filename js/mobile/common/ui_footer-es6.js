@@ -127,6 +127,28 @@
     });
   };
 
+  const asideComment = () => {
+    const $btn = document.querySelector(".aside .comment-btn");
+    const $commentArea = document.querySelector(".comment-area");
+
+    if ($btn) {
+      $btn.addEventListener("click", () => {
+        $commentArea.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  };
+
+  const asideViewLike = () => {
+    const $btn = document.querySelector(".aside .like-btn");
+    const $viewLike = document.querySelector(".view-like");
+
+    if ($btn) {
+      $btn.addEventListener("click", () => {
+        $viewLike.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  };
+
   const init = () => {
     appLinkClick();
     asideScroll();
@@ -134,6 +156,8 @@
     asideTxt();
     topBtn();
     asideDark();
+    asideComment();
+    asideViewLike();
   };
 
   window.addEventListener("load", () => {

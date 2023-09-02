@@ -258,11 +258,25 @@
     background-color: $neutral200;
     border-top: 1px solid $neutral500;
     z-index: 50;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .aside-btns {
-      display: flex;
-      justify-content: flex-end;
+      display: inline-flex;
       align-items: center;
-      height: 32px;
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+      // height: 32px;
+      justify-content: flex-end;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       .aside-btns-list {
         height: 32px;
@@ -275,6 +289,18 @@
         .aside-btn {
           width: 24px;
           height: 24px;
+
+          &.back-btn {
+            background: url($asideBack) center center no-repeat;
+          }
+
+          &.comment-btn {
+            background: url($asideComment) center center no-repeat;
+          }
+
+          &.like-btn {
+            background: url($asideLike) center center no-repeat;
+          }
 
           &.share-btn {
             background: url($share) center center no-repeat;

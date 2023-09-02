@@ -109,6 +109,28 @@
       $body.classList.toggle("dark");
     });
   };
+  var asideComment = function asideComment() {
+    var $btn = document.querySelector(".aside .comment-btn");
+    var $commentArea = document.querySelector(".comment-area");
+    if ($btn) {
+      $btn.addEventListener("click", function () {
+        $commentArea.scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    }
+  };
+  var asideViewLike = function asideViewLike() {
+    var $btn = document.querySelector(".aside .like-btn");
+    var $viewLike = document.querySelector(".view-like");
+    if ($btn) {
+      $btn.addEventListener("click", function () {
+        $viewLike.scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    }
+  };
   var init = function init() {
     appLinkClick();
     asideScroll();
@@ -116,6 +138,8 @@
     asideTxt();
     topBtn();
     asideDark();
+    asideComment();
+    asideViewLike();
   };
   window.addEventListener("load", function () {
     init();
