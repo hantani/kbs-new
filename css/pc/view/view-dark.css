@@ -1,0 +1,93 @@
+/* sns */
+/* select */
+/* button */
+/* categories */
+/* calamity */
+/* tooltip direction */
+/* decoration */
+body.dark #contents .view-box {
+  background-color: #272829;
+  border: 1px solid #131313;
+}
+body.dark #contents .view-box .view-title-look-more > .title-wrapper .title {
+  color: #fff;
+}
+body.dark #contents .view-box .view-title-look-more .title-wrapper .title {
+  color: #fff;
+}
+body.dark #contents .view-box .view-title-look-more .title-wrapper .sub-title {
+  color: #b5b5b5;
+}
+body.dark #contents .view-box .view-title-look-more .title-wrapper .sub-title.has-line::before {
+  background-color: #545454;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-headline .category-issue .category-name {
+  border: 1px solid rgba(148, 186, 220, 0.4);
+}
+body.dark #contents .view-page .view-contents-wrapper .view-headline .category-issue .issue-name {
+  color: #fff;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-headline .headline-title {
+  color: #fff;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-headline .tts-summary .tts-btn-wrapper .tts-btn {
+  background: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.5001 10.5776C20.165 11.1727 20.5834 12.0375 20.5834 13C20.5834 13.9626 20.165 14.8274 19.5001 15.4225M21.6667 8.15488C22.9965 9.34507 23.8334 11.0747 23.8334 12.9998C23.8334 14.9249 22.9965 16.6545 21.6667 17.8447M4.33341 17.3333H5.41675C6.01506 17.3333 6.50008 16.8483 6.50008 16.25V9.74999C6.50008 9.15168 6.01506 8.66666 5.41675 8.66666H4.33341C3.1368 8.66666 2.16675 9.63671 2.16675 10.8333V15.1667C2.16675 16.3633 3.1368 17.3333 4.33341 17.3333ZM7.09893 8.36723L13.5989 5.11723C14.3192 4.75708 15.1667 5.28087 15.1667 6.0862V19.9138C15.1667 20.7191 14.3192 21.2429 13.5989 20.8827L7.09893 17.6328C6.73192 17.4492 6.50008 17.0741 6.50008 16.6638V9.3362C6.50008 8.92586 6.73192 8.55074 7.09893 8.36723Z' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center center no-repeat;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-headline .tts-summary .summary-btn {
+  border: 1px solid #4f4f4f;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-headline .dates .input-date,
+body.dark #contents .view-page .view-contents-wrapper .view-headline .dates .edit-date {
+  color: #b5b5b5;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-headline .dates .edit-date::before {
+  background-color: #666;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article .prev-next-links .prev-link .prev-title-wrapper {
+  border: 1px solid #4f4f4f;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article .prev-next-links .prev-link .prev-title-wrapper .prev-txt::after {
+  background-color: #4f4f4f;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article .prev-next-links .next-link .next-title-wrapper {
+  border: 1px solid #4f4f4f;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article .prev-next-links .next-link .next-title-wrapper .next-txt {
+  color: #999;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article .prev-next-links .next-link .next-title-wrapper .next-txt::before {
+  background-color: #4f4f4f;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article .related-articles-wrapper .title {
+  color: #fff;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article .related-articles-wrapper .related-articles-links .related-articles-list .related-articles-link {
+  color: #f3f3f3;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-reporter .reporter-info .mailto-btn .mail-txt {
+  color: #b5b5b5;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-reporter .reporter-txt {
+  color: #b5b5b5;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article-like > .title {
+  color: #fff;
+}
+body.dark #contents .view-page .view-contents-wrapper .view-article-like .like-btns .like-btns-list .btn-title-wrapper .btn-title {
+  color: #f3f3f3;
+}
+body.dark #contents .view-page .side-contents-wrapper .side-headline .news-list .main-news .title {
+  color: #fff;
+}
+body.dark #contents .view-page .side-contents-wrapper .side-title {
+  color: #fff;
+}
+body.dark #contents .view-page .side-contents-wrapper .side-title.has-border {
+  border-bottom: 1px solid #313334;
+}
+body.dark #contents .view-page .side-contents-wrapper .side-most-viewed .ranks .ranks-list {
+  border-bottom: 1px solid #313334;
+}
+body.dark #contents .view-page .side-contents-wrapper .side-most-viewed .ranks .ranks-list:first-child {
+  border-top: #313334;
+}

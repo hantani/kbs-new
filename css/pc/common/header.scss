@@ -374,6 +374,22 @@
   // 헤더 타이틀 메뉴
   .header-title-menu-wrapper {
     background-color: $neutral200;
+    position: relative;
+    width: 100%;
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 200;
+      .progress-bar {
+        position: absolute;
+        height: 4px;
+        bottom: -4px;
+        left: 0;
+        background-color: $blue2800;
+      }
+    }
 
     .header-title-menu {
       width: 1280px;
@@ -490,6 +506,7 @@
     z-index: 150;
     border-top: 1px solid $neutral1000;
     border-bottom: 1px solid $neutral1300;
+    width: 100%;
 
     &.index-change {
       z-index: 100;
@@ -499,7 +516,12 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
+    }
+
+    &.fixed-02 {
+      position: fixed;
+      top: 80px;
+      left: 0;
     }
 
     .header-nav {

@@ -8,5 +8,8 @@
 @import "main/main.css";
 @import "view/view.css";
 
+@import "common/header-dark.css";
+@import "common/footer-dark.css";
 @import "common/common-dark.css";
 @import "main/main-dark.css";
+@import "view/view-dark.css";

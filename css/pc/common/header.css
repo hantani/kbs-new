@@ -390,6 +390,21 @@
 }
 #header .header-title-menu-wrapper {
   background-color: #f9f9f9;
+  position: relative;
+  width: 100%;
+}
+#header .header-title-menu-wrapper.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+#header .header-title-menu-wrapper.fixed .progress-bar {
+  position: absolute;
+  height: 4px;
+  bottom: -4px;
+  left: 0;
+  background-color: #239fe7;
 }
 #header .header-title-menu-wrapper .header-title-menu {
   width: 1280px;
@@ -517,6 +532,7 @@
   z-index: 150;
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #bfbfbf;
+  width: 100%;
 }
 #header .header-nav-wrapper.index-change {
   z-index: 100;
@@ -525,7 +541,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+}
+#header .header-nav-wrapper.fixed-02 {
+  position: fixed;
+  top: 80px;
+  left: 0;
 }
 #header .header-nav-wrapper .header-nav {
   width: 1280px;

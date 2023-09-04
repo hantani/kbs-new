@@ -9,6 +9,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     .view-contents-wrapper {
       width: 962px;
@@ -21,19 +22,18 @@
           align-items: center;
           margin-bottom: 8px;
           .category-name {
-            padding: 3px 16px;
-            color: $white;
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 500;
-            margin-right: 12px;
-            background-color: $blue600;
-            border-radius: 5px;
+            padding: 6px 16px;
+            border-radius: 15px;
+            border: 1px solid $blue1200;
+            color: $blue1300;
+            font-weight: 700;
+            margin-right: 16px;
           }
           .issue-name {
             font-weight: 500;
             font-size: 16px;
             color: $neutral700;
+            color: $blue500;
           }
         }
         .headline-title {
@@ -360,7 +360,13 @@
               background: url($reporterProfile) center center no-repeat;
             }
 
-            .img {
+            .image {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+
+            img {
               width: 100%;
               height: 100%;
               border-radius: 50%;
@@ -543,6 +549,12 @@
     }
     .side-contents-wrapper {
       width: 270px;
+      position: sticky;
+
+      &.fixed {
+        position: fixed;
+        top: 74px;
+      }
 
       .side-title {
         font-size: 22px;
