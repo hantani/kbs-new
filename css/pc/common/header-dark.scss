@@ -248,6 +248,12 @@ body.dark {
               }
             }
           }
+          .nav-logo {
+            content: url(/resource/image/pc/nav_logo_dark.png);
+          }
+          .article-title {
+            color: $white;
+          }
         }
       }
       .search-most-view {

@@ -168,6 +168,12 @@ body.dark #header .header-nav-wrapper .header-nav .nav-menu .hamburger-search-bt
 body.dark #header .header-nav-wrapper .header-nav .nav-menu .nav-links .nav-list .nav-link {
   color: #fff;
 }
+body.dark #header .header-nav-wrapper .header-nav .nav-menu .nav-logo {
+  content: url(/resource/image/pc/nav_logo_dark.png);
+}
+body.dark #header .header-nav-wrapper .header-nav .nav-menu .article-title {
+  color: #fff;
+}
 body.dark #header .header-nav-wrapper .search-most-view .most-view-wrapper {
   background-color: #222;
 }

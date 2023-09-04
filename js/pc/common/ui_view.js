@@ -79,12 +79,52 @@
       $nav.classList.remove("index-change");
     });
   };
+
+  // 사이드 메뉴 위치 세팅
+  var setAsidePosition = function setAsidePosition() {
+    var $aside = document.querySelector(".aside");
+    var $contents = document.querySelector("#contents");
+    var top = $contents.getBoundingClientRect().top;
+    $aside.style.top = top + 24 + "px";
+  };
+  var progressBar = function progressBar() {
+    var $progressBar = document.querySelector(".progress-bar");
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = winScroll / height * 100;
+    $progressBar.style.width = scrolled + "%";
+  };
+
+  // 스크롤시 네비게이션 메뉴 기사제목 나오기
+  var navArticleTitle = function navArticleTitle() {
+    var menuBar = $(".header-nav-wrapper");
+    var point = menuBar.offset().top;
+    var navLinks = $(".nav-menu .nav-links");
+    var hashTagLinks = $(".header-nav .hashtag-links");
+    var articleTitle = $(".nav-menu .article-title");
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > point) {
+        navLinks.addClass("off");
+        hashTagLinks.addClass("off");
+        articleTitle.addClass("on");
+      } else {
+        navLinks.removeClass("off");
+        hashTagLinks.removeClass("off");
+        articleTitle.removeClass("on");
+      }
+    });
+  };
   var init = function init() {
     likeClick();
     seriesSlide();
     summaryPopup();
+    setAsidePosition();
+    navArticleTitle();
   };
   window.addEventListener("load", function () {
     init();
+  });
+  window.addEventListener("scroll", function () {
+    progressBar();
   });
 })();

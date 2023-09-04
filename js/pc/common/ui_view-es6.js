@@ -103,36 +103,6 @@
     $aside.style.top = `${top + 24}px`;
   };
 
-  // 스크롤시 탑 메뉴 고정
-  const titleMenuFixed = () => {
-    var $titleMenu = $(".header-title-menu-wrapper");
-    var $navMenu = $(".header-nav-wrapper");
-    var point = $titleMenu.offset().top;
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop() > point) {
-        $titleMenu.addClass("fixed");
-        $navMenu.addClass("fixed-02");
-      } else {
-        $titleMenu.removeClass("fixed");
-        $navMenu.removeClass("fixed-02");
-      }
-    });
-  };
-
-  // 스크롤시 어사이드 고정 event
-  const asideFixed = () => {
-    var $aside = $(".aside");
-    var $contents = $("#contents");
-    var point = $contents.offset().top;
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop() > point) {
-        $aside.addClass("fixed-02");
-      } else if ($(window).scrollTop() <= point) {
-        $aside.removeClass("fixed-02");
-      }
-    });
-  };
-
   const progressBar = () => {
     const $progressBar = document.querySelector(".progress-bar");
     const winScroll =
@@ -144,13 +114,32 @@
     $progressBar.style.width = scrolled + "%";
   };
 
+  // 스크롤시 네비게이션 메뉴 기사제목 나오기
+  const navArticleTitle = () => {
+    var menuBar = $(".header-nav-wrapper");
+    var point = menuBar.offset().top;
+    var navLinks = $(".nav-menu .nav-links");
+    var hashTagLinks = $(".header-nav .hashtag-links");
+    var articleTitle = $(".nav-menu .article-title");
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > point) {
+        navLinks.addClass("off");
+        hashTagLinks.addClass("off");
+        articleTitle.addClass("on");
+      } else {
+        navLinks.removeClass("off");
+        hashTagLinks.removeClass("off");
+        articleTitle.removeClass("on");
+      }
+    });
+  };
+
   const init = () => {
     likeClick();
     seriesSlide();
     summaryPopup();
     setAsidePosition();
-    titleMenuFixed();
-    asideFixed();
+    navArticleTitle();
   };
 
   window.addEventListener("load", () => {

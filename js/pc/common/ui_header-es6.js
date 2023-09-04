@@ -198,12 +198,15 @@
   // 스크롤시 네비게이션 메뉴 고정 event
   const navFixed = () => {
     var menuBar = $(".header-nav-wrapper");
+    var navLogo = $(".nav-menu .nav-logo");
     var point = menuBar.offset().top;
     $(window).on("scroll", function () {
       if ($(window).scrollTop() > point) {
         menuBar.addClass("fixed");
+        navLogo.addClass("on");
       } else {
         menuBar.removeClass("fixed");
+        navLogo.removeClass("on");
       }
     });
   };
