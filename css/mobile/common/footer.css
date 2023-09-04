@@ -21,6 +21,9 @@
 #footer .dim.on {
   display: block;
 }
+#footer .dim.index-change {
+  z-index: 90;
+}
 #footer .notice-alarm-wrapper {
   background-color: #ececec;
   padding-bottom: 20px;
@@ -285,7 +288,7 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  overflow-x: auto;
+  width: 100%;
 }
 #footer .aside .aside-btns::-webkit-scrollbar {
   display: none;
@@ -299,6 +302,10 @@
       -ms-flex-align: center;
           align-items: center;
   margin-right: 36px;
+}
+#footer .aside .aside-btns .aside-btns-list.has-txt-btn {
+  width: auto;
+  height: 36px;
 }
 #footer .aside .aside-btns .aside-btns-list:last-child {
   margin-right: 0;
@@ -350,9 +357,9 @@
 }
 #footer .aside .aside-btns .aside-btns-list .btn-menu {
   display: none;
+  border-radius: 20px;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
 }
 #footer .aside .aside-btns .aside-btns-list .btn-menu.on {
   display: -webkit-box;

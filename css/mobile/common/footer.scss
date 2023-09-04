@@ -18,6 +18,9 @@
     &.on {
       display: block;
     }
+    &.index-change {
+      z-index: 90;
+    }
   }
 
   .notice-alarm-wrapper {
@@ -267,12 +270,8 @@
     .aside-btns {
       display: inline-flex;
       align-items: center;
-      // position: absolute;
-      // top: 0;
-      // right: 0;
-      // height: 32px;
       justify-content: flex-end;
-      overflow-x: auto;
+      width: 100%;
 
       &::-webkit-scrollbar {
         display: none;
@@ -283,6 +282,10 @@
         display: flex;
         align-items: center;
         margin-right: 36px;
+        &.has-txt-btn {
+          width: auto;
+          height: 36px;
+        }
         &:last-child {
           margin-right: 0;
         }
@@ -332,8 +335,8 @@
         }
         .btn-menu {
           display: none;
-          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
           border-radius: 20px;
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
 
           &.on {
             display: flex;
