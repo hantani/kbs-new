@@ -152,8 +152,6 @@
   }
   .footer-notice-wrapper,
   .footer-inform-wrapper {
-    border-bottom: 1px solid $neutral300;
-
     .footer-notice,
     .footer-inform {
       width: 1280px;
@@ -184,12 +182,14 @@
   }
   .footer-notice-wrapper {
     background-color: $lightPcBG;
+    border-bottom: 1px solid $neutral300;
   }
   .footer-inform-wrapper {
     background-color: $neutral200;
   }
   .footer-util-menu-wrapper {
     background-color: $white;
+    border-top: 1px solid $neutral300;
     border-bottom: 1px solid $neutral300;
     .footer-util-menu {
       width: 1280px;

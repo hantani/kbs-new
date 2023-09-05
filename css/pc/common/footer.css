@@ -133,10 +133,6 @@
   width: 123px;
   border-right: none;
 }
-#footer .footer-notice-wrapper,
-#footer .footer-inform-wrapper {
-  border-bottom: 1px solid #ebeef0;
-}
 #footer .footer-notice-wrapper .footer-notice,
 #footer .footer-notice-wrapper .footer-inform,
 #footer .footer-inform-wrapper .footer-notice,
@@ -188,12 +184,14 @@
 }
 #footer .footer-notice-wrapper {
   background-color: #f4f6f8;
+  border-bottom: 1px solid #ebeef0;
 }
 #footer .footer-inform-wrapper {
   background-color: #f9f9f9;
 }
 #footer .footer-util-menu-wrapper {
   background-color: #fff;
+  border-top: 1px solid #ebeef0;
   border-bottom: 1px solid #ebeef0;
 }
 #footer .footer-util-menu-wrapper .footer-util-menu {
