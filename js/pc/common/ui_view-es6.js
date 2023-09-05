@@ -98,7 +98,7 @@
   const setAsidePosition = () => {
     const $aside = document.querySelector(".aside");
     const $contents = document.querySelector("#contents");
-    const top = $contents.getBoundingClientRect().top;
+    const top = window.scrollY + $contents.getBoundingClientRect().top;
 
     $aside.style.top = `${top + 24}px`;
   };

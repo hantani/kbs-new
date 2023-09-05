@@ -84,7 +84,7 @@
   var setAsidePosition = function setAsidePosition() {
     var $aside = document.querySelector(".aside");
     var $contents = document.querySelector("#contents");
-    var top = $contents.getBoundingClientRect().top;
+    var top = window.scrollY + $contents.getBoundingClientRect().top;
     $aside.style.top = top + 24 + "px";
   };
   var progressBar = function progressBar() {
