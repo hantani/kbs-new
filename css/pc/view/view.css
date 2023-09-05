@@ -723,6 +723,26 @@
   padding-bottom: 0;
   border-bottom: none;
 }
+#contents .view-page .comment-notice {
+  padding: 20px 0 24px 0;
+  border-top: 2px solid #ccc;
+  border-bottom: 1px solid #dfe2e2;
+  margin-top: 24px;
+}
+#contents .view-page .comment-notice .notice-icon {
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%235B7C8E'/%3E%3Cpath d='M10.8326 18V10.016H13.1846V18H10.8326ZM12.0166 8.576C11.2006 8.576 10.6406 8.064 10.6406 7.28C10.6406 6.512 11.2006 6 12.0166 6C12.8166 6 13.3766 6.512 13.3766 7.28C13.3766 8.064 12.8166 8.576 12.0166 8.576Z' fill='%235B7C8E'/%3E%3C/svg%3E") center center no-repeat;
+  margin: 0 auto;
+}
+#contents .view-page .comment-notice .notice-text {
+  color: #5b7c8e;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 12px;
+}
 #contents .view-box {
   border: 1px solid #e2e2e2;
   border-radius: 10px;
@@ -883,9 +903,33 @@
 .detail-body {
   padding: 0;
   font-size: 17px;
-  font-family: "Noto Sans Light";
   color: #000;
   line-height: 30px;
   letter-spacing: 0;
   overflow: hidden;
+  font-family: "Noto Sans KR";
+}
+.detail-body div.anchor {
+  padding: 10px 23px 15px;
+  margin: 0px 0px 28px;
+  background: rgba(18, 18, 55, 0.04);
+  font-weight: 300;
+  line-height: 30px;
+}
+.detail-body div.anchor span.anchor {
+  color: rgb(18, 18, 55);
+  font-size: 17px;
+  font-weight: 700;
+}
+.detail-body div.report {
+  padding: 10px 23px 15px;
+  margin: 0px 0px 28px;
+  font-weight: 300;
+  background: rgba(0, 128, 204, 0.04);
+  line-height: 30px;
+}
+.detail-body div.report span.report {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0080cc;
 }

@@ -76,6 +76,16 @@ body.dark #contents .view-page .view-contents-wrapper .view-article-like > .titl
 body.dark #contents .view-page .view-contents-wrapper .view-article-like .like-btns .like-btns-list .btn-title-wrapper .btn-title {
   color: #f3f3f3;
 }
+body.dark #contents .view-page .view-contents-wrapper .comment-notice {
+  border-top: 2px solid #313334;
+  border-bottom: 1px solid #313334;
+}
+body.dark #contents .view-page .view-contents-wrapper .comment-notice .notice-icon {
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%23B5B5B5'/%3E%3Cpath d='M10.8326 18V10.016H13.1846V18H10.8326ZM12.0166 8.576C11.2006 8.576 10.6406 8.064 10.6406 7.28C10.6406 6.512 11.2006 6 12.0166 6C12.8166 6 13.3766 6.512 13.3766 7.28C13.3766 8.064 12.8166 8.576 12.0166 8.576Z' fill='%23B5B5B5'/%3E%3C/svg%3E") center center no-repeat;
+}
+body.dark #contents .view-page .view-contents-wrapper .comment-notice .notice-text {
+  color: #b5b5b5;
+}
 body.dark #contents .view-page .side-contents-wrapper .side-headline .news-list .main-news .title {
   color: #fff;
 }

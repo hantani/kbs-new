@@ -8,6 +8,7 @@ function news_contents_decorate() {
       font_color: "#121237",
       icon_name: "[앵커]",
       class: "anchor",
+      // ak1
     },
     "[질문]": {
       section_color: "#4664e6",
@@ -16,6 +17,7 @@ function news_contents_decorate() {
       font_color: "#121237",
       icon_name: "[질문]",
       class: "question",
+      // ak2
     },
     "[기자]": {
       section_color: "#db9655",
@@ -24,6 +26,7 @@ function news_contents_decorate() {
       font_color: "#0080CC",
       icon_name: "[기자]",
       class: "reporter",
+      // ak3
     },
     "[리포트]": {
       section_color: "#db9655",
@@ -32,6 +35,7 @@ function news_contents_decorate() {
       font_color: "#0080CC",
       icon_name: "[리포트]",
       class: "report",
+      // ak4
     },
     "[답변]": {
       section_color: "#db9655",
@@ -40,6 +44,7 @@ function news_contents_decorate() {
       font_color: "#0080CC",
       icon_name: "[답변]",
       class: "answer",
+      // ak5
     },
   };
 

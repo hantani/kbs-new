@@ -130,6 +130,16 @@ body.dark {
             }
           }
         }
+        .comment-notice {
+          border-top: 2px solid $darkBlack1000;
+          border-bottom: 1px solid $darkBlack1000;
+          .notice-icon {
+            background: url($noticeIconDark) center center no-repeat;
+          }
+          .notice-text {
+            color: $darkNeutral;
+          }
+        }
       }
       .side-contents-wrapper {
         .side-headline {
