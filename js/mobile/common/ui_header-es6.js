@@ -6,7 +6,7 @@
       loop: true,
       loopAdditionalSlides: 1,
       autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
       },
     });
@@ -189,6 +189,11 @@
         $dim.classList.toggle("index-change");
       });
       $closeButton.addEventListener("click", () => {
+        $menu.classList.remove("on");
+        $dim.classList.remove("on");
+        $dim.classList.remove("index-change");
+      });
+      $dim.addEventListener("click", () => {
         $menu.classList.remove("on");
         $dim.classList.remove("on");
         $dim.classList.remove("index-change");

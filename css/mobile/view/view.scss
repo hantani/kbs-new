@@ -62,6 +62,10 @@
         height: 24px;
         background: url($ttsBtn) center center no-repeat;
         margin-right: 8px;
+
+        &.on {
+          background: url($ttsBtnOn) center center no-repeat;
+        }
       }
       .summary-btn {
         padding: 5px 8px;

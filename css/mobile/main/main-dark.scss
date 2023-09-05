@@ -46,6 +46,12 @@ body.dark {
           }
         }
       }
+
+      &.recommend-news {
+        .recommend-news-swiper-wrapper {
+          border-top: 1px solid $darkBlack500;
+        }
+      }
     }
 
     .box-contents {

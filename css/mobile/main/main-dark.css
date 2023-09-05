@@ -33,6 +33,9 @@ body.dark #contents .box.youtube-live .ready {
 body.dark #contents .box.youtube-live .ready .txt {
   color: #c6cbd0;
 }
+body.dark #contents .box.recommend-news .recommend-news-swiper-wrapper {
+  border-top: 1px solid #383838;
+}
 body.dark #contents .box-contents.vertical .box-content {
   border: 1px solid #484848;
 }

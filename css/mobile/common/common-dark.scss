@@ -22,6 +22,29 @@ body.dark {
         }
       }
     }
+    .popup-texts {
+      .sub-text {
+        color: $neutral3000;
+      }
+    }
+    .selects-wrapper {
+      .common-select {
+        .title {
+          color: $white;
+        }
+        .select {
+          background: url($selectArrowDark) center right 12px no-repeat;
+          background-color: $neutral2700;
+          border: 1px solid $neutral700;
+          color: $white;
+
+          &:focus {
+            background: url($selectArrowUpDark) center right 12px no-repeat;
+            background-color: $neutral2700;
+          }
+        }
+      }
+    }
   }
   #footer {
     .aside {

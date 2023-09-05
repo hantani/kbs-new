@@ -54,10 +54,59 @@
     $status.style.width = scrolled + "%";
   };
 
+  const ttsPopup = () => {
+    const $btn = document.querySelector(".tts-btn");
+    const $popup = document.querySelector(".tts-popup");
+    const $dim = document.querySelector(".dim");
+    const $checkBtn = document.querySelector(".tts-popup .check-btn");
+
+    $btn.addEventListener("click", () => {
+      $popup.classList.toggle("on");
+      $dim.classList.toggle("on");
+      $btn.classList.toggle("on");
+    });
+
+    $checkBtn.addEventListener("click", () => {
+      $popup.classList.remove("on");
+      $dim.classList.remove("on");
+      $btn.classList.remove("on");
+    });
+
+    $dim.addEventListener("click", () => {
+      $popup.classList.remove("on");
+      $dim.classList.remove("on");
+      $btn.classList.remove("on");
+    });
+  };
+
+  const summaryPopup = () => {
+    const $btn = document.querySelector(".summary-btn");
+    const $popup = document.querySelector(".summary-popup");
+    const $dim = document.querySelector(".dim");
+    const $closeBtn = document.querySelector(".summary-popup .close-btn");
+
+    $btn.addEventListener("click", () => {
+      $popup.classList.toggle("on");
+      $dim.classList.toggle("on");
+    });
+
+    $dim.addEventListener("click", () => {
+      $popup.classList.remove("on");
+      $dim.classList.remove("on");
+    });
+
+    $closeBtn.addEventListener("click", () => {
+      $popup.classList.remove("on");
+      $dim.classList.remove("on");
+    });
+  };
+
   const init = () => {
     viewSeriesSwiper();
     viewLikeClick();
     headerSticky();
+    ttsPopup();
+    summaryPopup();
   };
 
   window.addEventListener("load", () => {

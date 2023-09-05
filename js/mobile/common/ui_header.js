@@ -8,7 +8,7 @@
       loop: true,
       loopAdditionalSlides: 1,
       autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false
       }
     });
@@ -151,6 +151,29 @@
       }
     });
   };
+  var premiumkMenu = function premiumkMenu() {
+    var $btn = document.querySelector("#header .premiumk-button");
+    var $menu = document.querySelector("#header .premiumk-menu");
+    var $dim = document.querySelector(".dim");
+    var $closeButton = document.querySelector("#header .premiumk-menu .close-button");
+    if ($btn) {
+      $btn.addEventListener("click", function () {
+        $menu.classList.toggle("on");
+        $dim.classList.toggle("on");
+        $dim.classList.toggle("index-change");
+      });
+      $closeButton.addEventListener("click", function () {
+        $menu.classList.remove("on");
+        $dim.classList.remove("on");
+        $dim.classList.remove("index-change");
+      });
+      $dim.addEventListener("click", function () {
+        $menu.classList.remove("on");
+        $dim.classList.remove("on");
+        $dim.classList.remove("index-change");
+      });
+    }
+  };
   var init = function init() {
     breakingNewsRolling();
     breakingNewsClick();
@@ -162,6 +185,7 @@
     hamburgerMenuOnOff();
     fullMenu();
     darkMode();
+    premiumkMenu();
   };
   window.addEventListener("load", function () {
     init();
