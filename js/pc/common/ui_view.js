@@ -114,12 +114,19 @@
       }
     });
   };
+  var ttsClick = function ttsClick() {
+    var $btn = document.querySelector(".tts-btn");
+    $btn.addEventListener("click", function () {
+      $btn.classList.toggle("on");
+    });
+  };
   var init = function init() {
     likeClick();
     seriesSlide();
     summaryPopup();
     setAsidePosition();
     navArticleTitle();
+    ttsClick();
   };
   window.addEventListener("load", function () {
     init();
