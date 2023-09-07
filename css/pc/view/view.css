@@ -661,7 +661,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 #contents .view-page .side-contents-wrapper .side-banner {
@@ -980,7 +980,6 @@
 }
 .detail-body span {
   font-family: "Noto Sans KR";
-  vertical-align: top;
 }
 .detail-body .photo_box {
   text-align: center;
