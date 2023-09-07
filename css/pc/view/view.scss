@@ -103,7 +103,7 @@
       }
       .view-article {
         margin-top: 24px;
-        padding: 16px 16px 24px 16px;
+        padding: 24px;
 
         .player-area {
           height: 522px;
@@ -485,6 +485,9 @@
       .view-series {
         margin-top: 24px;
         .view-series-swiper {
+          padding: 0 24px;
+        }
+        .view-series-slide {
           padding: 0 24px;
         }
       }

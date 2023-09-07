@@ -127,6 +127,27 @@ body.dark {
                   color: $neutral3000;
                 }
               }
+              .like-btn {
+                background: url($viewLikeDark) center center no-repeat;
+
+                &.on {
+                  background: url($viewLikeDarkOn) center center no-repeat;
+                }
+              }
+              .cheer-btn {
+                background: url($viewCheerDark) center center no-repeat;
+
+                &.on {
+                  background: url($viewCheerDarkOn) center center no-repeat;
+                }
+              }
+              .want-btn {
+                background: url($viewWantDark) center center no-repeat;
+
+                &.on {
+                  background: url($viewWantDarkOn) center center no-repeat;
+                }
+              }
             }
           }
         }
