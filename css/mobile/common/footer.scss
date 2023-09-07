@@ -144,6 +144,15 @@
                 center center no-repeat;
               background-size: 100% 100%;
             }
+            .txt {
+              position: relative;
+              sup {
+                display: inline-block;
+                margin-top: -3px;
+                font-size: 10px;
+                vertical-align: top;
+              }
+            }
           }
           &.kbs-news {
             .img {

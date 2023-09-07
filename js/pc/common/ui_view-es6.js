@@ -134,12 +134,21 @@
     });
   };
 
+  const ttsClick = () => {
+    const $btn = document.querySelector(".tts-btn");
+
+    $btn.addEventListener("click", () => {
+      $btn.classList.toggle("on");
+    });
+  };
+
   const init = () => {
     likeClick();
     seriesSlide();
     summaryPopup();
     setAsidePosition();
     navArticleTitle();
+    ttsClick();
   };
 
   window.addEventListener("load", () => {

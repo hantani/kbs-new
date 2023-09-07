@@ -532,6 +532,11 @@
     background-position: 50% 50%;
     left: 0;
     background-image: url(/resource/image/mobile/btn-prev-card.png);
+    &.swiper-button-disabled {
+      opacity: 0.35;
+      cursor: auto;
+      pointer-events: none;
+    }
   }
   .swiper-button-next {
     top: 0;
@@ -545,6 +550,11 @@
     background-position: 50% 50%;
     right: 0;
     background-image: url(/resource/image/mobile/btn-next-card.png);
+    &.swiper-button-disabled {
+      opacity: 0.35;
+      cursor: auto;
+      pointer-events: none;
+    }
   }
 }
 
@@ -555,6 +565,12 @@
   padding: 11px 65px 11px 23px;
   background-color: #343464;
   color: #eaeaea;
+  font-size: 13px;
+
+  .tit {
+    color: #eaeaea;
+    font-size: 13px;
+  }
 
   .swiper-pagination {
     bottom: 8px;
@@ -562,6 +578,7 @@
     left: auto;
     width: 65px;
     color: #eaeaea;
+    font-size: 13px;
   }
 }
 

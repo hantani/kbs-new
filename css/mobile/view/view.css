@@ -542,6 +542,11 @@
   left: 0;
   background-image: url(/resource/image/mobile/btn-prev-card.png);
 }
+.cardnews-swiper-area .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
 .cardnews-swiper-area .swiper-button-next {
   top: 0;
   overflow: hidden;
@@ -555,6 +560,11 @@
   right: 0;
   background-image: url(/resource/image/mobile/btn-next-card.png);
 }
+.cardnews-swiper-area .swiper-button-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
 
 .fraction-box {
   position: relative;
@@ -563,6 +573,11 @@
   padding: 11px 65px 11px 23px;
   background-color: #343464;
   color: #eaeaea;
+  font-size: 13px;
+}
+.fraction-box .tit {
+  color: #eaeaea;
+  font-size: 13px;
 }
 .fraction-box .swiper-pagination {
   bottom: 8px;
@@ -570,6 +585,7 @@
   left: auto;
   width: 65px;
   color: #eaeaea;
+  font-size: 13px;
 }
 
 .blind {

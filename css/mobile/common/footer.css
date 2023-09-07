@@ -165,6 +165,15 @@
   background: url("/resource/image/mobile/footer_application_1.png") center center no-repeat;
   background-size: 100% 100%;
 }
+#footer .application-download-links-wrapper .application-download-links .app-links .app-link.my-k .txt {
+  position: relative;
+}
+#footer .application-download-links-wrapper .application-download-links .app-links .app-link.my-k .txt sup {
+  display: inline-block;
+  margin-top: -3px;
+  font-size: 10px;
+  vertical-align: top;
+}
 #footer .application-download-links-wrapper .application-download-links .app-links .app-link.kbs-news .img {
   background: url("/resource/image/mobile/footer_application_2.png") center center no-repeat;
   background-size: 100% 100%;
