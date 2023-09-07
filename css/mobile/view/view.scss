@@ -513,6 +513,8 @@
 }
 
 .cardnews-swiper-area {
+  position: relative;
+  overflow: hidden;
   .swiper-slide {
     img {
       width: 100%;
@@ -529,7 +531,7 @@
     background-size: 18px auto;
     background-position: 50% 50%;
     left: 0;
-    background-image: url(../../../images/mobile/v1/btn/btn-prev-card.png);
+    background-image: url(/resource/image/mobile/btn-prev-card.png);
   }
   .swiper-button-next {
     top: 0;
@@ -542,7 +544,24 @@
     background-size: 18px auto;
     background-position: 50% 50%;
     right: 0;
-    background-image: url(../../../images/mobile/v1/btn/btn-next-card.png);
+    background-image: url(/resource/image/mobile/btn-next-card.png);
+  }
+}
+
+.fraction-box {
+  position: relative;
+  display: block;
+  line-height: 1.5;
+  padding: 11px 65px 11px 23px;
+  background-color: #343464;
+  color: #eaeaea;
+
+  .swiper-pagination {
+    bottom: 8px;
+    right: 0;
+    left: auto;
+    width: 65px;
+    color: #eaeaea;
   }
 }
 
