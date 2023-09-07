@@ -129,3 +129,32 @@ body.dark {
     }
   }
 }
+
+.description {
+  .view_img_dsc {
+    color: $white;
+  }
+
+  a {
+    color: $darkBlue;
+  }
+
+  div.anchor {
+    background-color: $darkBlack1100 !important;
+    span.anchor {
+      color: $white !important;
+    }
+  }
+  div.report {
+    background-color: $darkBlack1100 !important;
+    span.report {
+      color: $white !important;
+    }
+  }
+}
+
+.article-summary {
+  &:before {
+    background: $darkNeutral100;
+  }
+}

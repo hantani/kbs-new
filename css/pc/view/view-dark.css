@@ -119,3 +119,26 @@ body.dark #contents .view-page .side-contents-wrapper .side-most-viewed .ranks .
 body.dark #contents .view-page .side-contents-wrapper .side-most-viewed .ranks .ranks-list:first-child {
   border-top: #313334;
 }
+
+.detail-body .view_img_dsc {
+  color: #f3f3f3;
+}
+.detail-body a {
+  color: #53acff;
+}
+.detail-body div.anchor {
+  background-color: #353535 !important;
+}
+.detail-body div.anchor span.anchor {
+  color: #f3f3f3 !important;
+}
+.detail-body div.report {
+  background-color: #353535 !important;
+}
+.detail-body div.report span.report {
+  color: #f3f3f3 !important;
+}
+
+.article-summary:before {
+  background: #747474;
+}

@@ -192,3 +192,28 @@ body.dark {
     }
   }
 }
+
+.detail-body {
+  .view_img_dsc {
+    color: $neutral3000;
+  }
+  a {
+    color: $darkBlue;
+  }
+  div.anchor {
+    background-color: $darkBlack1500 !important;
+    span.anchor {
+      color: $neutral3000 !important;
+    }
+  }
+  div.report {
+    background-color: $darkBlack1500 !important;
+    span.report {
+      color: $neutral3000 !important;
+    }
+  }
+}
+
+.article-summary:before {
+  background: $darkNeutral700;
+}
