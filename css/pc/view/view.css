@@ -414,7 +414,6 @@
 }
 #contents .view-page .view-contents-wrapper .view-reporter .reporter-info .reporter-img-wrapper .image {
   width: 100%;
-  height: 100%;
   border-radius: 50%;
 }
 #contents .view-page .view-contents-wrapper .view-reporter .reporter-info .reporter-img-wrapper img {
@@ -1074,7 +1073,7 @@
 
 .component .component-box {
   position: relative;
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 .component .component-box:after {
@@ -1140,13 +1139,41 @@
 }
 
 .owl-carousel {
-  display: block;
+  display: none;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
   z-index: 1;
 }
 .owl-carousel.owl-loaded {
   display: block;
+}
+.owl-carousel .owl-stage-outer {
+  overflow: hidden;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-stage {
+  position: relative;
+}
+.owl-carousel .owl-stage::after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+}
+.owl-carousel .owl-item img {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
 }
 
 .blind {
