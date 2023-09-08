@@ -5,7 +5,12 @@
 /* calamity */
 /* tooltip direction */
 /* decoration */
+#header {
+  min-width: 1280px;
+}
+
 #contents {
+  min-width: 1280px;
   min-height: calc(100vh - 1001px);
 }
 #contents .tab-btns.type-01 {
@@ -164,6 +169,10 @@
   top: 8px;
   right: 8px;
   background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 3L2.99893 13.0011' stroke='%23484848' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3 3L13.0011 13.0011' stroke='%23484848' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center center no-repeat;
+}
+
+#footer {
+  min-width: 1280px;
 }
 
 .hashtag-links {
