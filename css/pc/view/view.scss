@@ -87,12 +87,6 @@
                 background: url($ttsOn) center center no-repeat;
               }
             }
-
-            &:hover {
-              .tooltip {
-                display: block;
-              }
-            }
           }
           .summary-btn {
             font-size: 14px;
@@ -356,6 +350,7 @@
             height: 48px;
             border-radius: 50%;
             margin-right: 12px;
+            overflow: hidden;
 
             .default-img {
               display: block;
@@ -683,6 +678,13 @@
         }
       }
     }
+    .comment-area {
+      .title {
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 44px;
+      }
+    }
     .comment-notice {
       padding: 20px 0 24px 0;
       border-top: 2px solid $neutral2500;
@@ -841,6 +843,58 @@
       }
     }
   }
+  .error-box-wrapper {
+    padding-top: 20px;
+    .error-box {
+      width: 1280px;
+      padding: 154px 0;
+      margin: 0 auto;
+
+      .error-icon {
+        width: 87px;
+        height: 87px;
+        margin: 0 auto;
+        background: url($errorIcon) center center no-repeat;
+      }
+      .error-text {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+        margin: 30px 0 50px 0;
+        .strong-text {
+          font-size: 40px;
+          font-weight: 700;
+        }
+      }
+      .buttons-wrapper {
+        display: flex;
+        justify-content: center;
+
+        .home-button {
+          margin-right: 8px;
+        }
+
+        .home-button,
+        .prev-page-button {
+          display: block;
+          padding: 5px 16px;
+          border-radius: 100px;
+          border: 1px solid $neutral1700;
+          font-size: 16px;
+          line-height: 23px;
+          color: $neutral800;
+          font-weight: 500;
+        }
+      }
+      .address {
+        font-size: 15px;
+        line-height: 20px;
+        color: $neutral800;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 #imgVodThumbnail {
@@ -858,7 +912,7 @@
 .section {
   &.vod {
     position: relative;
-    margin-left: -25px;
+    margin-bottom: 20px;
 
     .desc {
       display: block;
@@ -904,9 +958,9 @@
 
   a {
     color: #0088c8;
-    font-family: "Noto Sans Light";
     overflow: hidden;
     display: inline;
+    font-weight: 500;
   }
 
   div.anchor {

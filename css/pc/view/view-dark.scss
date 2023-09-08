@@ -194,6 +194,21 @@ body.dark {
         }
       }
     }
+    .error-box {
+      .error-text {
+        color: $white;
+      }
+      .buttons-wrapper {
+        .home-button,
+        .prev-page-button {
+          border: 1px solid $darkNeutral500;
+          color: $neutral3000;
+        }
+      }
+      .address {
+        color: $neutral3000;
+      }
+    }
   }
 
   .detail-body {

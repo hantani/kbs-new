@@ -39,10 +39,21 @@
   };
   var progress = function progress() {
     var $status = document.querySelector(".progress-bar .status");
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = winScroll / height * 100;
-    $status.style.width = scrolled + "%";
+    var $headline = document.querySelector(".view-headline");
+    var $article = document.querySelector(".view-article");
+    var top = window.scrollY + $headline.getBoundingClientRect().top;
+    var bottom = window.scrollY + $article.getBoundingClientRect().bottom;
+    var totalScroll = bottom - top;
+    var currentScroll = void 0;
+    var progressWidth = void 0;
+    window.addEventListener("scroll", function () {
+      currentScroll = window.scrollY - top;
+      progressWidth = currentScroll / totalScroll * 100;
+      if (progressWidth < 0) {
+        progressWidth = 0;
+      }
+      $status.style.width = progressWidth + "%";
+    });
   };
   var ttsPopup = function ttsPopup() {
     var $btn = document.querySelector(".tts-btn");

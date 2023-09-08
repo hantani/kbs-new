@@ -18,8 +18,18 @@
       });
   };
 
+  // 사이드 메뉴 위치 세팅
+  const setAsidePosition = () => {
+    const $aside = document.querySelector(".aside");
+    const $contents = document.querySelector("#contents");
+    const top = window.scrollY + $contents.getBoundingClientRect().top;
+
+    $aside.style.top = `${top + 24}px`;
+  };
+
   const init = () => {
     tabClick();
+    setAsidePosition();
   };
 
   window.addEventListener("load", () => {

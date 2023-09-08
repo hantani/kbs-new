@@ -127,8 +127,19 @@ body.dark {
         color: $neutral700;
       }
     }
+    .error-box {
+      .buttons-wrapper {
+        .home-button,
+        .prev-page-button {
+          border: 1px solid $darkBlack1200;
+          color: $neutral3000;
+        }
+      }
+      .address {
+        color: $neutral3000;
+      }
+    }
   }
-
   .description {
     .view_img_dsc {
       color: $white;

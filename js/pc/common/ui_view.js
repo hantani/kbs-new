@@ -80,19 +80,49 @@
     });
   };
 
-  // 사이드 메뉴 위치 세팅
-  var setAsidePosition = function setAsidePosition() {
-    var $aside = document.querySelector(".aside");
-    var $contents = document.querySelector("#contents");
-    var top = window.scrollY + $contents.getBoundingClientRect().top;
-    $aside.style.top = top + 24 + "px";
+  // 요약 팝업
+  var ttsPopup = function ttsPopup() {
+    var $btn = document.querySelector(".tts-btn");
+    var $closeBtn = document.querySelector(".tts-popup .close-btn");
+    var $popup = document.querySelector(".tts-popup");
+    var $dim = document.querySelector(".dim");
+    var $nav = document.querySelector(".header-nav-wrapper");
+    $btn.addEventListener("click", function () {
+      $btn.classList.toggle("on");
+      $popup.classList.toggle("on");
+      $dim.classList.toggle("on");
+      $nav.classList.toggle("index-change");
+    });
+    $closeBtn.addEventListener("click", function () {
+      $btn.classList.remove("on");
+      $popup.classList.remove("on");
+      $dim.classList.remove("on");
+      $nav.classList.remove("index-change");
+    });
+    $dim.addEventListener("click", function () {
+      $btn.classList.remove("on");
+      $popup.classList.remove("on");
+      $dim.classList.remove("on");
+      $nav.classList.remove("index-change");
+    });
   };
   var progressBar = function progressBar() {
     var $progressBar = document.querySelector(".progress-bar");
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = winScroll / height * 100;
-    $progressBar.style.width = scrolled + "%";
+    var $article = document.querySelector(".view-article");
+    var $headLine = document.querySelector(".view-headline");
+    var top = window.scrollY + $headLine.getBoundingClientRect().top;
+    var bottom = window.scrollY + $article.getBoundingClientRect().bottom;
+    var totalScroll = bottom - top;
+    var currentScroll = void 0;
+    var progressWidth = void 0;
+    window.addEventListener("scroll", function () {
+      currentScroll = window.scrollY - top;
+      progressWidth = currentScroll / totalScroll * 100;
+      if (progressWidth < 0) {
+        progressWidth = 0;
+      }
+      $progressBar.style.width = progressWidth + "%";
+    });
   };
 
   // 스크롤시 네비게이션 메뉴 기사제목 나오기
@@ -114,19 +144,12 @@
       }
     });
   };
-  var ttsClick = function ttsClick() {
-    var $btn = document.querySelector(".tts-btn");
-    $btn.addEventListener("click", function () {
-      $btn.classList.toggle("on");
-    });
-  };
   var init = function init() {
     likeClick();
     seriesSlide();
     summaryPopup();
-    setAsidePosition();
+    ttsPopup();
     navArticleTitle();
-    ttsClick();
   };
   window.addEventListener("load", function () {
     init();

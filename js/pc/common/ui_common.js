@@ -12,8 +12,17 @@
       $("#" + id).find(".tab-contents-list").eq(index).show();
     });
   };
+
+  // 사이드 메뉴 위치 세팅
+  var setAsidePosition = function setAsidePosition() {
+    var $aside = document.querySelector(".aside");
+    var $contents = document.querySelector("#contents");
+    var top = window.scrollY + $contents.getBoundingClientRect().top;
+    $aside.style.top = top + 24 + "px";
+  };
   var init = function init() {
     tabClick();
+    setAsidePosition();
   };
   window.addEventListener("load", function () {
     init();

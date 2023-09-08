@@ -122,6 +122,17 @@ body.dark #contents .view-page .side-contents-wrapper .side-most-viewed .ranks .
 body.dark #contents .view-page .side-contents-wrapper .side-most-viewed .ranks .ranks-list:first-child {
   border-top: #313334;
 }
+body.dark #contents .error-box .error-text {
+  color: #fff;
+}
+body.dark #contents .error-box .buttons-wrapper .home-button,
+body.dark #contents .error-box .buttons-wrapper .prev-page-button {
+  border: 1px solid #4f4f4f;
+  color: #f3f3f3;
+}
+body.dark #contents .error-box .address {
+  color: #f3f3f3;
+}
 body.dark .detail-body .view_img_dsc {
   color: #f3f3f3;
 }

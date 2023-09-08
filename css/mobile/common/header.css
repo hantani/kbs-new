@@ -24,7 +24,8 @@
   width: 100%;
   position: fixed;
   top: 0;
-  top: env(safe-area-inset-top);
+  top: calc(env(safe-area-inset-top) + 3.7142857143rem);
+  top: calc(constant(safe-area-inset-top) + 3.7142857143rem);
   left: 0;
 }
 #header .top-menu .report-link {
@@ -965,6 +966,7 @@
   left: 0;
 }
 #header .progress-bar .status {
+  width: 0%;
   height: 100%;
   background-color: #239fe7;
 }

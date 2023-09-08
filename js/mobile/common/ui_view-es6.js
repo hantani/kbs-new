@@ -45,13 +45,22 @@
 
   const progress = () => {
     const $status = document.querySelector(".progress-bar .status");
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    $status.style.width = scrolled + "%";
+    const $headline = document.querySelector(".view-headline");
+    const $article = document.querySelector(".view-article");
+    const top = window.scrollY + $headline.getBoundingClientRect().top;
+    const bottom = window.scrollY + $article.getBoundingClientRect().bottom;
+    const totalScroll = bottom - top;
+    let currentScroll;
+    let progressWidth;
+
+    window.addEventListener("scroll", () => {
+      currentScroll = window.scrollY - top;
+      progressWidth = (currentScroll / totalScroll) * 100;
+      if (progressWidth < 0) {
+        progressWidth = 0;
+      }
+      $status.style.width = `${progressWidth}%`;
+    });
   };
 
   const ttsPopup = () => {

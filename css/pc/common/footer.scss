@@ -691,60 +691,6 @@
       }
     }
   }
-  .common-popup {
-    z-index: 150;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $white;
-    width: 580px;
-    border-radius: 10px;
-    display: none;
-
-    &.on {
-      display: block;
-    }
-
-    .popup-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: $neutral300;
-      padding: 9px 14px 9px 30px;
-      border-radius: 10px 10px 0 0;
-
-      .title {
-        color: $neutral800;
-        font-size: 24px;
-        font-weight: 700;
-      }
-      .close-btn {
-        width: 42px;
-        height: 42px;
-        background: url($clear) center center no-repeat;
-        background-size: 32px 32px;
-      }
-    }
-
-    .popup-contents {
-      padding: 0 30px;
-      .summary-content {
-        font-size: 18px;
-        line-height: 24px;
-        padding: 30px 0;
-        color: $black;
-      }
-      .summary-desc {
-        padding: 16px 0;
-        font-size: 16px;
-        line-height: 24px;
-        color: $gray;
-
-        border-top: 1px solid $neutral1100;
-      }
-    }
-  }
   .top-btn {
     border-radius: 50%;
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
