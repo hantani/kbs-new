@@ -85,9 +85,11 @@
                 text-overflow: ellipsis;
               }
               a.breaking-news-link {
-                &:hover {
-                  cursor: pointer;
-                  text-decoration: underline;
+                &:link {
+                  &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                  }
                 }
               }
             }
@@ -152,9 +154,11 @@
               }
 
               a.txt {
-                &:hover {
-                  cursor: pointer;
-                  text-decoration: underline;
+                &:link {
+                  &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                  }
                 }
               }
 

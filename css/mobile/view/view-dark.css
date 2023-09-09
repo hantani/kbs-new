@@ -94,6 +94,9 @@ body.dark #contents .error-box .address {
 body.dark #contents .reply-title-wrapper {
   background-color: #fff;
 }
+body.dark #contents .reply-title-wrapper .title {
+  color: #222;
+}
 body.dark #reply {
   background-color: #fff;
 }

@@ -96,7 +96,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#header .breaking-news-wrapper .breaking-news.rolling .breaking-news-swiper .swiper-wrapper .breaking-news-list a.breaking-news-link:hover {
+#header .breaking-news-wrapper .breaking-news.rolling .breaking-news-swiper .swiper-wrapper .breaking-news-list a.breaking-news-link:link:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -166,7 +166,7 @@
   top: calc(50% + 6px);
   left: 21px;
 }
-#header .rolling-breaking-news .breaking-news-history-wrapper .breaking-news-history .histories .history-list .txt-wrapper a.txt:hover {
+#header .rolling-breaking-news .breaking-news-history-wrapper .breaking-news-history .histories .history-list .txt-wrapper a.txt:link:hover {
   cursor: pointer;
   text-decoration: underline;
 }
