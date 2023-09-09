@@ -136,6 +136,14 @@ body.dark #contents .error-box .buttons-wrapper .prev-page-button {
 body.dark #contents .error-box .address {
   color: #f3f3f3;
 }
+body.dark #contents .comment-area {
+  background-color: #fff;
+  padding: 24px 0 0 24px;
+}
+body.dark #msg {
+  background-color: #fff;
+  padding: 24px;
+}
 body.dark .detail-body .view_img_dsc {
   color: #f3f3f3;
 }

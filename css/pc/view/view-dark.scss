@@ -216,6 +216,15 @@ body.dark {
         color: $neutral3000;
       }
     }
+    .comment-area {
+      background-color: $white;
+      padding: 24px 0 0 24px;
+    }
+  }
+
+  #msg {
+    background-color: $white;
+    padding: 24px;
   }
 
   .detail-body {

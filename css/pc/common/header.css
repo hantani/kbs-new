@@ -96,6 +96,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+#header .breaking-news-wrapper .breaking-news.rolling .breaking-news-swiper .swiper-wrapper .breaking-news-list a.breaking-news-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 #header .breaking-news-wrapper .breaking-news.rolling .arrow-btn {
   width: 32px;
   height: 32px;
@@ -161,6 +165,10 @@
   position: absolute;
   top: calc(50% + 6px);
   left: 21px;
+}
+#header .rolling-breaking-news .breaking-news-history-wrapper .breaking-news-history .histories .history-list .txt-wrapper a.txt:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 #header .rolling-breaking-news .breaking-news-history-wrapper .breaking-news-history .histories .history-list .txt-wrapper .txt {
   font-weight: 500;
@@ -566,8 +574,8 @@
 }
 #header .header-nav-wrapper .header-nav .nav-menu .nav-logo {
   display: none;
-  width: 67px;
-  height: 20px;
+  width: 66px;
+  height: 15px;
   margin-right: 30px;
 }
 #header .header-nav-wrapper .header-nav .nav-menu .nav-logo .nav-logo-image {
@@ -1168,6 +1176,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: calc(100% - 82px);
+  line-height: 18px;
 }
 #header .header-notice-wrapper .header-notice .notice-txt:hover {
   text-decoration: underline;

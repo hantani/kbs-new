@@ -1009,7 +1009,7 @@
 
     span.anchor {
       color: rgb(18, 18, 55);
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 700;
     }
   }
@@ -1022,7 +1022,7 @@
     line-height: 30px;
 
     span.report {
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 700;
       color: #0080cc;
     }
@@ -1116,6 +1116,7 @@
 
   img {
     max-width: 100%;
+    margin: 0 auto;
   }
 
   .section {

@@ -1062,7 +1062,7 @@
 }
 .detail-body div.anchor span.anchor {
   color: rgb(18, 18, 55);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
 }
 .detail-body div.report {
@@ -1073,7 +1073,7 @@
   line-height: 30px;
 }
 .detail-body div.report span.report {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   color: #0080cc;
 }
@@ -1149,6 +1149,7 @@
 }
 .detail-visual img {
   max-width: 100%;
+  margin: 0 auto;
 }
 .detail-visual .section.photonews {
   padding: 0 25px;
