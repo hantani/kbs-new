@@ -79,33 +79,43 @@
       $nav.classList.remove("index-change");
     });
   };
-
-  // 요약 팝업
-  var ttsPopup = function ttsPopup() {
+  var ttsClick = function ttsClick() {
     var $btn = document.querySelector(".tts-btn");
-    var $closeBtn = document.querySelector(".tts-popup .close-btn");
-    var $popup = document.querySelector(".tts-popup");
-    var $dim = document.querySelector(".dim");
-    var $nav = document.querySelector(".header-nav-wrapper");
     $btn.addEventListener("click", function () {
       $btn.classList.toggle("on");
-      $popup.classList.toggle("on");
-      $dim.classList.toggle("on");
-      $nav.classList.toggle("index-change");
-    });
-    $closeBtn.addEventListener("click", function () {
-      $btn.classList.remove("on");
-      $popup.classList.remove("on");
-      $dim.classList.remove("on");
-      $nav.classList.remove("index-change");
-    });
-    $dim.addEventListener("click", function () {
-      $btn.classList.remove("on");
-      $popup.classList.remove("on");
-      $dim.classList.remove("on");
-      $nav.classList.remove("index-change");
     });
   };
+
+  // 요약 팝업
+  // const ttsPopup = () => {
+  //   const $btn = document.querySelector(".tts-btn");
+  //   const $closeBtn = document.querySelector(".tts-popup .close-btn");
+  //   const $popup = document.querySelector(".tts-popup");
+  //   const $dim = document.querySelector(".dim");
+  //   const $nav = document.querySelector(".header-nav-wrapper");
+
+  //   $btn.addEventListener("click", () => {
+  //     $btn.classList.toggle("on");
+  //     $popup.classList.toggle("on");
+  //     $dim.classList.toggle("on");
+  //     $nav.classList.toggle("index-change");
+  //   });
+
+  //   $closeBtn.addEventListener("click", () => {
+  //     $btn.classList.remove("on");
+  //     $popup.classList.remove("on");
+  //     $dim.classList.remove("on");
+  //     $nav.classList.remove("index-change");
+  //   });
+
+  //   $dim.addEventListener("click", () => {
+  //     $btn.classList.remove("on");
+  //     $popup.classList.remove("on");
+  //     $dim.classList.remove("on");
+  //     $nav.classList.remove("index-change");
+  //   });
+  // };
+
   var progressBar = function progressBar() {
     var $progressBar = document.querySelector(".progress-bar");
     var $article = document.querySelector(".view-article");
@@ -148,8 +158,8 @@
     likeClick();
     seriesSlide();
     summaryPopup();
-    ttsPopup();
     navArticleTitle();
+    ttsClick();
   };
   window.addEventListener("load", function () {
     init();

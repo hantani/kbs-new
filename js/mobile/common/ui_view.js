@@ -94,12 +94,22 @@
       $dim.classList.remove("on");
     });
   };
+  var playerSettingPopup = function playerSettingPopup() {
+    var $checkBtn = document.querySelector(".player-setting-popup .primary-btn");
+    var $popup = document.querySelector(".player-setting-popup");
+    var $dim = document.querySelector(".dim");
+    $checkBtn.addEventListener("click", function () {
+      $popup.classList.remove("on");
+      $dim.classList.remove("on");
+    });
+  };
   var init = function init() {
     viewSeriesSwiper();
     viewLikeClick();
     headerSticky();
     ttsPopup();
     summaryPopup();
+    playerSettingPopup();
   };
   window.addEventListener("load", function () {
     init();
