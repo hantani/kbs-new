@@ -5,6 +5,14 @@
 /* share */
 /* aside */
 /* icon */
+#header .notch-bg {
+  width: 100%;
+  height: 100px;
+  background-color: #f9f9f9;
+  position: fixed;
+  left: 0;
+  top: -100px;
+}
 #header .top-menu {
   display: -webkit-box;
   display: -ms-flexbox;
