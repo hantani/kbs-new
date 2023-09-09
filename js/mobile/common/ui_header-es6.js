@@ -86,15 +86,20 @@
       ".search-input-keywords .close-btn"
     );
     const $body = document.querySelector("body");
+    const $notchBg = document.querySelector(".notch-bg");
 
     $btn.addEventListener("click", () => {
       $searchMenu.classList.add("on");
       $body.classList.add("hidden");
+      if (!$notchBg.classList.contains("sticky")) {
+        $notchBg.classList.add("sticky");
+      }
     });
 
     $closeBtn.addEventListener("click", () => {
       $searchMenu.classList.remove("on");
       $body.classList.remove("hidden");
+      $notchBg.classList.remove("sticky");
     });
   };
 
@@ -130,15 +135,20 @@
       ".ham-top-menu .setting-close .close-btn"
     );
     const $body = document.querySelector("body");
+    const $notchBg = document.querySelector(".notch-bg");
 
     $btn.addEventListener("click", () => {
       $hamburgerMenu.classList.add("on");
       $body.classList.add("hidden");
+      if (!$notchBg.classList.contains("sticky")) {
+        $notchBg.classList.add("sticky");
+      }
     });
 
     $closeBtn.addEventListener("click", () => {
       $hamburgerMenu.classList.remove("on");
       $body.classList.remove("hidden");
+      $notchBg.classList.remove("sticky");
     });
   };
 

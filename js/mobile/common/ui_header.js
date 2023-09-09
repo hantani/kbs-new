@@ -82,13 +82,18 @@
     var $searchMenu = document.querySelector("#header .search-menu");
     var $closeBtn = document.querySelector(".search-input-keywords .close-btn");
     var $body = document.querySelector("body");
+    var $notchBg = document.querySelector(".notch-bg");
     $btn.addEventListener("click", function () {
       $searchMenu.classList.add("on");
       $body.classList.add("hidden");
+      if (!$notchBg.classList.contains("sticky")) {
+        $notchBg.classList.add("sticky");
+      }
     });
     $closeBtn.addEventListener("click", function () {
       $searchMenu.classList.remove("on");
       $body.classList.remove("hidden");
+      $notchBg.classList.remove("sticky");
     });
   };
 
@@ -117,13 +122,18 @@
     var $hamburgerMenu = document.querySelector("#header .hamburger-menu");
     var $closeBtn = document.querySelector(".ham-top-menu .setting-close .close-btn");
     var $body = document.querySelector("body");
+    var $notchBg = document.querySelector(".notch-bg");
     $btn.addEventListener("click", function () {
       $hamburgerMenu.classList.add("on");
       $body.classList.add("hidden");
+      if (!$notchBg.classList.contains("sticky")) {
+        $notchBg.classList.add("sticky");
+      }
     });
     $closeBtn.addEventListener("click", function () {
       $hamburgerMenu.classList.remove("on");
       $body.classList.remove("hidden");
+      $notchBg.classList.remove("sticky");
     });
   };
 

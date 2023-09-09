@@ -485,6 +485,8 @@
 #header .search-menu {
   position: fixed;
   top: 0;
+  top: env(safe-area-inset-top);
+  top: constant(safe-area-inset-top);
   left: 0;
   width: 100%;
   height: 100%;
@@ -624,6 +626,8 @@
 #header .hamburger-menu {
   position: fixed;
   top: 0;
+  top: env(safe-area-inset-top);
+  top: constant(safe-area-inset-top);
   left: 0;
   width: 100%;
   height: 100%;
