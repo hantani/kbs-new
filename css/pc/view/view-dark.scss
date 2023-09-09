@@ -219,6 +219,10 @@ body.dark {
     .comment-area {
       background-color: $white;
       padding: 24px 0 0 24px;
+      .title {
+        color: $black;
+        margin-top: 0;
+      }
     }
   }
 

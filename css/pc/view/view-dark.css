@@ -140,6 +140,10 @@ body.dark #contents .comment-area {
   background-color: #fff;
   padding: 24px 0 0 24px;
 }
+body.dark #contents .comment-area .title {
+  color: #222;
+  margin-top: 0;
+}
 body.dark #msg {
   background-color: #fff;
   padding: 24px;

@@ -22,6 +22,7 @@ body.dark .popup .share-sns .share-sns-btn .txt {
 }
 body.dark .popup .popup-texts .sub-text {
   color: #f3f3f3;
+  border-top: 1px solid #545454;
 }
 body.dark .popup .selects-wrapper .common-select .title {
   color: #fff;
