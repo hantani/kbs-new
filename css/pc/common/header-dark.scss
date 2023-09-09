@@ -13,6 +13,10 @@ body.dark {
           .common-menu {
             border-right: 1px solid #696969;
 
+            &.on {
+              background-color: $darkBlack1600;
+            }
+
             .full-menu-links-wrapper {
               .full-menu-heading {
                 color: $white;
@@ -236,6 +240,10 @@ body.dark {
           .hamburger-search-btns {
             .hamburger-btn {
               background: url($menu) 0 0 no-repeat;
+
+              &.on {
+                background: url($closeWhite) 0 0 no-repeat;
+              }
             }
             .search-btn {
               background: url($search) 0 0 no-repeat;

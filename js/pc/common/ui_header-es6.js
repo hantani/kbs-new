@@ -126,6 +126,7 @@
     const $fullMenu = document.querySelector(".full-menu-wrapper");
     const $dim = document.querySelector(".dim");
     const $fullMenuNames = document.querySelectorAll(".full-menu-heading");
+    const $hamburgerBtn = document.querySelector(".hamburger-btn");
     let $onNavLink;
 
     $navLinks.forEach(($navLink) => {
@@ -134,6 +135,10 @@
         if (menuNames.includes(menuName)) {
           if ($onNavLink) {
             $onNavLink.classList.remove("on");
+          }
+
+          if (!$hamburgerBtn.classList.contains("on")) {
+            $hamburgerBtn.classList.add("on");
           }
 
           $navLink.classList.add("on");

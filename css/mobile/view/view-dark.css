@@ -91,6 +91,12 @@ body.dark #contents .error-box .buttons-wrapper .prev-page-button {
 body.dark #contents .error-box .address {
   color: #f3f3f3;
 }
+body.dark #contents .reply-title-wrapper {
+  background-color: #fff;
+}
+body.dark #reply {
+  background-color: #fff;
+}
 body.dark .description .view_img_dsc {
   color: #fff;
 }

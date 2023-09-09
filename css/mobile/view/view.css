@@ -413,12 +413,12 @@
   font-weight: 500;
   padding: 16px 0 2px 0;
 }
-#contents .comment-area {
+#contents .reply-title-wrapper {
   margin-top: 20px;
   padding: 24px 0 20px 16px;
   background-color: #fff;
 }
-#contents .comment-area .title {
+#contents .reply-title-wrapper .title {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;

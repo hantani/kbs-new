@@ -129,7 +129,7 @@
 
   const asideComment = () => {
     const $btn = document.querySelector(".aside .comment-btn");
-    const $commentArea = document.querySelector(".comment-area");
+    const $commentArea = document.querySelector(".reply-title-wrapper");
 
     if ($btn) {
       $btn.addEventListener("click", () => {

@@ -12,6 +12,9 @@ body.dark #header .header-nav-wrapper .full-menu-wrapper {
 body.dark #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu {
   border-right: 1px solid #696969;
 }
+body.dark #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu.on {
+  background-color: #2a2a2a;
+}
 body.dark #header .header-nav-wrapper .full-menu-wrapper .full-menu .common-menu .full-menu-links-wrapper .full-menu-heading {
   color: #fff;
 }
@@ -161,6 +164,9 @@ body.dark #header .header-nav-wrapper {
 }
 body.dark #header .header-nav-wrapper .header-nav .nav-menu .hamburger-search-btns .hamburger-btn {
   background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 5H21' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M3 12H21' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M3 19H21' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A") 0 0 no-repeat;
+}
+body.dark #header .header-nav-wrapper .header-nav .nav-menu .hamburger-search-btns .hamburger-btn.on {
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.3633 5.63623L5.63536 18.3642' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.63672 5.63623L18.3646 18.3642' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 0 0 no-repeat;
 }
 body.dark #header .header-nav-wrapper .header-nav .nav-menu .hamburger-search-btns .search-btn {
   background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.5 17C13.0899 17 16 14.0899 16 10.5C16 6.91015 13.0899 4 9.5 4C5.91015 4 3 6.91015 3 10.5C3 14.0899 5.91015 17 9.5 17Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.7929 21.2071C19.1834 21.5976 19.8166 21.5976 20.2071 21.2071C20.5976 20.8166 20.5976 20.1834 20.2071 19.7929L18.7929 21.2071ZM15.2071 14.7929L14.5 14.0858L13.0858 15.5L13.7929 16.2071L15.2071 14.7929ZM20.2071 19.7929L15.2071 14.7929L13.7929 16.2071L18.7929 21.2071L20.2071 19.7929Z' fill='white'/%3E%3C/svg%3E%0A") 0 0 no-repeat;

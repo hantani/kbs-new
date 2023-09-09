@@ -139,7 +139,15 @@ body.dark {
         color: $neutral3000;
       }
     }
+    .reply-title-wrapper {
+      background-color: $white;
+    }
   }
+
+  #reply {
+    background-color: $white;
+  }
+
   .description {
     .view_img_dsc {
       color: $white;

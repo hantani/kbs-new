@@ -17,7 +17,7 @@
       position: fixed;
       top: 0;
       top: env(safe-area-inset-top);
-      top: constant(safe-area-inset-top);
+      padding-top: env(safe-area-inset-top);
       left: 0;
     }
 
