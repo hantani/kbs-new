@@ -952,6 +952,8 @@
     &.sticky {
       position: fixed;
       top: 48px;
+      top: calc(env(safe-area-inset-top) + 48px);
+      top: calc(constant(safe-area-inset-top) + 48px);
       left: 0;
     }
 
