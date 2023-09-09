@@ -69,9 +69,11 @@
       if ($(window).scrollTop() > point) {
         $topMenu.addClass("sticky");
         $(".top-quick-menu-wrapper").addClass("sticky");
+        $(".notch-bg").addClass("sticky");
       } else {
         $topMenu.removeClass("sticky");
         $(".top-quick-menu-wrapper").removeClass("sticky");
+        $(".notch-bg").removeClass("sticky");
       }
     });
   };

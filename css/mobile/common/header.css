@@ -5,6 +5,20 @@
 /* share */
 /* aside */
 /* icon */
+#header .notch-bg {
+  background-color: #fff;
+  width: 100%;
+  height: env(safe-area-inset-top);
+  height: constant(safe-area-inset-top);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 100;
+}
+#header .notch-bg.sticky {
+  display: block;
+}
 #header .top-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,6 +39,7 @@
   position: fixed;
   top: 0;
   top: env(safe-area-inset-top);
+  height: constant(safe-area-inset-top);
   left: 0;
 }
 #header .top-menu .report-link {
@@ -81,6 +96,7 @@
   position: fixed;
   top: 48px;
   top: calc(env(safe-area-inset-top) + 48px);
+  height: calc(constant(safe-area-inset-top) + 48px);
   left: 0;
 }
 #header .top-quick-menu-wrapper.index-changed {

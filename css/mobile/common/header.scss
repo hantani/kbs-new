@@ -3,6 +3,22 @@
 @import "_svg";
 
 #header {
+  .notch-bg {
+    background-color: $white;
+    width: 100%;
+    height: env(safe-area-inset-top);
+    height: constant(safe-area-inset-top);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 100;
+
+    &.sticky {
+      display: block;
+    }
+  }
+
   .top-menu {
     display: flex;
     align-items: center;
@@ -17,6 +33,7 @@
       position: fixed;
       top: 0;
       top: env(safe-area-inset-top);
+      height: constant(safe-area-inset-top);
       left: 0;
     }
 
@@ -73,6 +90,7 @@
       position: fixed;
       top: 48px;
       top: calc(env(safe-area-inset-top) + 48px);
+      height: calc(constant(safe-area-inset-top) + 48px);
       left: 0;
     }
 

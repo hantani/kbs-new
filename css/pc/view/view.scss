@@ -363,14 +363,27 @@
         &.multiple {
           padding: 17px 20px;
 
-          .reporter-info {
-            width: 25%;
-            flex-direction: column;
-            align-items: flex-start;
-
-            .reporter-name-link {
-              &:first-child {
-                margin-bottom: 8px;
+          .reporter-infoes {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            .reporter-infoes-list {
+              width: 25%;
+              &:nth-child(n + 5) {
+                margin-top: 8px;
+              }
+              .reporter-name-link {
+                display: flex;
+                align-items: center;
+                .home-icon {
+                  margin-right: 6px;
+                  width: 16px;
+                  height: 16px;
+                  background-image: url(/resource/image/reporter_home.png);
+                }
+                .reporter-name {
+                  font-weight: 500;
+                }
               }
             }
           }

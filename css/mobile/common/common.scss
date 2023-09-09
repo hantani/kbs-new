@@ -3,16 +3,8 @@
 @import "_svg";
 
 body {
-  &::before {
-    content: "";
-    display: block;
-    background-color: $white;
-    width: 100%;
-    height: env(safe-area-inset-top);
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
+  padding-top: env(safe-area-inset-top);
+  padding-top: constant(safe-area-inset-top);
 
   &.hidden {
     overflow-y: hidden;

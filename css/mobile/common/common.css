@@ -5,15 +5,9 @@
 /* share */
 /* aside */
 /* icon */
-body::before {
-  content: "";
-  display: block;
-  background-color: #fff;
-  width: 100%;
-  height: env(safe-area-inset-top);
-  position: fixed;
-  left: 0;
-  top: 0;
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-top: constant(safe-area-inset-top);
 }
 body.hidden {
   overflow-y: hidden;
