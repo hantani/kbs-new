@@ -16,8 +16,8 @@
       width: 100%;
       position: fixed;
       top: 0;
-      top: calc(env(safe-area-inset-top) + 3.7142857143rem);
-      top: calc(constant(safe-area-inset-top) + 3.7142857143rem);
+      top: env(safe-area-inset-top);
+      top: constant(safe-area-inset-top);
       left: 0;
     }
 
@@ -403,8 +403,11 @@
         .disaster-rolling-list {
           margin-bottom: 10px;
           .rolling-message {
-            -webkit-line-clamp: 2;
+            overflow-x: auto;
+            display: block;
+            text-overflow: initial;
             padding-right: 10px;
+            height: auto;
             .caution {
               display: none;
             }

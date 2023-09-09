@@ -24,8 +24,8 @@
   width: 100%;
   position: fixed;
   top: 0;
-  top: calc(env(safe-area-inset-top) + 3.7142857143rem);
-  top: calc(constant(safe-area-inset-top) + 3.7142857143rem);
+  top: env(safe-area-inset-top);
+  top: constant(safe-area-inset-top);
   left: 0;
 }
 #header .top-menu .report-link {
@@ -430,8 +430,11 @@
   margin-bottom: 10px;
 }
 #header .disaster-rolling-message.open .swiper-wrapper .disaster-rolling-list .rolling-message {
-  -webkit-line-clamp: 2;
+  overflow-x: auto;
+  display: block;
+  text-overflow: initial;
   padding-right: 10px;
+  height: auto;
 }
 #header .disaster-rolling-message.open .swiper-wrapper .disaster-rolling-list .rolling-message .caution {
   display: none;
