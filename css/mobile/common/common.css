@@ -5,6 +5,16 @@
 /* share */
 /* aside */
 /* icon */
+body::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: env(safe-area-inset-top);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
 body.hidden {
   overflow-y: hidden;
 }
@@ -352,7 +362,7 @@ a.more-btn.white {
   line-height: 20px;
 }
 .popup .popup-texts .sub-text {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 20px;
   color: #666;
   margin-top: 20px;
