@@ -94,35 +94,43 @@
     });
   };
 
-  // 요약 팝업
-  const ttsPopup = () => {
+  const ttsClick = () => {
     const $btn = document.querySelector(".tts-btn");
-    const $closeBtn = document.querySelector(".tts-popup .close-btn");
-    const $popup = document.querySelector(".tts-popup");
-    const $dim = document.querySelector(".dim");
-    const $nav = document.querySelector(".header-nav-wrapper");
 
     $btn.addEventListener("click", () => {
       $btn.classList.toggle("on");
-      $popup.classList.toggle("on");
-      $dim.classList.toggle("on");
-      $nav.classList.toggle("index-change");
-    });
-
-    $closeBtn.addEventListener("click", () => {
-      $btn.classList.remove("on");
-      $popup.classList.remove("on");
-      $dim.classList.remove("on");
-      $nav.classList.remove("index-change");
-    });
-
-    $dim.addEventListener("click", () => {
-      $btn.classList.remove("on");
-      $popup.classList.remove("on");
-      $dim.classList.remove("on");
-      $nav.classList.remove("index-change");
     });
   };
+
+  // 요약 팝업
+  // const ttsPopup = () => {
+  //   const $btn = document.querySelector(".tts-btn");
+  //   const $closeBtn = document.querySelector(".tts-popup .close-btn");
+  //   const $popup = document.querySelector(".tts-popup");
+  //   const $dim = document.querySelector(".dim");
+  //   const $nav = document.querySelector(".header-nav-wrapper");
+
+  //   $btn.addEventListener("click", () => {
+  //     $btn.classList.toggle("on");
+  //     $popup.classList.toggle("on");
+  //     $dim.classList.toggle("on");
+  //     $nav.classList.toggle("index-change");
+  //   });
+
+  //   $closeBtn.addEventListener("click", () => {
+  //     $btn.classList.remove("on");
+  //     $popup.classList.remove("on");
+  //     $dim.classList.remove("on");
+  //     $nav.classList.remove("index-change");
+  //   });
+
+  //   $dim.addEventListener("click", () => {
+  //     $btn.classList.remove("on");
+  //     $popup.classList.remove("on");
+  //     $dim.classList.remove("on");
+  //     $nav.classList.remove("index-change");
+  //   });
+  // };
 
   const progressBar = () => {
     const $progressBar = document.querySelector(".progress-bar");
@@ -168,8 +176,8 @@
     likeClick();
     seriesSlide();
     summaryPopup();
-    ttsPopup();
     navArticleTitle();
+    ttsClick();
   };
 
   window.addEventListener("load", () => {

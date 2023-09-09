@@ -100,6 +100,9 @@
 #contents .view-page .view-contents-wrapper .view-headline .tts-summary .tts-btn-wrapper {
   position: relative;
 }
+#contents .view-page .view-contents-wrapper .view-headline .tts-summary .tts-btn-wrapper:hover .tooltip {
+  display: block;
+}
 #contents .view-page .view-contents-wrapper .view-headline .tts-summary .tts-btn-wrapper .tts-btn {
   width: 26px;
   height: 26px;
@@ -391,6 +394,41 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 24px;
+}
+#contents .view-page .view-contents-wrapper .view-reporter.three {
+  padding: 17px 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+#contents .view-page .view-contents-wrapper .view-reporter.three .reporter-info {
+  width: 33.33%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#contents .view-page .view-contents-wrapper .view-reporter.three .reporter-info .reporter-name-link {
+  margin-bottom: 8px;
+}
+#contents .view-page .view-contents-wrapper .view-reporter.multiple {
+  padding: 17px 20px;
+}
+#contents .view-page .view-contents-wrapper .view-reporter.multiple .reporter-info {
+  width: 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#contents .view-page .view-contents-wrapper .view-reporter.multiple .reporter-info .reporter-name-link:first-child {
+  margin-bottom: 8px;
 }
 #contents .view-page .view-contents-wrapper .view-reporter .reporter-info {
   display: -webkit-box;
@@ -959,11 +997,12 @@
 }
 
 .artical-btm {
-  font-size: 17px;
+  font-size: 18px;
   font-family: "Noto Sans Light";
   color: #000;
   line-height: 30px;
   letter-spacing: 0;
+  font-weight: 300;
 }
 
 .section.vod {
@@ -996,12 +1035,13 @@
 
 .detail-body {
   padding: 0;
-  font-size: 17px;
+  font-size: 18px;
   color: #000;
   line-height: 30px;
   letter-spacing: 0;
   overflow: hidden;
   font-family: "Noto Sans KR";
+  font-weight: 300;
 }
 .detail-body .section.vod {
   height: auto;
@@ -1119,7 +1159,7 @@
 
 .photo-desc {
   padding-top: 26px;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.3px;
   font-family: "Noto Sans KR";

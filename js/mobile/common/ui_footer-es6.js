@@ -54,55 +54,70 @@
 
   // 어사이드 텍스트 메뉴
   const asideTxt = () => {
-    const $offBtn = document.querySelector(".aside-btn.txt-btn");
+    const $txtBtn = document.querySelector(".aside-btn.txt-btn");
     const $onBtn = document.querySelector(
       ".aside-btns .btn-menu-list .txt-btn"
     );
     const $btnMenu = document.querySelector(".aside-btns-list .btn-menu");
 
-    $offBtn.addEventListener("click", () => {
-      $offBtn.classList.add("off");
+    $txtBtn.addEventListener("click", () => {
+      $txtBtn.classList.add("off");
       $btnMenu.classList.add("on");
     });
 
     $onBtn.addEventListener("click", () => {
       $btnMenu.classList.remove("on");
-      $offBtn.classList.remove("off");
+      $txtBtn.classList.remove("off");
     });
 
     // 텍스트 메뉴 클릭
     $(".common-btn.large-btn")
       .off("click")
-      .on("click", function () {
-        $("body *").each(function () {
-          $(this).css("font-size", "");
-          var size = Number($(this).css("font-size").replace("px", "")) + 1;
-          if (size > 1) {
-            $(this).css("font-size", size + "px");
-          }
-        });
+      .on("click", function (e) {
+        if (!$txtBtn.classList.contains("large")) {
+          $("body *").each(function () {
+            $(this).css("font-size", "");
+            var size = Number($(this).css("font-size").replace("px", "")) + 1;
+            if (size > 1) {
+              $(this).css("font-size", size + "px");
+            }
+          });
+          $txtBtn.className = "aside-btn txt-btn large";
+        }
+        if ($txtBtn.classList.contains("off")) {
+          $txtBtn.classList.remove("off");
+        }
         $btnMenu.classList.remove("on");
-        $offBtn.classList.remove("off");
       });
     $(".common-btn.normal-btn")
       .off("click")
       .on("click", function () {
-        $("body *").each(function () {
-          $(this).css("font-size", "");
-        });
+        if (!$txtBtn.classList.contains("normal")) {
+          $("body *").each(function () {
+            $(this).css("font-size", "");
+          });
+          $txtBtn.className = "aside-btn txt-btn normal";
+        }
+        if ($txtBtn.classList.contains("off")) {
+          $txtBtn.classList.remove("off");
+        }
         $btnMenu.classList.remove("on");
-        $offBtn.classList.remove("off");
       });
     $(".common-btn.small-btn")
       .off("click")
       .on("click", function () {
-        $("body *").each(function () {
-          $(this).css("font-size", "");
-          var size = Number($(this).css("font-size").replace("px", "")) - 1;
-          $(this).css("font-size", size + "px");
-        });
+        if (!$txtBtn.classList.contains("small")) {
+          $("body *").each(function () {
+            $(this).css("font-size", "");
+            var size = Number($(this).css("font-size").replace("px", "")) - 1;
+            $(this).css("font-size", size + "px");
+          });
+          $txtBtn.className = "aside-btn txt-btn small";
+        }
+        if ($txtBtn.classList.contains("off")) {
+          $txtBtn.classList.remove("off");
+        }
         $btnMenu.classList.remove("on");
-        $offBtn.classList.remove("off");
       });
   };
 

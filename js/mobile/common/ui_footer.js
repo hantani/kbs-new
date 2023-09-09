@@ -111,7 +111,7 @@
   };
   var asideComment = function asideComment() {
     var $btn = document.querySelector(".aside .comment-btn");
-    var $commentArea = document.querySelector(".comment-area");
+    var $commentArea = document.querySelector(".reply-title-wrapper");
     if ($btn) {
       $btn.addEventListener("click", function () {
         $commentArea.scrollIntoView({

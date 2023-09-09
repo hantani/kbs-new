@@ -122,6 +122,7 @@
     var $fullMenu = document.querySelector(".full-menu-wrapper");
     var $dim = document.querySelector(".dim");
     var $fullMenuNames = document.querySelectorAll(".full-menu-heading");
+    var $hamburgerBtn = document.querySelector(".hamburger-btn");
     var $onNavLink = void 0;
     $navLinks.forEach(function ($navLink) {
       $navLink.addEventListener("click", function () {
@@ -129,6 +130,9 @@
         if (menuNames.includes(menuName)) {
           if ($onNavLink) {
             $onNavLink.classList.remove("on");
+          }
+          if (!$hamburgerBtn.classList.contains("on")) {
+            $hamburgerBtn.classList.add("on");
           }
           $navLink.classList.add("on");
           $onNavLink = $navLink;

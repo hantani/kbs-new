@@ -110,12 +110,26 @@
     });
   };
 
+  const playerSettingPopup = () => {
+    const $checkBtn = document.querySelector(
+      ".player-setting-popup .primary-btn"
+    );
+    const $popup = document.querySelector(".player-setting-popup");
+    const $dim = document.querySelector(".dim");
+
+    $checkBtn.addEventListener("click", () => {
+      $popup.classList.remove("on");
+      $dim.classList.remove("on");
+    });
+  };
+
   const init = () => {
     viewSeriesSwiper();
     viewLikeClick();
     headerSticky();
     ttsPopup();
     summaryPopup();
+    playerSettingPopup();
   };
 
   window.addEventListener("load", () => {

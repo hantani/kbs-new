@@ -8,6 +8,13 @@ body.dark {
     .view-box {
       background-color: $darkBlack900;
       border: 1px solid $darkBlack800;
+
+      > .title-wrapper {
+        .sub-title {
+          color: $darkNeutral;
+        }
+      }
+
       .view-title-look-more {
         > .title-wrapper {
           .title {

@@ -77,37 +77,43 @@
     $(".txt-menu-btn.large")
       .off("click")
       .on("click", function () {
-        $("body *").each(function () {
-          $(this).css("font-size", "");
-          var size = Number($(this).css("font-size").replace("px", "")) + 1;
-          if (size > 1) {
-            $(this).css("font-size", size + "px");
-          }
-        });
-        $txtIcon.className = "txt-icon large";
-        $btnTxt.innerText = "확대";
+        if (!$txtIcon.classList.contains("large")) {
+          $("body *").each(function () {
+            $(this).css("font-size", "");
+            var size = Number($(this).css("font-size").replace("px", "")) + 1;
+            if (size > 1) {
+              $(this).css("font-size", size + "px");
+            }
+          });
+          $txtIcon.className = "txt-icon large";
+          $btnTxt.innerText = "확대";
+        }
         $menu.classList.remove("on");
       });
     $(".txt-menu-btn.normal")
       .off("click")
       .on("click", function () {
-        $("body *").each(function () {
-          $(this).css("font-size", "");
-        });
-        $txtIcon.className = "txt-icon normal";
-        $btnTxt.innerText = "기본";
+        if (!$txtIcon.classList.contains("normal")) {
+          $("body *").each(function () {
+            $(this).css("font-size", "");
+          });
+          $txtIcon.className = "txt-icon normal";
+          $btnTxt.innerText = "기본";
+        }
         $menu.classList.remove("on");
       });
     $(".txt-menu-btn.small")
       .off("click")
       .on("click", function () {
-        $("body *").each(function () {
-          $(this).css("font-size", "");
-          var size = Number($(this).css("font-size").replace("px", "")) - 1;
-          $(this).css("font-size", size + "px");
-        });
-        $txtIcon.className = "txt-icon small";
-        $btnTxt.innerText = "축소";
+        if (!$txtIcon.classList.contains("small")) {
+          $("body *").each(function () {
+            $(this).css("font-size", "");
+            var size = Number($(this).css("font-size").replace("px", "")) - 1;
+            $(this).css("font-size", size + "px");
+          });
+          $txtIcon.className = "txt-icon small";
+          $btnTxt.innerText = "축소";
+        }
         $menu.classList.remove("on");
       });
   };

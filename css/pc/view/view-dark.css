@@ -9,6 +9,9 @@ body.dark #contents .view-box {
   background-color: #272829;
   border: 1px solid #131313;
 }
+body.dark #contents .view-box > .title-wrapper .sub-title {
+  color: #b5b5b5;
+}
 body.dark #contents .view-box .view-title-look-more > .title-wrapper .title {
   color: #fff;
 }
