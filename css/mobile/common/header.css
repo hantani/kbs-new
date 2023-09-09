@@ -13,11 +13,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  display: none;
   z-index: 100;
-}
-#header .notch-bg.sticky {
-  display: block;
 }
 #header .top-menu {
   display: -webkit-box;
