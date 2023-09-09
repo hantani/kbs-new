@@ -1,4 +1,5 @@
 (() => {
+  // 노치수정완료
   // 수직 롤링 함수
   const verticalRollingFn = (swiper) => {
     const retrunValue = new Swiper(swiper, {
