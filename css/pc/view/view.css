@@ -130,8 +130,9 @@
   margin-bottom: 16px;
 }
 #contents .view-page .view-contents-wrapper .view-article .prev-next-links {
-  padding: 16px 0;
+  padding-top: 16px;
   position: relative;
+  height: 76px;
 }
 #contents .view-page .view-contents-wrapper .view-article .prev-next-links .title-img .img-wrapper.no-img {
   background-color: #f2f2f2;
@@ -246,9 +247,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  top: 16px;
+  right: 0;
+  position: absolute;
   top: 16px;
   right: 0;
 }
@@ -1077,6 +1078,7 @@
   background: rgba(18, 18, 55, 0.04);
   font-weight: 300;
   line-height: 30px;
+  margin-top: 16px;
 }
 .detail-body div.anchor span.anchor {
   color: rgb(18, 18, 55);

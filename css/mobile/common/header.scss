@@ -370,6 +370,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
     .disaster-rolling-swiper {
       width: calc(100% - 26px);
       margin: 0;
@@ -386,7 +387,6 @@
         -webkit-box-orient: vertical;
         line-height: 18px;
         font-weight: 500;
-        line-height: 18px;
 
         .caution {
           margin-right: 2px;

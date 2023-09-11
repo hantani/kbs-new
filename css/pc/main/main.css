@@ -412,6 +412,7 @@
   font-size: 28px;
   line-height: 32px;
   height: 64px;
+  font-weight: 700;
 }
 #contents .box.head-line .box-contents .main-news-wrapper .main-news .txt-wrapper .news-txt {
   margin-top: 25px;
@@ -547,6 +548,12 @@
 }
 #contents .box.premium-k .premium-k-slide .swiper-wrapper .swiper-slide .thumbnail {
   height: 128px;
+}
+#contents .box.asian-game {
+  width: 1024px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
 }
 #contents .box.nationwide-news .box-contents .box-content-wrapper {
   position: relative;

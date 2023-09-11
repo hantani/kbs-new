@@ -397,6 +397,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
 }
 #header .disaster-rolling-message .disaster-rolling-swiper {
   width: calc(100% - 26px);
@@ -414,7 +415,6 @@
   -webkit-box-orient: vertical;
   line-height: 18px;
   font-weight: 500;
-  line-height: 18px;
 }
 #header .disaster-rolling-message .disaster-rolling-swiper .rolling-message .caution {
   margin-right: 2px;

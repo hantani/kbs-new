@@ -421,6 +421,7 @@
                 font-size: 28px;
                 line-height: 32px;
                 height: 64px;
+                font-weight: 700;
               }
               .news-txt {
                 margin-top: 25px;
@@ -619,6 +620,13 @@
           }
         }
       }
+    }
+
+    &.asian-game {
+      width: 1024px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
     }
 
     &.nationwide-news {
